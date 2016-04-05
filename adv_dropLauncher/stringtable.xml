@@ -1,0 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="ADV">
+    <Package name="DROPLAUNCHER">
+        <Key ID="STR_ADV_DROPLAUNCHER_DROPLAUNCHER">
+			<Original>DROP LAUNCHER</Original>
+            <English>DROP LAUNCHER</English>
+            <German>EINWEGWERFER WEGWERFEN</German>
+        </Key>
+	</Package>
+</Project>
