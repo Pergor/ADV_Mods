@@ -14,6 +14,13 @@
 };
 
 class CfgVehicles {
+
+    class ThingX;
+    class Items_base_F;
+    class ReammoBox_F: ThingX {
+        ace_cargo_size = 1; // 1 = small, 2 = large
+        ace_cargo_canLoad = 1;
+    };
 	
 	class APC_Tracked_01_base_F;
 	class Heli_Transport_03_base_F;
