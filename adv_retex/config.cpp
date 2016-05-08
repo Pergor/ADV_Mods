@@ -76,7 +76,7 @@ class CfgVehicles {
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
 		side = 1;
 		scope = 2;
-		displayName = "AFV-4 Gorgon (NATO)";
+		displayName = "AFV-4 Gorgon";
 		faction = "BLU_F";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -92,7 +92,7 @@ class CfgVehicles {
 	class adv_retex_b_strider_f: I_MRAP_03_F {
 		side = 1;
 		scope = 2;
-		displayName = "Strider (NATO)";
+		displayName = "Strider";
 		faction = "BLU_F";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -104,7 +104,7 @@ class CfgVehicles {
 	class adv_retex_b_strider_hmg_f: I_MRAP_03_hmg_F {
 		side = 1;
 		scope = 2;
-		displayName = "Strider HMG (NATO)";
+		displayName = "Strider HMG";
 		faction = "BLU_F";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -116,7 +116,7 @@ class CfgVehicles {
 	class adv_retex_b_strider_gmg_f: I_MRAP_03_gmg_F {
 		side = 1;
 		scope = 2;
-		displayName = "Strider GMG (NATO)";
+		displayName = "Strider GMG";
 		faction = "BLU_F";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
