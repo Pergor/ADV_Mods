@@ -1,4 +1,18 @@
-﻿class CfgPatches
+﻿#define standard_macro scope=2;\
+			author="Spezialeinheit Luchs";\
+			scopeCurator = 2;
+
+#define nato_macro side=1;\
+			faction="BLU_F";
+			
+#define aaf_macro side=2;\
+			faction="IND_F";
+
+#define civ_macro side=3;\
+			faction="CIV_F";
+			
+
+class CfgPatches
 {
     class adv_retex
     {
@@ -9,15 +23,18 @@
 			"adv_retex_b_strider_gmg_f",
 			"adv_retex_b_mohawk_01_f",
 			"adv_retex_b_mohawk_02_f",			
+			"adv_retex_b_mh9_black_f",
+			"adv_retex_b_ah9_black_f",
 			"adv_retex_i_mh9_f",
+			"adv_retex_i_mh9_black_f",
 			"adv_retex_i_ah9_f",
+			"adv_retex_i_ah9_black_f",
 			"adv_retex_i_orca_f",
 			"adv_retex_i_mohawk_01_f",
 			"adv_retex_i_mohawk_02_f",
 			"adv_retex_c_orca_f",
 			"adv_retex_c_mohawk_01_f",
 			"adv_retex_c_mohawk_02_f"
-			
 		};
         weapons[] = {};
         requiredVersion = 1.58;
@@ -29,10 +46,11 @@
 			"A3_Air_F_Beta_Heli_Transport_02",
 			"A3_Characters_F_BLUFOR",
 			"A3_Characters_F_INDEP",
-			"A3_Characters_F_Civil"
+			"A3_Characters_F_Civil",
+			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.0";
-		versionStr = "1.0";
+		version = "1.1";
+		versionStr = "1.1";
 		author[] = {"[SeL] Belbo // Adrian"};
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -45,6 +63,8 @@ class cfgFunctions {
 			file = "adv_retex\functions";
 			class setTextureNATOGorgon {};
 			class setTextureNATOStrider {};
+			class setTextureBLACKPawnee {};
+			class setTextureWDL {};
 		};
 		class setTextureAAF {
 			file = "adv_retex\functions";
@@ -61,7 +81,7 @@ class cfgFunctions {
 };
 
 class CfgVehicles {
-	//inheritances
+	//vehicle inheritances
 	class I_APC_Wheeled_03_cannon_F;
 	class I_Heli_Transport_02_F;
 	class B_Heli_Light_01_F;
@@ -74,27 +94,25 @@ class CfgVehicles {
 	//blufor vehicles
 	//gorgon
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "AFV-4 Gorgon";
-		faction = "BLU_F";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-			"A3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_co.paa",
-			"A3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext2_co.paa",
-			"A3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa",
-			"A3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
+			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_co.paa",
+			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext2_co.paa",
+			"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa",
+			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
 			
 		};
 	};
 	//strider
 	class adv_retex_b_strider_f: I_MRAP_03_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "Strider";
-		faction = "BLU_F";
-		crew = "B_crew_F";
+		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
@@ -102,11 +120,10 @@ class CfgVehicles {
 		};
 	};
 	class adv_retex_b_strider_hmg_f: I_MRAP_03_hmg_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "Strider HMG";
-		faction = "BLU_F";
-		crew = "B_crew_F";
+		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
@@ -114,11 +131,10 @@ class CfgVehicles {
 		};
 	};
 	class adv_retex_b_strider_gmg_f: I_MRAP_03_gmg_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "Strider GMG";
-		faction = "BLU_F";
-		crew = "B_crew_F";
+		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
@@ -127,10 +143,9 @@ class CfgVehicles {
 	};
 	//mohawk (dahoman)
 	class adv_retex_b_mohawk_01_f: I_Heli_Transport_02_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "CH-49 Mohawk (Dahoman)";
-		faction = "BLU_F";
 		crew = "B_helipilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
@@ -140,10 +155,9 @@ class CfgVehicles {
 	};
 	//mohawk (ion)
 	class adv_retex_b_mohawk_02_f: I_Heli_Transport_02_F {
-		side = 1;
-		scope = 2;
+		standard_macro
+		nato_macro
 		displayName = "CH-49 Mohawk (ION)";
-		faction = "BLU_F";
 		crew = "B_helipilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
@@ -151,32 +165,59 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
 		};
 	};
+	//mh9
+	class adv_retex_b_mh9_black_f: B_Heli_Light_01_F {
+		standard_macro
+		nato_macro
+		displayName = "MH-9 Hummingbird (Black)";
+		crew = "B_helipilot_F";
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+	};	
+	//ah9
+	class adv_retex_b_ah9_black_f: B_Heli_Light_01_armed_F {
+		standard_macro
+		nato_macro
+		displayName = "AH-9 Pawnee (Black)";
+		crew = "B_helipilot_F";
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+	};
 	
 	//indfor vehicles
 	//mh9
 	class adv_retex_i_mh9_f: B_Heli_Light_01_F {
-		side = 2;
-		scope = 2;
+		standard_macro
+		aaf_macro
 		displayName = "MH-9 Hummingbird";
-		faction = "IND_F";
-		crew = "I_helipilot_F";
-		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
-	};	
-	//ah9
-	class adv_retex_i_ah9_f: B_Heli_Light_01_armed_F {
-		side = 2;
-		scope = 2;
-		displayName = "AH-9 Pawnee";
-		faction = "IND_F";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
 	};
+	class adv_retex_i_mh9_black_f: B_Heli_Light_01_F {
+		standard_macro
+		aaf_macro
+		displayName = "MH-9 Hummingbird (Black)";
+		crew = "I_helipilot_F";
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+	};	
+	//ah9
+	class adv_retex_i_ah9_f: B_Heli_Light_01_armed_F {
+		standard_macro
+		aaf_macro
+		displayName = "AH-9 Pawnee";
+		crew = "I_helipilot_F";
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
+	};
+	class adv_retex_i_ah9_black_f: B_Heli_Light_01_armed_F {
+		standard_macro
+		aaf_macro
+		displayName = "AH-9 Pawnee (Black)";
+		crew = "I_helipilot_F";
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+	};
 	//mohawk (dahoman)
 	class adv_retex_i_mohawk_01_f: I_Heli_Transport_02_F {
-		side = 2;
-		scope = 2;
+		standard_macro
+		aaf_macro
 		displayName = "CH-49 Mohawk (Dahoman)";
-		faction = "IND_F";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
@@ -186,10 +227,9 @@ class CfgVehicles {
 	};
 	//mohawk (ion)
 	class adv_retex_i_mohawk_02_f: I_Heli_Transport_02_F {
-		side = 2;
-		scope = 2;
+		standard_macro
+		aaf_macro
 		displayName = "CH-49 Mohawk (ION)";
-		faction = "IND_F";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
@@ -199,10 +239,9 @@ class CfgVehicles {
 	};
 	//orca
 	class adv_retex_i_orca_f: O_Heli_Light_02_F {
-		side = 2;
-		scope = 2;
+		standard_macro
+		aaf_macro
 		displayName = "PO-30 Orca";
-		faction = "IND_F";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_02\Data\heli_light_02_ext_indp_co.paa"};
 	};
@@ -210,10 +249,9 @@ class CfgVehicles {
 	//civilian vehicles
 	//mohawk (dahoman)
 	class adv_retex_c_mohawk_01_f: I_Heli_Transport_02_F {
-		side = 3;
-		scope = 2;
+		standard_macro
+		civ_macro
 		displayName = "CH-49 Mohawk (Dahoman)";
-		faction = "CIV_F";
 		crew = "C_man_pilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
@@ -223,10 +261,9 @@ class CfgVehicles {
 	};
 	//mohawk (ion)
 	class adv_retex_c_mohawk_02_f: I_Heli_Transport_02_F {
-		side = 3;
-		scope = 2;
+		standard_macro
+		civ_macro
 		displayName = "CH-49 Mohawk (ION)";
-		faction = "CIV_F";
 		crew = "C_man_pilot_F";
 		hiddenSelectionsTextures[] = {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
@@ -236,10 +273,9 @@ class CfgVehicles {
 	};
 	//orca
 	class adv_retex_c_orca_f: O_Heli_Light_02_F {
-		side = 3;
-		scope = 2;
+		standard_macro
+		civ_macro
 		displayName = "PO-30 Orca";
-		faction = "CIV_F";
 		crew = "C_man_pilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_02\Data\heli_light_02_ext_civilian_co.paa"};
 	};
