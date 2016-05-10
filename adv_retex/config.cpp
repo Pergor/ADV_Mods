@@ -194,6 +194,7 @@ class CfgVehicles {
 	class adv_retex_i_mh9_black_f: B_Heli_Light_01_F {
 		standard_macro
 		aaf_macro
+		scopeArsenal = 0;
 		displayName = "MH-9 Hummingbird (Black)";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
@@ -210,6 +211,7 @@ class CfgVehicles {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee (Black)";
+		scopeArsenal = 0;
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
 	};
