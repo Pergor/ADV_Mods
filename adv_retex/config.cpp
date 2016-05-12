@@ -17,6 +17,8 @@ class CfgPatches
     class adv_retex
     {
         units[] = {
+			"adv_retex_b_mora_f",
+			"adv_retex_b_marid_f",
 			"adv_retex_b_gorgon_f",
 			"adv_retex_b_strider_f",
 			"adv_retex_b_strider_hmg_f",
@@ -83,15 +85,43 @@ class cfgFunctions {
 class CfgVehicles {
 	//vehicle inheritances
 	class I_APC_Wheeled_03_cannon_F;
+	class I_APC_tracked_03_cannon_F;
+	class O_APC_Wheeled_02_rcws_F;
 	class I_Heli_Transport_02_F;
 	class B_Heli_Light_01_F;
 	class B_Heli_Light_01_armed_F;
 	class O_Heli_Light_02_F;
+	class O_Heli_Light_02_unarmed_F;
 	class I_MRAP_03_F;
 	class I_MRAP_03_hmg_F;
 	class I_MRAP_03_gmg_F;
 	
 	//blufor vehicles
+	//mora
+	class adv_retex_b_mora_f: I_APC_tracked_03_cannon_F {
+		standard_macro
+		nato_macro
+		displayName = "FV-720 Mora";
+		crew = "B_crew_F";
+		typicalCargo[] = {"B_soldier_F"};
+		hiddenSelectionsTextures[] = {
+				"adv_retex\textures\mora\TurretTexture.paa",
+				"adv_retex\textures\mora\BodyTexture.paa"
+		};
+	};
+	//marid
+	class adv_retex_b_marid_f: O_APC_Wheeled_02_rcws_F {
+		standard_macro
+		nato_macro
+		displayName = "MSE-3 Marid";
+		crew = "B_crew_F";
+		typicalCargo[] = {"B_soldier_F"};
+		hiddenSelectionsTextures[] = {
+				"adv_retex\textures\marid\MaridBodyTexture1.paa",
+				"adv_retex\textures\marid\MaridBodyTexture2.paa",
+				"adv_retex\textures\marid\MaridRcwcsTexture.paa"
+		};
+	};
 	//gorgon
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
 		standard_macro
@@ -104,7 +134,6 @@ class CfgVehicles {
 			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext2_co.paa",
 			"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa",
 			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
-			
 		};
 	};
 	//strider
@@ -274,7 +303,7 @@ class CfgVehicles {
 		};
 	};
 	//orca
-	class adv_retex_c_orca_f: O_Heli_Light_02_F {
+	class adv_retex_c_orca_f: O_Heli_Light_02_unarmed_F {
 		standard_macro
 		civ_macro
 		displayName = "PO-30 Orca";

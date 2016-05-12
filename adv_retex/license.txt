@@ -2,6 +2,9 @@
 
 This file must not be removed from the folder and must be contained in every work based on this addon or parts of it.
 
+The textures from this mod are taken from BLUFOR IFV-Mora retexture and BLUFOR IFV-Marid retexture by Stevenson. (http://www.armaholic.com/page.php?id=25166 and http://www.armaholic.com/page.php?id=24989)
+All rights remain with the original author of these textures.
+
 This addon is published under the APL-SA licence:
 
 "	With this licence you are free to adapt (i.e. modify, rework or update) and share (i.e. copy, distribute or transmit) the material under the following conditions:
