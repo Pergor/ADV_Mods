@@ -6,7 +6,7 @@ Call from initPlayerLocal.sqf via:
 [] spawn ADV_fnc_dispLaunch;
 */
 
-if (isNil "ADV_array_dispLaunch" || !hasInterface) exitWith {};
+if (isNil "ADV_array_dropLaunch" || !hasInterface) exitWith {};
 
 //this is where the magic happens:
 if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
@@ -16,7 +16,7 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
 		("<t color=""#FF0000"">" + (localize "STR_ADV_DROPLAUNCHER_DROPLAUNCHER") + "</t>"),
 		"",
 		{ [player] call ADV_dropLauncher_fnc_dropLauncher },
-		{ !(secondaryWeapon player == "") && ( toUpper (secondaryWeapon player) ) in ADV_array_dispLaunch }
+		{ !(secondaryWeapon player == "") && ( toUpper (secondaryWeapon player) ) in ADV_array_dropLaunch }
 	] call ace_interact_menu_fnc_createAction;
 	[player , 1, ["ACE_SelfActions"],_ace_dropLaunch] call ace_interact_menu_fnc_addActionToObject;
 };
