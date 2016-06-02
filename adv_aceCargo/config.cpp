@@ -7,7 +7,7 @@
 #define macro_ugv ace_refuel_fuelCapacity = 2000;\
 		supplyRadius = 10;\
 		transportAmmo = 300000;\
-		transportFuel = 2000;\
+		transportFuel = 300000;\
 		ace_repair_canRepair = 1;\
 		ace_cargo_space = 8;\
 		ace_cargo_hasCargo = 1;
