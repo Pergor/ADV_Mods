@@ -53,7 +53,7 @@ class CfgPatches
 		};
 		version = "1.1";
 		versionStr = "1.1";
-		author[] = {"[SeL] Belbo // Adrian"};
+		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
 };

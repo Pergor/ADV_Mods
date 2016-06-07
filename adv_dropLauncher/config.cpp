@@ -8,7 +8,7 @@
         requiredAddons[] = {};
 		version = "1.01";
 		versionStr = "1.01";
-		author[] = {"[SeL] Belbo // Adrian"};
+		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
 };

@@ -26,7 +26,7 @@ class CfgPatches
         requiredAddons[] = { "ace_cargo", "ace_repair", "A3_Air_F_Heli_Heli_Transport_03", "A3_Armor_F_Panther", "A3_Soft_F_Gamma_HEMTT", "A3_Soft_F_EPC_Truck_03" };
 		version = "1.02";
 		versionStr = "1.02";
-		author[] = {"[SeL] Belbo // Adrian"};
+		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
 };
