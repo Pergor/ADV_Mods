@@ -22,5 +22,15 @@ if ( !hasInterface ) exitWith {};
 if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) then {
 	call ADV_dropLauncher_fnc_aceAction;
 } else {
-	ADV_dropLauncher_handle_mainLoop = [] spawn ADV_dropLauncher_fnc_loop;
+	ADV_action_dropIt = player addAction [
+		"<t color=""#FFFFFF"">" + (localize "STR_ADV_DROPLAUNCHER_DROPLAUNCHER") + "</t>",
+		{ [player] call ADV_dropLauncher_fnc_dropLauncher },
+		"",
+		6,
+		true,
+		true,
+		"",
+		"!(secondaryWeapon player == "") && ( toUpper (secondaryWeapon player) ) in ADV_array_dispLaunch"
+	];
+	//ADV_dropLauncher_handle_mainLoop = [] spawn ADV_dropLauncher_fnc_loop;
 };
