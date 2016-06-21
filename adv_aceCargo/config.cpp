@@ -13,7 +13,7 @@
 
 #define macro_refuel_actions 	class ACE_Actions: ACE_Actions {\
 			class ACE_MainActions: ACE_MainActions {\
-				class aceCargo_refuel {\
+				class ace_refuel_Refuel {\
 					displayName = "Refuel";\
 					condition = "true";\
 					statement = "";\
