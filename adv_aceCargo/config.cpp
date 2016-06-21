@@ -72,7 +72,17 @@ class CfgPatches
 		};
         weapons[] = {};
         requiredVersion = 1.58;
-        requiredAddons[] = { "ace_cargo", "ace_repair", "ace_refuel","A3_Air_F_Heli_Heli_Transport_03", "A3_Armor_F_Panther", "A3_Soft_F_Gamma_HEMTT", "A3_Soft_F_EPC_Truck_03" };
+        requiredAddons[] = {
+			"ace_cargo",
+			"ace_repair",
+			"ace_refuel",
+			"A3_Air_F_Heli_Heli_Transport_03",
+			"A3_Armor_F_Panther",
+			"A3_Soft_F_Gamma_HEMTT",
+			"A3_Soft_F_EPC_Truck_03",
+			"A3_Soft_F_Crusher_UGV",
+			"A3_Soft_F_Heli_Crusher_UGV"
+		};
 		version = "1.02";
 		versionStr = "1.02";
 		author = "[SeL] Belbo // Adrian";
