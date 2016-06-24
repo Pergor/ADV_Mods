@@ -20,47 +20,46 @@
 					showDisabled = 0;\
 					priority = 2;\
 					distance = 4.5;\
-					icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+					icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					class ace_refuel_TakeNozzle {\
 						displayName = "Take Fuel Nozzle";\
 						condition = "[_player, _target] call ace_refuel_fnc_canTakeNozzle";\
 						statement = "[_player, _target, objNull] call ace_refuel_fnc_takeNozzle";\
 						exceptions[] = {"isNotInside"};\
-						icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					};\
 					class ace_refuel_CheckFuelCounter {\
 						displayName = "Check Fuel Counter";\
 						condition = "true";\
 						statement = "[_player, _target, objNull] call ace_refuel_fnc_readFuelCounter";\
 						exceptions[] = {"isNotInside"};\
-						icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					};\
 					class ace_refuel_CheckFuel{\
 						displayName = "Check Fuel";\
 						condition = "[_player, _target] call ace_refuel_fnc_canCheckFuel";\
 						statement = "[_player, _target, objNull] call ace_refuel_fnc_checkFuel";\
 						exceptions[] = {"isNotInside"};\
-						icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					};\
 					class ace_refuel_Connect {\
 						displayName = "Connect Fuel Nozzle";\
 						condition = "[_player, _target] call ace_refuel_fnc_canConnectNozzle";\
 						statement = "[_player, _target, objNull] call ace_refuel_fnc_connectNozzle";\
 						exceptions[] = {"isNotInside"};\
-						icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					};\
 					class ace_refuel_Return {\
 						displayName = "Return Fuel Nozzle";\
 						condition = "[_player, _target] call ace_refuel_fnc_canReturnNozzle";\
 						statement = "[_player, _target, objNull] call ace_refuel_fnc_returnNozzle";\
 						exceptions[] = {"isNotInside"};\
-						icon = "\ace_refuel\ui\icon_refuel_interact.paa";\
+						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
 					};\
 				};\
 			};\
 		};
 		
-
 class CfgPatches
 {
     class adv_aceCargo
@@ -96,7 +95,6 @@ class CfgPatches
 			"A3_Soft_F_SUV",
 			"A3_Soft_F_Gamma_HEMTT",
 			"A3_Soft_F_Gamma_TruckHeavy",
-			"A3_Soft_F_Gamma_Truck",
 			"A3_Armor_F_AMV",
 			"A3_Armor_F_Marid",
 			"A3_Armor_F_APC_Wheeled_03",
@@ -123,12 +121,12 @@ class CfgVehicles {
     };
 	
 	class Land;
-	class LandVehicles: Land {
+	class LandVehicle: Land {
 		class ACE_Actions {
 			class ACE_MainActions {};
 		};		
 	};
-	class Car: LandVehicles {
+	class Car: LandVehicle {
 		class Car_F {
 			class ACE_Actions: ACE_Actions {
 				class ACE_MainActions: ACE_MainActions {};
