@@ -89,7 +89,7 @@ class CfgPatches
 			"A3_Soft_F_Quadbike",
 			"A3_Soft_F_HEMTT",
 			"A3_Soft_F_TruckHeavy",
-			"A3_Soft_F_EPC_Truc_03",
+			"A3_Soft_F_EPC_Truck_03",
 			"A3_Soft_F_Car",
 			"A3_Soft_F_Gamma_Offroad",
 			"A3_Soft_F_Gamma_Quadbike",
