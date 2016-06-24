@@ -81,6 +81,7 @@ class CfgPatches
 			"ace_cargo",
 			"ace_repair",
 			"ace_refuel",
+			"A3_Weapons_F_Ammoboxes",
 			"A3_Soft_F_MRAP_01",
 			"A3_Soft_F_MRAP_02",
 			"A3_Soft_F_MRAP_03",
@@ -121,13 +122,6 @@ class CfgVehicles {
         ace_cargo_canLoad = 1;
     };
 	
-	class APC_Tracked_01_base_F;
-	class Heli_Transport_03_base_F;
-	class Heli_Transport_03_unarmed_base_F;
-	class B_Truck_01_mover_F;
-	class B_Truck_01_transport_F;
-	class Truck_03_base_F;
-	
 	class Land;
 	class LandVehicles: Land {
 		class ACE_Actions {
@@ -147,6 +141,15 @@ class CfgVehicles {
 	class B_UGV_01_F: UGV_01_base_F {};
 	class O_UGV_01_F: UGV_01_base_F {};
 	class I_UGV_01_F: UGV_01_base_F {};
+	
+	
+	class APC_Tracked_01_base_F;
+	class Heli_Transport_03_base_F;
+	class Heli_Transport_03_unarmed_base_F;
+	class B_Truck_01_mover_F;
+	class B_Truck_01_transport_F;
+	class Truck_03_base_F;
+	
 	
 	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
 		macro_10
