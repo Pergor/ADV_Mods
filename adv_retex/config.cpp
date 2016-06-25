@@ -51,8 +51,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.1";
-		versionStr = "1.1";
+		version = "1.11";
+		versionStr = "1.11";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
