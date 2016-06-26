@@ -11,6 +11,8 @@ adv_damnYouAceHearing: Removes stupidly configured volume reduction from ACE³ fo
 
 adv_dropLauncher: Adds action to drop certain disposable launchers after shooting.
 
+adv_fnclib: Contains a library of missin functions that may prove usefull.
+
 adv_gasmasks: Adds breathing sounds to gasmasks of Hidden Identity Pack V2.
 
 adv_hlcG36_bwmod: Adds compatibility between hlc g36 and bwmod magazines. (Requires hlc_g36 and BWmod)
