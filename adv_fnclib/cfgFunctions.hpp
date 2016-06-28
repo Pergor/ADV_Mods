@@ -4,6 +4,7 @@ class CfgFunctions {
 		class clientside {
 			file = "adv_fnclib\functions\clientside";
 			class fullHeal {};
+			class safeZone {};
 			class teleport {};
 			class undercover {};
 		};
