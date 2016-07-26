@@ -105,8 +105,8 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-				"adv_retex\textures\mora\TurretTexture.paa",
-				"adv_retex\textures\mora\BodyTexture.paa"
+			"adv_retex\textures\mora\TurretTexture.paa",
+			"adv_retex\textures\mora\BodyTexture.paa"
 		};
 	};
 	//marid
@@ -117,9 +117,9 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-				"adv_retex\textures\marid\MaridBodyTexture1.paa",
-				"adv_retex\textures\marid\MaridBodyTexture2.paa",
-				"adv_retex\textures\marid\MaridRcwcsTexture.paa"
+			"adv_retex\textures\marid\MaridBodyTexture1.paa",
+			"adv_retex\textures\marid\MaridBodyTexture2.paa",
+			"adv_retex\textures\marid\MaridRcwcsTexture.paa"
 		};
 	};
 	//gorgon
