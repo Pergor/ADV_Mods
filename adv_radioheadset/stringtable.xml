@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="adv">
+    <Package name="radioheadset">
+        <Key ID="STR_ADV_HEADSET_LOWER">
+			<Original>Lower Headset</Original>
+            <English>Lower Headset</English>
+            <German>Headset abnehmen</German>
+        </Key>
+        <Key ID="STR_ADV_HEADSET_RAISE">
+			<Original>Raise Headset</Original>
+            <English>Raise Headset</English>
+            <German>Headset aufsetzen</German>
+        </Key>
+        <Key ID="STR_ADV_HEADSET_LOWERED">
+			<Original>Headset lowered.</Original>
+            <English>Headset lowered.</English>
+            <German>Headset abgenommen.</German>
+        </Key>
+        <Key ID="STR_ADV_HEADSET_RAISED">
+			<Original>Headset raised.</Original>
+            <English>Headset raised.</English>
+            <German>Headset aufgesetzt.</German>
+        </Key>
+		</Package>
+</Project>

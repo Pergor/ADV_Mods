@@ -28,7 +28,7 @@ adv_script_fnc_headsetOff = {
 	
 	player setVariable ["tf_unable_to_use_radio", true, true];
 	
-	systemChat "Headset lowered.";
+	systemChat (localize "STR_ADV_HEADSET_LOWERED");
 	adv_var_headsetOn = false;
 };
 
@@ -46,19 +46,19 @@ adv_script_fnc_headsetOn = {
 	
 	player setVariable ["tf_unable_to_use_radio", false, true];
 	
-	systemChat "Headset raised.";
+	systemChat (localize "STR_ADV_HEADSET_RAISED");
 	adv_var_headsetOn = true;
 };
 
 if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) then {
 
-	_lowerHeadset = ["lowerHeadsetSelfAction",("<t color=""#FF0000"">" + ("Lower Headset") + "</t>"),"",{
+	_lowerHeadset = ["lowerHeadsetSelfAction",("<t color=""#FF0000"">" + (localize "STR_ADV_HEADSET_LOWER") + "</t>"),"",{
 	
 		call adv_script_fnc_headsetOff;
 		
 	},{ adv_var_headsetOn && (call TFAR_fnc_haveSWRadio || call TFAR_fnc_haveLRRadio) }] call ace_interact_menu_fnc_createAction;
 	
-	_raiseHeadset = ["raiseHeadsetSelfAction",("<t color=""#00FF00"">" + ("Raise Headset") + "</t>"),"",{
+	_raiseHeadset = ["raiseHeadsetSelfAction",("<t color=""#00FF00"">" + (localize "STR_ADV_HEADSET_RAISE") + "</t>"),"",{
 
 		call adv_script_fnc_headsetOn;
 		
@@ -71,7 +71,7 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) then {
 
 while { true } do {
 
-	adv_handle_headsetActionOff = _unit addAction [("<t color=""#FF0000"">" + ("Lower Headset") + "</t>"), {
+	adv_handle_headsetActionOff = _unit addAction [("<t color=""#FF0000"">" + (localize "STR_ADV_HEADSET_LOWER") + "</t>"), {
 	
 		call adv_script_fnc_headsetOff;
 
@@ -81,7 +81,7 @@ while { true } do {
 	waitUntil { sleep 1; !adv_var_headsetOn };
 	_unit removeAction adv_handle_headsetActionOff;
 	
-	adv_handle_headsetActionOn = _unit addAction [("<t color=""#00FF00"">" + ("Raise Headset") + "</t>"), {
+	adv_handle_headsetActionOn = _unit addAction [("<t color=""#00FF00"">" + (localize "STR_ADV_HEADSET_RAISE") + "</t>"), {
 
 		call adv_script_fnc_headsetOn;
 	
