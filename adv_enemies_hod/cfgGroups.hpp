@@ -1,6 +1,6 @@
 ﻿#define standard_values faction = "adv_faction_enemies_hod";\
 						side = 0;\
-						aliveCategory = "Infanty";
+						aliveCategory = "Infantry";
 
 class CfgGroups
 {
