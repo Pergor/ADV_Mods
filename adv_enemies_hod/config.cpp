@@ -11,14 +11,18 @@ class CfgPatches
 			"adv_hod_soldier_m38_3_f",
 			"adv_hod_soldier_mk14_1_f",
 			"adv_hod_soldier_mk14_2_f",
-			"adv_hod_soldier_mk14_3_f"
+			"adv_hod_soldier_mk14_3_f",
+			"adv_hod_soldier_enf_1_f",
+			"adv_hod_soldier_enf_2_f",
+			"adv_hod_soldier_enf_3_f",
+			"adv_hod_soldier_k98_medic_f",
+			"adv_hod_soldier_m38_medic_f"
 		};
         weapons[] = {};
-        requiredVersion = 1.62;
+        requiredVersion = 1.60;
         requiredAddons[] = {
 			"A3_Characters_F",
 			"rhs_main"
-			"rhsgref_main"
 		};
 		version = "1.02";
 		versionStr = "1.02";
@@ -27,7 +31,7 @@ class CfgPatches
     };
 };
 
-class cfgFactionClasses{
+class cfgFactionClasses {
 	class adv_faction_enemies_hod {
 		displayName = "ADV - HOD Enemies";
 		priority = 1;
