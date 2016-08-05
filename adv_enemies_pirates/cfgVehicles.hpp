@@ -1,15 +1,16 @@
 ﻿#define standard_cfg author = "[SeL] Belbo";\
 	scope = 2;\
+	curatorScope = 2;\
 	side = 0;\
 	faction = "adv_faction_enemies_pirates";\
-	vehicleClass = "adv_vehicleclass_enemies_pirates";\
-	model = "\A3\characters_F_gamma\Guerrilla\ig_guerrilla1_1.p3d";\
-	modelSides[] = {0,1,2,3};\
+	vehicleClass = "Men";\
+	model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";\
+	modelSides[]={3,2,1,0};\
 	hiddenSelections[] = {"Camo", "insignia"};\
 	hiddenSelectionsTextures[] = {"\A3\Characters_F_Gamma\Guerrilla\Data\ig_guerrilla2_1_co.paa"};\
 	identityTypes[] = {"Head_African", "Head_Euro", "Head_Greek", "G_IRAN_default", "G_GUERIL_default", "LanguagePER_F"};\
 	faceType = "Man_A3";\
-	genericNames = "AfroMen";\
+	genericNames="TanoanMen";\
 	nakedUniform = "U_BasicBody";\
 	headgearList[] = { "H_ShemagOpen_tan", 0.3, "H_Bandanna_khk", 0.3, "H_Bandanna_camo", 0.3, "H_Bandanna_sand", 0.3, "H_Bandanna_blk", 0.3, "", 0.1 };\
 	class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0), [], []] call BIS_fnc_unitHeadgear;};"; };
@@ -25,7 +26,7 @@
 	curatorScope = 2;\
 	side = 0;\
 	faction = "adv_faction_enemies_pirates";\
-	vehicleClass = "adv_vehicleclass_enemies_pirates_vehicles";
+	vehicleClass = "Car";
 
 class CfgVehicles {
 	//backpacks
@@ -73,12 +74,17 @@ class CfgVehicles {
 	};
 
 	//units
-	class SoldierEB;
-	class O_Soldier_base_F: SoldierEB {
+	class SoldierGB;
+	class I_G_Soldier_base_F : SoldierGB {
 		class EventHandlers;
+		modelsides[] = {3,2,1,0};
+	};
+	class I_C_Soldier_base_F : I_G_Soldier_base_F {
+		class EventHandlers;
+		modelsides[] = {3,2,1,0};
 	};
 	
-	class adv_pirates_soldier_1_f : O_Soldier_base_F {
+	class adv_pirates_soldier_1_f : I_C_Soldier_base_F {
 		standard_cfg
 		
 		displayName = "Pirat 1";
