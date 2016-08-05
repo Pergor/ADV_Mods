@@ -18,6 +18,7 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = 1.62;
         requiredAddons[] = {
+			"A3_Characters_F_OPFOR",
 			"A3_Characters_F",
 			"A3_Soft_F_Gamma_Offroad"
 		};
