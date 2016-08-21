@@ -66,6 +66,7 @@ class cfgFunctions {
 			class setTextureNATOGorgon {};
 			class setTextureNATOStrider {};
 			class setTextureBLACKPawnee {};
+			class setTextureMarid {};
 			class setTextureWDL {};
 		};
 		class setTextureAAF {
@@ -86,7 +87,10 @@ class CfgVehicles {
 	//vehicle inheritances
 	class I_APC_Wheeled_03_cannon_F;
 	class I_APC_tracked_03_cannon_F;
-	class O_APC_Wheeled_02_rcws_F;
+	class O_APC_Wheeled_02_base_F;
+	class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
+		class Eventhandlers;
+	};
 	class I_Heli_Transport_02_F;
 	class B_Heli_Light_01_F;
 	class B_Heli_Light_01_armed_F;
@@ -121,6 +125,7 @@ class CfgVehicles {
 			"adv_retex\textures\marid\MaridBodyTexture2.paa",
 			"adv_retex\textures\marid\MaridRcwcsTexture.paa"
 		};
+		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0)] call adv_retex_fnc_setTextureMarid;};"; };
 	};
 	//gorgon
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
