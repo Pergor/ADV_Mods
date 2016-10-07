@@ -14,17 +14,11 @@ class CfgPatches
 };
 class CfgWeapons
 {
-	class WeaponSlotsInfo;
-	class ItemCore;
-	class InventoryMuzzleItem_Base_F;
 	class Rifle;
-	class Rifle_Base_F : Rifle
-	{
+	class Rifle_Base_F: Rifle {
 		class WeaponSlotsInfo;
-		class GunParticles;
 	};
-	class Rifle_Long_Base_F : Rifle_Base_F
-	{
+	class Rifle_Long_Base_F: Rifle_Base_F {
 		class WeaponSlotsInfo;
 	};
 	class UGL_F;
