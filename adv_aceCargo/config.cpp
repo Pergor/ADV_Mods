@@ -4,73 +4,14 @@
 		ace_cargo_hasCargo = 1;
 #define macro_40 ace_cargo_space = 40;\
 		ace_cargo_hasCargo = 1;
-#define macro_ugv ace_refuel_fuelCargo = 2000;\
-		supplyRadius = 10;\
-		transportAmmo = 30000;\
-		ace_repair_canRepair = 1;\
-		ace_cargo_space = 8;\
-		ace_cargo_hasCargo = 1;
-
-#define macro_refuel_actions 	class ACE_Actions: ACE_Actions {\
-			class ACE_MainActions: ACE_MainActions {\
-				class ace_refuel_Refuel {\
-					displayName = "Refuel";\
-					condition = "true";\
-					statement = "";\
-					showDisabled = 0;\
-					priority = 2;\
-					distance = 4.5;\
-					icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					class ace_refuel_TakeNozzle {\
-						displayName = "Take Fuel Nozzle";\
-						condition = "[_player, _target] call ace_refuel_fnc_canTakeNozzle";\
-						statement = "[_player, _target, objNull] call ace_refuel_fnc_takeNozzle";\
-						exceptions[] = {"isNotInside"};\
-						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					};\
-					class ace_refuel_CheckFuelCounter {\
-						displayName = "Check Fuel Counter";\
-						condition = "true";\
-						statement = "[_player, _target, objNull] call ace_refuel_fnc_readFuelCounter";\
-						exceptions[] = {"isNotInside"};\
-						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					};\
-					class ace_refuel_CheckFuel{\
-						displayName = "Check Fuel";\
-						condition = "[_player, _target] call ace_refuel_fnc_canCheckFuel";\
-						statement = "[_player, _target, objNull] call ace_refuel_fnc_checkFuel";\
-						exceptions[] = {"isNotInside"};\
-						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					};\
-					class ace_refuel_Connect {\
-						displayName = "Connect Fuel Nozzle";\
-						condition = "[_player, _target] call ace_refuel_fnc_canConnectNozzle";\
-						statement = "[_player, _target, objNull] call ace_refuel_fnc_connectNozzle";\
-						exceptions[] = {"isNotInside"};\
-						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					};\
-					class ace_refuel_Return {\
-						displayName = "Return Fuel Nozzle";\
-						condition = "[_player, _target] call ace_refuel_fnc_canReturnNozzle";\
-						statement = "[_player, _target, objNull] call ace_refuel_fnc_returnNozzle";\
-						exceptions[] = {"isNotInside"};\
-						icon = "\adv_aceCargo\ui\icon_refuel_interact.paa";\
-					};\
-				};\
-			};\
-		};
 		
 class CfgPatches
 {
     class adv_aceCargo
     {
-        units[] = {
-			"B_UGV_resupply_F",
-			"O_UGV_resupply_F",
-			"I_UGV_resupply_F"
-		};
+        units[] = {};
         weapons[] = {};
-        requiredVersion = 1.58;
+        requiredVersion = 1.64;
         requiredAddons[] = {
 			"ace_main",
 			"ace_modules",
@@ -78,34 +19,15 @@ class CfgPatches
 			"ace_interaction",
 			"ace_interact_menu",
 			"ace_cargo",
-			"ace_repair",
-			"ace_refuel",
-			"A3_Weapons_F_Ammoboxes",
-			"A3_Soft_F_MRAP_01",
-			"A3_Soft_F_MRAP_02",
-			"A3_Soft_F_MRAP_03",
-			"A3_Soft_F_Offroad_01",
-			"A3_Soft_F_Quadbike",
-			"A3_Soft_F_HEMTT",
-			"A3_Soft_F_TruckHeavy",
-			"A3_Soft_F_EPC_Truck_03",
-			"A3_Soft_F_Car",
-			"A3_Soft_F_Gamma_Offroad",
-			"A3_Soft_F_Gamma_Quadbike",
-			"A3_Soft_F_SUV",
-			"A3_Soft_F_Gamma_HEMTT",
-			"A3_Soft_F_Gamma_TruckHeavy",
+			"A3_Soft_F_Quadbike_01",
 			"A3_Armor_F_AMV",
 			"A3_Armor_F_Marid",
 			"A3_Armor_F_APC_Wheeled_03",
 			"A3_Air_F_Heli_Heli_Transport_03",
-			"A3_Armor_F_Panther",
-			"A3_Soft_F_EPC_Truck_03",
-			"A3_Soft_F_Crusher_UGV",
-			"A3_Soft_F_Heli_Crusher_UGV"
+			"A3_Armor_F_Panther"
 		};
-		version = "1.02";
-		versionStr = "1.02";
+		version = "1.03";
+		versionStr = "1.03";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -120,34 +42,20 @@ class CfgVehicles {
         ace_cargo_canLoad = 1;
     };
 	
-	class Land;
-	class LandVehicle: Land {
-		class ACE_Actions {
-			class ACE_MainActions {};
-		};		
-	};
-	class Car: LandVehicle {
-		class Car_F {
-			class ACE_Actions: ACE_Actions {
-				class ACE_MainActions: ACE_MainActions {};
-			};
-		};
-	};
-	class Car_F: Car {};
-	class UGV_01_base_F: Car_F {};
-	
-	class B_UGV_01_F: UGV_01_base_F {};
-	class O_UGV_01_F: UGV_01_base_F {};
-	class I_UGV_01_F: UGV_01_base_F {};
-	
-	
 	class APC_Tracked_01_base_F;
 	class Heli_Transport_03_base_F;
 	class Heli_Transport_03_unarmed_base_F;
 	class B_Truck_01_mover_F;
 	class B_Truck_01_transport_F;
+	class B_Truck_01_fuel_F;
 	class Truck_03_base_F;
+	/*
+	class Quadbike_01_base_F;
 	
+	class B_Quadbike_01_F: Quadbike_01_base_F {
+		macro_20
+	};
+	*/
 	
 	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
 		macro_10
@@ -173,20 +81,4 @@ class CfgVehicles {
     class O_Truck_03_medical_F: Truck_03_base_F {
 		macro_20
     };
-
-	class B_UGV_resupply_F: B_UGV_01_F {
-		displayName = "UGV Stomper (Resupply)";
-		macro_ugv
-		macro_refuel_actions
-	};
-	class O_UGV_resupply_F: O_UGV_01_F {
-		displayName = "UGV Saif (Resupply)";
-		macro_ugv
-		macro_refuel_actions
-	};
-	class I_UGV_resupply_F: I_UGV_01_F {
-		displayName = "UGV Stomper (Resupply)";
-		macro_refuel_actions
-		macro_ugv
-	};
 };
