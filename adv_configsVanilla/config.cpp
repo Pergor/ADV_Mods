@@ -32,7 +32,14 @@ class CfgWeapons
 	class Rifle_Long_Base_F: Rifle_Base_F {
 		class WeaponSlotsInfo;
 	};
+	class LMG_03_base_F: Rifle_Long_Base_F {
+		magazines[] += {
+			"200Rnd_556x45_Box_F","200Rnd_556x45_Box_Red_F","200Rnd_556x45_Box_Tracer_F","200Rnd_556x45_Box_Tracer_Red_F"
+			,"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"
+		};
+	};
 	
+	/*
 	class LRR_base_F: Rifle_Long_Base_F {
 		class WeaponSlotsInfo;
 	};
@@ -50,4 +57,5 @@ class CfgWeapons
 			mass = 253.8;
 		};
 	};
+	*/
 };
