@@ -33,6 +33,9 @@ class CfgPatches
     class adv_retex
     {
         units[] = {
+			"adv_retex_b_mrap_f",
+			"adv_retex_b_mrap_hmg_f",
+			"adv_retex_b_mrap_gmg_f",
 			"adv_retex_b_mora_f",
 			"adv_retex_b_marid_f",
 			"adv_retex_b_gorgon_f",
@@ -60,6 +63,7 @@ class CfgPatches
 			"A3_Armor_F_APC_Wheeled_03",
 			"A3_Air_F_Heli_Light_01",
 			"A3_Air_F_Heli_Light_02",
+			"A3_Soft_F_MRAP_01",
 			"A3_Soft_F_MRAP_03",
 			"A3_Air_F_Beta_Heli_Transport_02",
 			"A3_Characters_F_BLUFOR",
@@ -67,8 +71,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.11";
-		versionStr = "1.11";
+		version = "1.12";
+		versionStr = "1.12";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -83,6 +87,7 @@ class cfgFunctions {
 			class setTextureNATOStrider {};
 			class setTextureBLACKPawnee {};
 			class setTextureMarid {};
+			class setTextureRHSHunter {};
 			class setTextureWDL {};
 		};
 		class setTextureAAF {
@@ -116,7 +121,35 @@ class CfgVehicles {
 	class I_MRAP_03_hmg_F;
 	class I_MRAP_03_gmg_F;
 	
+	class B_MRAP_01_F;
+	class B_MRAP_01_hmg_F;
+	class B_MRAP_01_gmg_F;
+	
 	//blufor vehicles
+	//hunter
+	class adv_retex_b_mrap_f: B_MRAP_01_F {
+		displayName = "Hunter (Desert)";
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\hunter\rhs_body.paa",
+			"adv_retex\textures\hunter\rhs_back.paa"
+		};
+	};
+	class adv_retex_b_mrap_hmg_f: B_MRAP_01_hmg_F {
+		displayName = "Hunter HMG (Desert)";
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\hunter\rhs_body.paa",
+			"adv_retex\textures\hunter\rhs_back.paa",
+			"adv_retex\textures\hunter\rhs_turret.paa"
+		};
+	};
+	class adv_retex_b_mrap_gmg_f: B_MRAP_01_gmg_F {
+		displayName = "Hunter GMG (Desert)";
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\hunter\rhs_body.paa",
+			"adv_retex\textures\hunter\rhs_back.paa",
+			"adv_retex\textures\hunter\rhs_turret.paa"
+		};
+	};
 	//mora
 	class adv_retex_b_mora_f: I_APC_tracked_03_cannon_F {
 		standard_macro
