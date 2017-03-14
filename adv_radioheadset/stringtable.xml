@@ -21,5 +21,10 @@
             <English>Headset raised.</English>
             <German>Headset aufgesetzt.</German>
         </Key>
+        <Key ID="STR_ADV_HEADSET_LOWERED_EVHTEXT">
+			<Original>Your headset is still lowered!</Original>
+            <English>Your headset is still lowered!</English>
+            <German>Du hast dein Funk-Headset nicht auf!</German>
+        </Key>
 		</Package>
 </Project>
