@@ -11,9 +11,9 @@
 #define civ_macro side=3;\
 			faction="CIV_F";
 			
-#define fennekweapons class xx_arifle_MX_F { weapon = "arifle_MX_F"; count = 2; };
+#define natoweapons class xx_arifle_MX_F { weapon = "arifle_MX_F"; count = 2; };
 
-#define fennekmags class _xx_30Rnd_65x39_caseless_mag { magazine = "30Rnd_65x39_caseless_mag"; count = 16; };\
+#define natomags class _xx_30Rnd_65x39_caseless_mag { magazine = "30Rnd_65x39_caseless_mag"; count = 16; };\
 	class _xx_100Rnd_65x39_caseless_mag { magazine = "100Rnd_65x39_caseless_mag"; count = 6; };\
 	class _xx_HandGrenade { magazine = "HandGrenade"; count = 10; };\
 	class _xx_1Rnd_HE_Grenade_shell { magazine = "1Rnd_HE_Grenade_shell"; count = 10; };\
@@ -71,8 +71,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.12";
-		versionStr = "1.12";
+		version = "1.13";
+		versionStr = "1.13";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -87,6 +87,7 @@ class cfgFunctions {
 			class setTextureNATOStrider {};
 			class setTextureBLACKPawnee {};
 			class setTextureMarid {};
+			class setTextureMora {};
 			class setTextureRHSHunter {};
 			class setTextureWDL {};
 		};
@@ -154,6 +155,12 @@ class CfgVehicles {
 	class adv_retex_b_mora_f: I_APC_tracked_03_cannon_F {
 		standard_macro
 		nato_macro
+		class TransportMagazines {
+			natomags
+		};
+		class TransportWeapons {
+			natoweapons
+		};
 		displayName = "FV-720 Mora";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -166,6 +173,12 @@ class CfgVehicles {
 	class adv_retex_b_marid_f: O_APC_Wheeled_02_rcws_F {
 		standard_macro
 		nato_macro
+		class TransportMagazines {
+			natomags
+		};
+		class TransportWeapons {
+			natoweapons
+		};
 		displayName = "MSE-3 Marid";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -180,6 +193,12 @@ class CfgVehicles {
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
 		standard_macro
 		nato_macro
+		class TransportMagazines {
+			natomags
+		};
+		class TransportWeapons {
+			natoweapons
+		};
 		displayName = "AFV-4 Gorgon";
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
@@ -198,10 +217,10 @@ class CfgVehicles {
 		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		class TransportMagazines {
-			fennekmags
+			natomags
 		};
 		class TransportWeapons {
-			fennekweapons
+			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
@@ -215,10 +234,10 @@ class CfgVehicles {
 		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		class TransportMagazines {
-			fennekmags
+			natomags
 		};
 		class TransportWeapons {
-			fennekweapons
+			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
@@ -232,10 +251,10 @@ class CfgVehicles {
 		crew = "B_soldier_F";
 		typicalCargo[] = {"B_soldier_F"};
 		class TransportMagazines {
-			fennekmags
+			natomags
 		};
 		class TransportWeapons {
-			fennekweapons
+			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
 			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
