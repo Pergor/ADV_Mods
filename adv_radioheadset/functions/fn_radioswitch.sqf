@@ -24,8 +24,8 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
 		
 	},{ call TFAR_fnc_haveSWRadio && !([call TFAR_fnc_activeSWRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
-	[_unit , 1, ["ACE_SelfActions"],_SRoff] call ace_interact_menu_fnc_addActionToObject;
-	[_unit , 1, ["ACE_SelfActions"],_SRon] call ace_interact_menu_fnc_addActionToObject;	
+	[_unit , 1, ["ACE_Equipment"],_SRoff] call ace_interact_menu_fnc_addActionToObject;
+	[_unit , 1, ["ACE_Equipment"],_SRon] call ace_interact_menu_fnc_addActionToObject;	
 
 	_LRoff = ["LRoffSelfAction",("<t color=""#FF0000"">" + (localize "STR_ADV_LR_OFF") + "</t>"),"",{
 	
@@ -39,8 +39,8 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
 		
 	},{ call TFAR_fnc_haveLRRadio && !([call TFAR_fnc_activeLRRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
-	[_unit , 1, ["ACE_SelfActions"],_LRoff] call ace_interact_menu_fnc_addActionToObject;
-	[_unit , 1, ["ACE_SelfActions"],_LRon] call ace_interact_menu_fnc_addActionToObject;
+	[_unit , 1, ["ACE_Equipment"],_LRoff] call ace_interact_menu_fnc_addActionToObject;
+	[_unit , 1, ["ACE_Equipment"],_LRon] call ace_interact_menu_fnc_addActionToObject;
 };
 
 false;
