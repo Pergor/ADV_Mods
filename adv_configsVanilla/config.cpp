@@ -41,7 +41,7 @@ class cfgMagazines {
 	class 200Rnd_65x39_cased_Box_Tracer;
 	class 200Rnd_65x39_cased_Box_Tracer_red: 200Rnd_65x39_cased_Box_Tracer {
 		displayName = "6.5 mm 200Rnd Tracer Box (Red)";
-		descriptionShort = "6.5mm Tracer";
+		descriptionShort = "6.5mm Tracer Red";
 		ammo = "B_65x39_Caseless";
 	};
 	class 200Rnd_65x39_cased_Box_red: 200Rnd_65x39_cased_Box_Tracer_red {
