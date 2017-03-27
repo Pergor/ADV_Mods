@@ -8,7 +8,8 @@
 	model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";\
 	hiddenSelections[] = {"Camo", "insignia"};\
 	hiddenSelectionsTextures[] = {"\A3\Characters_F_Gamma\Guerrilla\Data\ig_guerrilla2_1_co.paa"};\
-	identityTypes[]={"LanguagePER_F", "Head_African", "NoGlasses"};\
+	identityTypes[]={"LanguagePER_F", "Head_African", "NoGlasses",0,"G_NATO_default",0,"G_NATO_casual",0,"G_NATO_pilot",0,"G_NATO_recon",0,"G_NATO_SF",0,"G_NATO_sniper",0,\
+            "G_NATO_diver",0,"G_IRAN_default",0,"G_IRAN_diver",0,"G_GUERIL_default",0,"G_HAF_default",0,"G_CIVIL_female",0,"G_CIVIL_male",0};\
 	faceType = "Man_A3";\
 	genericNames="TanoanMen";\
 	nakedUniform="U_BasicBody";\
@@ -72,6 +73,9 @@ class CfgVehicles {
 	class adv_hod_soldier_k98_medic_f : adv_hod_soldier_k98_1_f {
 		displayName = "Medic (K98)";
 		backpack = "adv_enemies_hod_medicPack_sidor";
+		attendant = 1;
+		icon = "iconManMedic";
+		picture = "pictureHeal";
 	};
 	
 	class adv_hod_soldier_m38_1_f : adv_hod_soldier_k98_1_f {
@@ -102,6 +106,9 @@ class CfgVehicles {
 	class adv_hod_soldier_m38_medic_f : adv_hod_soldier_m38_1_f {
 		displayName = "Medic (M38)";
 		backpack = "adv_enemies_hod_medicPack_sidor";
+		attendant = 1;
+		icon = "iconManMedic";
+		picture = "pictureHeal";
 	};
 	
 	class adv_hod_soldier_mk14_1_f : adv_hod_soldier_k98_1_f {

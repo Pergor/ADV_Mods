@@ -22,8 +22,8 @@ class CfgPatches
 			"A3_Characters_F",
 			"A3_Soft_F_Gamma_Offroad"
 		};
-		version = "1.02";
-		versionStr = "1.02";
+		version = "1.03";
+		versionStr = "1.03";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };

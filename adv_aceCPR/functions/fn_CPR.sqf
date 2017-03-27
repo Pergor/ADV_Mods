@@ -15,9 +15,9 @@ private _maxTime = missionNamespace getVariable ["ace_medical_maxReviveTime",900
 private _startTime = _target getVariable ["ace_medical_reviveStartTime",0];
 
 //probability for custom cpr success:
-private _probability = if ( _isMedic > 0 || _inVeh || _inLoc ) then {
-	if (_isMedic > 1 || _inVeh || _inLoc) then {50} else {70};
-} else {85};
+private _probability = if ( _isMedic > 0) then {
+	if ( _isMedic > 1 ) then { 50 } else { 70 };
+} else { 85 };
 private _diceRoll = 1+floor(random 100);
 
 //diagnostics:

@@ -52,7 +52,7 @@ class CfgVehicles {
         {
 			class _xx_AT_rounds 
 			{
-				magazine = "RPG7_F"; count = 3;
+				magazine = "RPG7_F"; count = 2;
 			};
         };
 	};
@@ -221,7 +221,10 @@ class CfgVehicles {
 	//vehicles
 	class O_G_Offroad_01_F;
 	class O_G_Offroad_01_armed_F;
-	class I_C_Offroad_02_unarmed_F;
+	class Offroad_02_unarmed_base_F;
+	class I_C_Offroad_02_unarmed_F: Offroad_02_unarmed_base_F {
+		class Eventhandlers;
+	};
 	
 	class adv_pirates_offroad_f : O_G_Offroad_01_F {
 		standard_cfg_vehicle
@@ -244,5 +247,6 @@ class CfgVehicles {
 		displayname = "MB 4WD";
 		crew = "adv_pirates_soldier_3_f";
 		typicalCargo[] = { "adv_pirates_soldier_TL_f" };
+		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0),['Olive',1],['hideLeftDoor',1,'hideRightDoor',1,'hideFenders',1,'hideHeadSupportRear',1,'hideHeadSupportFront',1,'hideRollcage',1]] call BIS_fnc_initVehicle;};"; };
 	};
 };

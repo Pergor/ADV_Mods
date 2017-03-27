@@ -12,4 +12,4 @@ This addon is published under the APL-SA licence:
 ( http://www.bistudio.com/community/licenses/arma-public-license-share-alike )
 
 Noncommercial includes monetized servers: This addon or parts of it may not be used on monetized servers.
-Altis Life - You may not use this addon or parts of it in any derivative of Life Gamemode.
+Altis Life - This addon or parts of it may not be used in any derivative of Life gamemode.

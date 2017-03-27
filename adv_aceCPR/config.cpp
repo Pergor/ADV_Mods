@@ -37,30 +37,3 @@ class ACE_Medical_Actions {
 		};
 	};
 };
-
-/*
-class CfgVehicles
-{
-	class Man;
-	class CAManBase: Man
-	{
-		class ACE_Actions
-		{
-			class ACE_Torso
-			{
-				class adv_aceCPR_CPR
-				{
-					displayName = localize STR_ADV_ACECPR_CPR;
-					condition = "[_target] call adv_aceCPR_fnc_canCPR";
-					statement = "[_target,_player] call adv_aceCPR_fnc_CPR";
-					showDisabled = 0;
-					priority = 3;
-					enableInside = 1;
-					distance = 2.0;
-					//icon = "\bridge_punch\ui\knock.paa";
-				};
-			};
-		};
-	};
-};
-*/

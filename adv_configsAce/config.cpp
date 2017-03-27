@@ -47,7 +47,7 @@ class CfgWeapons
 	class Rifle_Long_Base_F;
 	
 	class LMG_Mk200_F: Rifle_Long_Base_F {
-		magazines[] += {"200Rnd_65x39_cased_Box_red","200Rnd_65x39_cased_Box_Tracer_red"};
+		magazines[] += {"200Rnd_65x39_cased_Box_red","200Rnd_65x39_cased_Box_Tracer_red","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","100Rnd_65x39_caseless_mag_Tracer","100Rnd_65x39_caseless_mag"};
 	};
 	
 	class LMG_03_base_F: Rifle_Long_Base_F {
