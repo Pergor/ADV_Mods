@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="adv">
+    <Package name="radioheadset">
+        <Key ID="STR_ADV_ACECPR_CPR">
+			<Original>(TRUE) CPR</Original>
+            <English>(TRUE) CPR</English>
+            <German>(RICHTIGE) HLW</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_CPR_PROGRESS">
+			<Original>Performing CPR...</Original>
+            <English>Performing CPR...</English>
+            <German>HLW durchführen...</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_CPR_ABORTED">
+			<Original>CPR not completed.</Original>
+            <English>CPR not completed.</English>
+            <German>HLW nicht abgeschlossen.</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_CPR_COMPLETED">
+			<Original>%1 stabilized the patient.</Original>
+            <English>%1 stabilized the patient.</English>
+            <German>%1 hat den Patienten stabilisiert.</German>
+        </Key>
+		</Package>
+</Project>
