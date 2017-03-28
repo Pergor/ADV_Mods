@@ -8,8 +8,7 @@
 	model = "\a3\characters_F_gamma\Guerrilla\ig_guerrilla2_1.p3d";\
 	hiddenSelections[] = {"Camo", "insignia"};\
 	hiddenSelectionsTextures[] = {"\A3\Characters_F_Gamma\Guerrilla\Data\ig_guerrilla2_1_co.paa"};\
-	identityTypes[]={"LanguagePER_F", "Head_African", "NoGlasses",0,"G_NATO_default",0,"G_NATO_casual",0,"G_NATO_pilot",0,"G_NATO_recon",0,"G_NATO_SF",0,"G_NATO_sniper",0,\
-            "G_NATO_diver",0,"G_IRAN_default",0,"G_IRAN_diver",0,"G_GUERIL_default",0,"G_HAF_default",0,"G_CIVIL_female",0,"G_CIVIL_male",0};\
+	identityTypes[]={"Head_African", "LanguagePER_F"};\
 	faceType = "Man_A3";\
 	genericNames="TanoanMen";\
 	nakedUniform="U_BasicBody";\
