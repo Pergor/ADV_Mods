@@ -32,7 +32,7 @@ if (local _target) then {
 [_caller,_target,_selectionName,_className,_items] call ace_medical_fnc_treatmentAdvanced_CPR;
 
 //if necessary execute the custom cpr action:
-if ( [_target] call adv_aceCPR_fnc_canCPR && (missionNamespace getVariable ["ace_medical_enableRevive",0]) > 0 ) exitWith {
+if ( (missionNamespace getVariable ["ace_medical_enableRevive",0]) > 0 ) exitWith {
 	//diagnostics
 	if (adv_aceCPR_diag) then {
 		["adv_aceCPR_evh_log", ["adv_aceCPR - fnc_cpr is being executed."]] call CBA_fnc_localEvent;

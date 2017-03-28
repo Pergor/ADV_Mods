@@ -4,6 +4,16 @@ ADV_aceCPR_fnc_CPR_Local - by Belbo
 
 params ["_caller", "_target"];
 
+if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
+	//diagnostics:
+	if (adv_aceCPR_diag) then {
+		if !(local _caller) then {
+			["adv_aceCPR_evh_log", ["adv_aceCPR - target was too long in revive state."], _caller] call CBA_fnc_targetEvent;
+		};
+		["adv_aceCPR_evh_log", ["adv_aceCPR - target was too long in revive state."]] call CBA_fnc_localEvent;
+	};
+};
+
 //probability for custom cpr success:
 private _isMedic = _caller getVariable ["ACE_medical_medicClass",0];
 //probability depends on medicClass of _caller:
