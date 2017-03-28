@@ -18,6 +18,10 @@ private _startTime = _target getVariable ["ace_medical_reviveStartTime",0];
 private _probability = if ( _isMedic > 0) then {
 	if ( _isMedic > 1 ) then { 50 } else { 70 };
 } else { 85 };
+/*
+private _gotEpi = _target getVariable ["ace_medical_ace_epinephrin_inSystem",0];
+if (_gotEpi) then {};
+*/
 private _diceRoll = 1+floor(random 100);
 
 //diagnostics:
@@ -37,9 +41,11 @@ if ( _diceRoll >= _probability ) exitWith {
 	
 	//execute custom CPR local to the unit:
 	if (local _target) then {
-        [_target] call adv_aceCPR_fnc_CPR_Local;
+        //[_target] call adv_aceCPR_fnc_CPR_Local;
+		["adv_aceCPR_evh_CPR_Local", [_target]] call CBA_fnc_localEvent;
     } else {
-        [_target] remoteExecCall ["adv_aceCPR_fnc_CPR_Local", _target];
+        //[_target] remoteExecCall ["adv_aceCPR_fnc_CPR_Local", _target];
+		["adv_aceCPR_evh_CPR_Local", [_target], _target] call CBA_fnc_targetEvent;
 	};
 };
 

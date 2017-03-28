@@ -20,11 +20,13 @@ class CfgFunctions {
 		tag = "adv_aceCPR";
 		class init {
 			file = "adv_aceCPR\functions";
+			class action {};
 			class addTime {};
-			class init {};
+			class init { postInit = 1; };
 			class canCPR {};
 			class CPR {};
 			class CPR_Local {};
+			class getBloodLoss {};
 		};
 	};
 };
@@ -33,7 +35,7 @@ class ACE_Medical_Actions {
 	class Advanced {
 		class fieldDressing;
 		class CPR: fieldDressing {
-			callbackSuccess = "adv_aceCPR_fnc_init";
+			callbackSuccess = "adv_aceCPR_fnc_action";
 		};
 	};
 };

@@ -2,18 +2,22 @@
 ADV_aceCPR_fnc_CPR - by Belbo
 */
 
-params [
-	["_target", objNull, [objNull]]
-];
+params ["_target"];
 
 //resetting the values of the target:
-_target setVariable ["ace_medical_inReviveState",false, true];
-_target setVariable ["ace_medical_inCardiacArrest",false, true];
-_target setVariable ["ace_medical_heartRate",40, true];
-_target setVariable ["ace_medical_bloodPressure", [40,60], true];
-_target setVariable ["ace_medical_bloodVolume",(_target getVariable ["ace_medical_bloodVolume",70])-20, true];
-if (_target getVariable "ace_medical_bloodVolume" < 45) then {
-	_target setVariable ["ace_medical_bloodVolume",45, true];
+_target setVariable ["ace_medical_inReviveState",false,true];
+_target setVariable ["ace_medical_inCardiacArrest",nil, true];
+if (_target getVariable "ace_medical_bloodVolume" > 60) then {
+	_target setVariable ["ace_medical_heartRate",30];
+} else {
+	_target setVariable ["ace_medical_heartRate",40];
+};
+/*
+_target setVariable ["ace_medical_bloodPressure", [40,60]];
+_target setVariable ["ace_medical_bloodVolume",(_target getVariable ["ace_medical_bloodVolume",70])-20];
+*/
+if (_target getVariable "ace_medical_bloodVolume" < 30) then {
+	_target setVariable ["ace_medical_bloodVolume",30];
 };
 
 //diagnostics:
