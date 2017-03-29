@@ -15,7 +15,8 @@ if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 };
 
 //probability for custom cpr success:
-private _isMedic = _caller getVariable ["ACE_medical_medicClass",0];
+private _isMedic = _caller getVariable ["ACE_medical_medicClass", 0];
+private _onlyDoctors = missionNamespace getVariable ["adv_aceCPR_onlyDoctors", false];
 //probability depends on medicClass of _caller:
 private _probability = if ( _isMedic > 0 ) then {
 	if ( _isMedic > 1 ) then { 50 } else { 30 };
@@ -62,9 +63,20 @@ call {
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
-//and let at least a chance of 2%:
+//and let at least a chance of 2%...:
 if (_probability < 1) then {
 	_probability = 2;
+};
+//... but not if the mission has medevac:
+if ( _onlyDoctors && _isMedic < 2 ) then {
+	_probability = 0;
+	//diagnostics:
+	if (adv_aceCPR_diag) then {
+		if !(local _caller) then {
+			["adv_aceCPR_evh_log", ["adv_aceCPR - Caller's medicClass is not sufficient."], _caller] call CBA_fnc_targetEvent;
+		};
+		["adv_aceCPR_evh_log", ["adv_aceCPR - Caller's medicClass is not sufficient."]] call CBA_fnc_localEvent;
+	};
 };
 
 //diagnostics:
