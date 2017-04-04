@@ -1,6 +1,49 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project name="adv">
     <Package name="radioheadset">
+		
+        <Key ID="STR_ADV_SR_OFF">
+			<Original>Switch Handheld Off</Original>
+            <English>Switch Handheld Off</English>
+            <German>Handfunkgerät abschalten</German>
+        </Key>
+        <Key ID="STR_ADV_SR_OFF_HINT">
+			<Original>You turned your handheld radio off.</Original>
+            <English>You turned your handheld radio off.</English>
+            <German>Du hast dein Handfunkgerät ausgeschaltet.</German>
+        </Key>
+        <Key ID="STR_ADV_SR_ON">
+			<Original>Switch Handheld On</Original>
+            <English>Switch Handheld On</English>
+            <German>Handfunkgerät anschalten</German>
+        </Key>
+        <Key ID="STR_ADV_SR_ON_HINT">
+			<Original>You turned your handheld radio back on.</Original>
+            <English>You turned your handheld radio back on.</English>
+            <German>Du hast dein Handfunkgerät eingeschaltet.</German>
+        </Key>
+
+        <Key ID="STR_ADV_LR_OFF">
+			<Original>Switch Longrange Off</Original>
+            <English>Switch Longrange Off</English>
+            <German>LR-Funkgerät abschalten</German>
+        </Key>
+        <Key ID="STR_ADV_LR_OFF_HINT">
+			<Original>You turned your longrange radio off.</Original>
+            <English>You turned your longrange radio off.</English>
+            <German>Du hast dein LR-Funkgerät ausgeschaltet.</German>
+        </Key>
+        <Key ID="STR_ADV_LR_ON">
+			<Original>Switch Longrange On</Original>
+            <English>Switch Longrange On</English>
+            <German>LR-Funkgerät anschalten</German>
+        </Key>
+        <Key ID="STR_ADV_LR_ON_HINT">
+			<Original>You turned your longrange radio back on.</Original>
+            <English>You turned your longrange radio back on.</English>
+            <German>Du hast dein LR-Funkgerät eingeschaltet.</German>
+        </Key>
+	
         <Key ID="STR_ADV_HEADSET_LOWER">
 			<Original>Lower Headset</Original>
             <English>Lower Headset</English>
@@ -11,29 +54,6 @@
             <English>Raise Headset</English>
             <German>Headset aufsetzen</German>
         </Key>
-		
-        <Key ID="STR_ADV_SR_OFF">
-			<Original>Switch Handheld Off</Original>
-            <English>Switch Handheld Off</English>
-            <German>Handfunkgerät abschalten</German>
-        </Key>
-        <Key ID="STR_ADV_SR_ON">
-			<Original>Switch Handheld On</Original>
-            <English>Switch Handheld On</English>
-            <German>Handfunkgerät anschalten</German>
-        </Key>
-
-        <Key ID="STR_ADV_LR_OFF">
-			<Original>Switch Longrange Off</Original>
-            <English>Switch Longrange Off</English>
-            <German>LR-Funkgerät abschalten</German>
-        </Key>
-        <Key ID="STR_ADV_LR_ON">
-			<Original>Switch Longrange On</Original>
-            <English>Switch Longrange On</English>
-            <German>LR-Funkgerät anschalten</German>
-        </Key>
-
         <Key ID="STR_ADV_HEADSET_LOWERED">
 			<Original>Headset lowered.</Original>
             <English>Headset lowered.</English>

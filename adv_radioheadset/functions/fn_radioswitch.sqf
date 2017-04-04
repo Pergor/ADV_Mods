@@ -16,11 +16,17 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
 	
 		[call TFAR_fnc_activeSWRadio,false] call TFAR_fnc_radioOn;
 		
+		//systemChat (localize "STR_ADV_SR_OFF_HINT");
+		[parseText (localize "STR_ADV_SR_OFF_HINT"), 5] call TFAR_fnc_showHint;
+		
 	},{ call TFAR_fnc_haveSWRadio && ([call TFAR_fnc_activeSWRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
 	_SRon = ["SRonSelfAction",("<t color=""#00FF00"">" + (localize "STR_ADV_SR_ON") + "</t>"),"",{
 
 		[call TFAR_fnc_activeSWRadio,true] call TFAR_fnc_radioOn;
+		
+		//systemChat (localize "STR_ADV_SR_ON_HINT");
+		[parseText (localize "STR_ADV_SR_ON_HINT"), 5] call TFAR_fnc_showHint;
 		
 	},{ call TFAR_fnc_haveSWRadio && !([call TFAR_fnc_activeSWRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
@@ -31,11 +37,17 @@ if ( isClass(configFile >> "CfgPatches" >> "ace_interact_menu") ) exitWith {
 	
 		[call TFAR_fnc_activeLRRadio,false] call TFAR_fnc_radioOn;
 		
+		//systemChat (localize "STR_ADV_LR_OFF_HINT");
+		[parseText (localize "STR_ADV_LR_OFF_HINT"), 5] call TFAR_fnc_showHint;
+		
 	},{ call TFAR_fnc_haveLRRadio && ([call TFAR_fnc_activeLRRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
 	_LRon = ["LRonSelfAction",("<t color=""#00FF00"">" + (localize "STR_ADV_LR_ON") + "</t>"),"",{
 
 		[call TFAR_fnc_activeLRRadio,true] call TFAR_fnc_radioOn;
+		
+		//systemChat (localize "STR_ADV_LR_ON_HINT");
+		[parseText (localize "STR_ADV_LR_ON_HINT"), 5] call TFAR_fnc_showHint;
 		
 	},{ call TFAR_fnc_haveLRRadio && !([call TFAR_fnc_activeLRRadio] call TFAR_fnc_radioOn) }] call ace_interact_menu_fnc_createAction;
 	
