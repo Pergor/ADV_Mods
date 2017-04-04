@@ -8,6 +8,7 @@ params [
 	["_unit", player, [objNull]]
 ];
 
+
 if (isNil "_mediKit") then { _mediKit = 0; };
 if (isNil "_FirstAidKits") then { _FirstAidKits = 0; };
 
@@ -32,6 +33,7 @@ if (isNil "_ACE_salineIV_250") then { _ACE_salineIV_250 = 0; };
 if (isNil "_ACE_bodyBag") then { _ACE_bodyBag = 0; };
 if (isNil "_ACE_surgicalKit") then { _ACE_surgicalKit = 0; };
 if (isNil "_ACE_personalAidKit") then { _ACE_personalAidKit = 0; };
+
 
 if ( isClass(configFile >> "CfgPatches" >> "ACE_medical") ) exitWith {
 	if ( (missionnamespace getVariable ["ace_medical_level",2]) > 1 ) then {
