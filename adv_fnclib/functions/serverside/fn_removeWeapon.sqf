@@ -6,7 +6,7 @@ example:
 
 [] spawn {
 	waitUntil {captive target_1};
-	[target_1] call ADV_fnc_removeWeapon;
+	[target_1] call ADV_fnclib_fnc_removeWeapon;
 };
 
 */

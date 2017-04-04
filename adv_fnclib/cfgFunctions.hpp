@@ -3,8 +3,14 @@ class CfgFunctions {
 		tag = "adv_fnclib";
 		class clientside {
 			file = "adv_fnclib\functions\clientside";
+			class aceFAK {};
+			class aceMedicalItems {};
+			class changeUnit {};
 			class fullHeal {};
+			class inGroup {};
+			class insignia {};
 			class safeZone {};
+			class setFrequencies {};
 			class teleport {};
 			class undercover {};
 		};
@@ -27,11 +33,15 @@ class CfgFunctions {
 			class clearCargo {};
 			class createZeus {};
 			class disableVeh {};
+			class findNearestEnemy {};
 			class flare {};
+			class getOppPos {};
+			class IEDhandler {};
 			class paraBomb {};
 			class paraCrate {};
 			class removeWeapon {};
 			class setSide {};
+			class spawnGroup {};
 			class zeusObjects {};
 		};
 	};

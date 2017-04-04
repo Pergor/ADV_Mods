@@ -1,15 +1,13 @@
 ﻿/*
-adv_fnclib_fnc_zeusObjects by Belbo
+zeus script by Belbo
 Makes most units placed in the editor and playable units editable by Zeus.
-Call from init.sqf via:
-if (isServer) then {[CURATORMODULENAME] spawn compile preprocessFileLineNumbers "fn_zeus.sqf";};
+Call via:
+if (isServer) then {[CURATORMODULENAME] spawn adv_fnclib_fnc_zeusObjects;};
 or:
-if (isServer) then {[] spawn compile preprocessFileLineNumbers "fn_zeus.sqf";};
+if (isServer) then {[] spawn adv_fnclib_fnc_zeusObjects;};
 */
 
 if (!isServer) exitWith {};
-
-//_curator = [_this, 0, true] call BIS_fnc_param;
 
 params [
 	["_curator", true, [true, objNull]]
@@ -20,9 +18,9 @@ switch (typeName _curator) do {
 	case "OBJECT": {
 		//adds objects placed in editor:
 		_curator addCuratorEditableObjects [vehicles,true];
-		_curator addCuratorEditableObjects [(allMissionObjects "Man"), false];
-		_curator addCuratorEditableObjects [(allMissionObjects "Air"), true];
-		_curator addCuratorEditableObjects [(allMissionObjects "Ammo"), false];
+		_curator addCuratorEditableObjects [(entities "Man"), false];
+		_curator addCuratorEditableObjects [(entities "Air"), false];
+		_curator addCuratorEditableObjects [(entities "Ammo"), false];
 		//makes all units continuously available to Zeus (for respawning players and AI that's being spawned by a script.)
 		while {true} do {
 			_curatorUnit = getAssignedCuratorUnit _curator;
@@ -36,17 +34,21 @@ switch (typeName _curator) do {
 	default {
 		{
 			_x addCuratorEditableObjects [vehicles,true];
-			_x addCuratorEditableObjects [(allMissionObjects "Man"), false];
-			_x addCuratorEditableObjects [(allMissionObjects "Air"), true];
-			_x addCuratorEditableObjects [(allMissionObjects "Ammo"), false];
+			_x addCuratorEditableObjects [(entities "Man"), false];
+			_x addCuratorEditableObjects [(entities "Air"), false];
+			_x addCuratorEditableObjects [(entities "Ammo"), false];
 			nil;
 		} count allCurators;
 		while {true} do {
 			{
-				_curatorUnit = getAssignedCuratorUnit _x;
-				if (!isNil "_curatorUnit") then {
+				if ( !isNull (getAssignedCuratorUnit _x) ) then {
 					_x addCuratorEditableObjects [allUnits, false];
 					_x addCuratorEditableObjects [vehicles, true];
+					/*
+					_bluforUnits = [];
+					{ if ( side (group _x) == west ) then { _bluforUnits pushBack _x }; nil; } count allUnits;
+					_x addCuratorEditableObjects [_bluforUnits,true];
+					*/
 				};
 			} count allCurators;
 			sleep 5;

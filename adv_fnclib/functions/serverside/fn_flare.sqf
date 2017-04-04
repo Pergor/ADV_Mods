@@ -7,7 +7,7 @@ _this select 2 = spread of actual flare spawn - SCALAR;
 _this select 3 = height - SCALAR;
 
 ex.:
-[[player,player],"red",30,120] call ADV_fnc_flare;
+[[player,player],"red",30,120] call ADV_fnclib_fnc_flare;
 
 */
 

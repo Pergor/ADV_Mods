@@ -1,5 +1,5 @@
 ﻿/*
-ADV_fnclib_fnc_teleport by Belbo
+ADV_fnc_teleport by Belbo
 
 Attaches an action to an object that allows teleport to a provided location from this object.
 
@@ -20,7 +20,7 @@ params [
 ];
 _name = if (_name isEqualTo "" || isNil "_name") then {_target} else {_name};
 
-adv_fnclib_scriptfnc_teleport = {
+adv_scriptfnc_teleport = {
 	params [
 		["_unit", player, [objNull]],
 		["_target", objNull, [objNull,"",[]]],
@@ -53,11 +53,12 @@ _actionText = if (_text isEqualTo "" || isNil "_text") then {
 } else {
 	format ["<t color='#00FF00'>%1</t>",_text];
 };
+
 _start addAction [
 	_actionText,
 	{
-		[_this select 1, (_this select 3) select 0, (_this select 3) select 1, (_this select 3) select 2] spawn adv_fnclib_scriptfnc_teleport;
-	},[_target,_name,_text],6,false,true,"","player distance cursortarget <5"
+		[_this select 1, (_this select 3) select 0, (_this select 3) select 1, (_this select 3) select 2] spawn adv_scriptfnc_teleport;
+	},[_target,_name,_text],6,false,true,"","true",5
 ];
 	
 if (true) exitWith {};

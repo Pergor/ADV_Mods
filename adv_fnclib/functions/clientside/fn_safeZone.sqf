@@ -13,7 +13,7 @@ params [
 	["_radius", 100,[0]]
 ];
 
-adv_fnclib_safezone_scriptfnc = {
+adv_safezone_scriptfnc = {
 	params [
 		["_target", player, [objNull]],
 		["_object", [0,0,0], [[]]],
@@ -28,20 +28,20 @@ adv_fnclib_safezone_scriptfnc = {
 	true
 };
 
-adv_fnclib_safezone_targetPos = switch (typeName _object) do {
+adv_safezone_targetPos = switch (typeName _object) do {
 	case "STRING": { getMarkerPos _object };
 	case "OBJECT": { getPosWorld _object };
 	case "ARRAY": { _object };
 	default {nil};
 };
 
-adv_fnclib_safezone_radius = _radius;
+adv_safezone_radius = _radius;
 
 _target addEventhandler [
 	"fired",
 	{
 		if (_this select 1 == "THROW") then {
-			[_this select 0,adv_fnclib_safezone_targetPos,adv_fnclib_safezone_radius,_this select 6,_this select 5] call adv_fnclib_safezone_scriptfnc;
+			[_this select 0,adv_safezone_targetPos,adv_safezone_radius,_this select 6,_this select 5] call adv_safezone_scriptfnc;
 		};
 	}
 ];

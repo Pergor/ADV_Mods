@@ -9,14 +9,10 @@ If the last radio repeater is deactivated, the distance multiplicator is removed
 Possible call - has to be executed on client and server:
 
 in init.sqf:
-[VEHICLE, west, 90] spawn ADV_fnc_radioRelay;
-or
-[VEHICLE, west, 90] spawn compile preprocessFileLineNumbers "fn_radioRelay.sqf";
+[VEHICLE, west, 90] spawn ADV_fnclib_fnc_radioRelay;
 
 or from a local client:
-[VEHICLE, west, 90] remoteExec ["ADV_fnc_radioRelay",0];
-or
-{[VEHICLE, west, 90] spawn compile preprocessFileLineNumbers "fn_radioRelay.sqf";} remoteExec ["bis_fnc_spawn",0];
+[VEHICLE, west, 90] remoteExec ["ADV_fnclib_fnc_radioRelay",0];
 */
 
 params [
@@ -69,14 +65,14 @@ if (side player == _side || typeOf _relay == "Land_DataTerminal_01_F") then {
 				waitUntil { sleep 1; (damage _relay) < 0.6 };
 				_relay setVariable [format ["adv_var_isRelay_%1",_side],false,true];
 			
-				adv_fnclib_handle_relayActionOn = _relay addAction [("<t color=""#00FF00"">" + ("Activate Radio Repeater") + "</t>"), {
+				adv_handle_relayActionOn = _relay addAction [("<t color=""#00FF00"">" + ("Activate Radio Repeater") + "</t>"), {
 				
 					(_this select 0) setVariable [format ["adv_var_isRelay_%1",((_this select 3) select 0)],true,true];
 					systemChat "Radio repeater activated.";
 					if (typeOf (_this select 0) == "Land_DataTerminal_01_F") then { [(_this select 0),3] call BIS_fnc_dataTerminalAnimate; };
 					(_this select 0) removeAction (_this select 2);
 					
-					adv_fnclib_handle_relayActionOff = (_this select 0) addAction [("<t color=""#FF0000"">" + ("Deactivate Radio Repeater") + "</t>"), {
+					adv_handle_relayActionOff = (_this select 0) addAction [("<t color=""#FF0000"">" + ("Deactivate Radio Repeater") + "</t>"), {
 					
 						(_this select 0) setVariable [format ["adv_var_isRelay_%1",((_this select 3) select 0)],false,true];
 						systemChat "Radio repeater deactivated.";
@@ -89,7 +85,7 @@ if (side player == _side || typeOf _relay == "Land_DataTerminal_01_F") then {
 				
 				waitUntil { sleep 1; _relay getVariable (format ["adv_var_isRelay_%1",_side]) };
 				waitUntil { sleep 1; ((damage _relay) > 0.6 || !alive _relay) || !(_relay getVariable (format ["adv_var_isRelay_%1",_side])) };
-				if (!isNil "adv_handle_relayActionOff") then { _relay removeAction adv_fnclib_handle_relayActionOff; };
+				if (!isNil "adv_handle_relayActionOff") then { _relay removeAction adv_handle_relayActionOff; };
 			};
 		};
 	};

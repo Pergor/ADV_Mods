@@ -1,16 +1,18 @@
 ﻿/*
-ADV_fnc_spawnFire:
+ADV_fnclib_fnc_spawnFire:
 
 Creates a fire or smoke effect at a given object.
 
 Possible calls - has to be executed on each client locally:
 
-[OBJECT,"FIRE_SMALL"] call ADV_fnc_spawnFire;
-[OBJECT,"FIRE_MEDIUM"] call ADV_fnc_spawnFire;
-[OBJECT,"FIRE_BIG"] call ADV_fnc_spawnFire;
-[OBJECT,"SMOKE_SMALL"] call ADV_fnc_spawnFire;
-[OBJECT,"SMOKE_MEDIUM"] call ADV_fnc_spawnFire;
-[OBJECT,"SMOKE_BIG"] call ADV_fnc_spawnFire;
+[OBJECT,"FIRE_SMALL"] call ADV_fnclib_fnc_spawnFire;
+[OBJECT,"FIRE_MEDIUM"] call ADV_fnclib_fnc_spawnFire;
+[OBJECT,"FIRE_BIG"] call ADV_fnc_fnclib_spawnFire;
+[OBJECT,"FIRE_NODAMAGE"] call ADV_fnc_fnclib_spawnFire;
+[OBJECT,"SMOKE_SMALL"] call ADV_fnclib_fnc_spawnFire;
+[OBJECT,"SMOKE_MEDIUM"] call ADV_fnclib_fnc_spawnFire;
+[OBJECT,"SMOKE_BIG"] call ADV_fnclib_fnc_spawnFire;
+[OBJECT,"LIGHT_SMALL"] call ADV_fnclib_fnc_spawnFire;
 */
 
 private["_effect","_pos","_fire","_smoke"];

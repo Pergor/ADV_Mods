@@ -3,7 +3,7 @@ ADV_fnclib_fnc_CASRun by Belbo
 
 Spawns a CAS run at given position with given direction, given plane class and given type.
 Call with:
-[attackLogic,0,"B_Plane_CAS_01_F",0] call ADV_fnc_CASRun;
+[attackLogic,0,"B_Plane_CAS_01_F",0] call ADV_fnclib_fnc_CASRun;
 
 _this select 0 = position of attack (position in form of [x,y,z], marker or object);
 _this select 1 = direction of attack (number);

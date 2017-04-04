@@ -3,9 +3,9 @@ ADV_fnclib_fnc_paraCrate by Belbo
 
 Spawns a supply crate in the given height.
 Call with:
-[spawnLocation,500,"BLUE",[ADV_fnc_clearCargo,ADV_fnc_crate],"B_CargoNet_01_ammo_F","B_Parachute_02_F"] call ADV_fnc_paraCrate;
+[spawnLocation,500,"BLUE",[ADV_fnc_clearCargo,ADV_fnc_crate],"B_CargoNet_01_ammo_F","B_Parachute_02_F"] call ADV_fnclib_fnc_paraCrate;
 or
-["landingMarker",500,"NONE","clearItemCargo (_this select 0);"] call ADV_fnc_paraCrate;
+["landingMarker",500,"NONE","clearItemCargo (_this select 0);"] call ADV_fnclib_fnc_paraCrate;
 
 _this select 0 = Object or Marker at the spawn Location (object or string);
 _this select 1 = Height (number);

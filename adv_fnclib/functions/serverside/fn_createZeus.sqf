@@ -7,7 +7,7 @@ _this select 0 = string of player's unit - (string)
 _this select 1 = mode (0 = no addons, 1 = Addons present in scenario, 2 = All Addons, 3 = All Addons including unofficial ones)
 
 call like this:
-["zeus_1",3] remoteExecCall ["adv_fnc_createZeus",2];
+["zeus_1",2] remoteExecCall ["adv_fnclib_fnc_createZeus",2];
 */
 
 if (!isServer) exitWith {};

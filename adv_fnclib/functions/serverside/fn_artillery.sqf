@@ -1,6 +1,6 @@
 ﻿/*
 Based on the Artillery-Script by Nyaan (edited by Belbo)
-[[target_1,target_2],"Sh_155mm_AMOS",[3,7],300,5,50] spawn ADV_fnc_artillery;
+[[target_1,target_2],"Sh_155mm_AMOS",[3,7],300,5,50] spawn ADV_fnclib_fnc_artillery;
 */
 
 params [
@@ -10,20 +10,25 @@ params [
 	["_height", 300, [0]],
 	["_amount", 5, [0]],
 	["_spread", 50, [0]],
-	"_targetType", "_targetPos", "_strike", "_sound", "_soundFile"
+	"_targetPos", "_strike", "_sound", "_soundFile"
 ];
 
 {
 	_target = _x;
 	if (!isNil "_target") then {
-		_targetType = typeName (_target);
 		_targetPos = nil;
 		for "_x" from 1 to _amount do {
-			if (_targetType == "STRING") then {
-				_targetPos = [getMarkerPos _target select 0, getMarkerPos _target select 1, _height];
-			};
-			if (_targetType == "OBJECT") then {
-				_targetPos = [getPos _target select 0, getPos _target select 1, _height];
+			private _targetPos = call {
+				if (_target isEqualType "") exitWith {
+					[getMarkerPos _target select 0, getMarkerPos _target select 1, _height];
+				};
+				if (_target isEqualType objNull) exitWith {
+					[getPosWorld _target select 0, getPosWorld _target select 1, _height];
+				};
+				if (_target isEqualType []) exitWith {
+					[_target select 0,_target select 1, _height];
+				};
+				nil;
 			};
 			_strike = createVehicle [_ammotype, _targetPos, [], _spread, "NONE"];
 			_strike allowdamage false;
@@ -36,6 +41,7 @@ params [
 			sleep ((_delay select 0) + round (random ((_delay select 1) - (_delay select 0))));
 		};
 	};
+	nil;
 } count _targetArray;
 
 if (true) exitWith {};
