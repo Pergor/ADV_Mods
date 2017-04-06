@@ -132,7 +132,7 @@ if (isServer) exitWith {
 		params ["_relay","_side","_minHeight"];
 		//we make sure the loop is only executed once for every vehicle:
 		if ( _relay getVariable ["adv_radioRelay_available",true] ) then {
-			_relay setVariable [format ["adv_radioRelay_available",false]];
+			_relay setVariable ["adv_radioRelay_available",false];
 			//the loop runs as long as the vehicle is alive:
 			while {alive _relay} do {
 				//this waits until the damage to the relay is higher than 60%, the relay is dead, below minimal height or moving:
