@@ -47,4 +47,4 @@ params [
 	nil;
 } count allPlayers;
 
-nil;
+true;

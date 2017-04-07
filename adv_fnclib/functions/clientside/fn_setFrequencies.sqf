@@ -27,3 +27,5 @@ if (isClass(configFile >> "CfgPatches" >> "tfar_core")) exitWith {
 	};
 	_settings;
 };
+
+false;

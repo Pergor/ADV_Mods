@@ -2,7 +2,7 @@
 ADV_fnclib_fnc_weather
 */
 
-_this spawn {
+_handle = _this spawn {
 	params [
 		["_weather", 99, [0,""]]
 	];
@@ -39,4 +39,4 @@ _this spawn {
 	skipTime -24;
 };
 
-nil;
+_handle;

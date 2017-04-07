@@ -18,9 +18,9 @@ params [
 	"_wholeName"
 ];
 _wholeName = format ["%1 %2",_firstName,_lastName];
-
-(driver _target) setName [_firstName,_lastName,_wholeName];
 _return = [_firstName,_lastName,_wholeName];
 
+(driver _target) setName _return;
 _target setName _return;
+
 _return;

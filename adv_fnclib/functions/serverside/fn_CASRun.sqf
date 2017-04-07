@@ -40,4 +40,4 @@ _dummy setDir _dir;
     deleteVehicle (_this select 0);
 };
 
-nil;
+true;

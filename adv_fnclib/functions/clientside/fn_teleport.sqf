@@ -54,11 +54,11 @@ _actionText = if (_text isEqualTo "" || isNil "_text") then {
 	format ["<t color='#00FF00'>%1</t>",_text];
 };
 
-_start addAction [
+_id = _start addAction [
 	_actionText,
 	{
 		[_this select 1, (_this select 3) select 0, (_this select 3) select 1, (_this select 3) select 2] spawn adv_scriptfnc_teleport;
 	},[_target,_name,_text],6,false,true,"","true",5
 ];
 	
-nil;
+_id;

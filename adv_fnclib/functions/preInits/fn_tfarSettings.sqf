@@ -87,8 +87,9 @@ if (isClass(configFile >> "CfgPatches" >> "tfar_core")) exitWith {
 	TFAR_freq_sw_independent = _settingsSwGuer;
 	TFAR_freq_lr_independent = _settingsLrGuer;
 
-	nil;
+	true;
 };
+
 if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) exitWith {
 	//für zusätzliche variablen/functions: https://github.com/michail-nikolaev/task-force-arma-3-radio/wiki/API:-Variables
 	call compile preprocessFileLineNumbers "\task_force_radio\functions\common.sqf";
@@ -160,5 +161,7 @@ if (isClass (configFile >> "CfgPatches" >> "task_force_radio")) exitWith {
 	tf_freq_guer = _settingsSwGuer;
 	tf_freq_guer_lr = _settingsLrGuer;
 	
-	nil;
+	true;
 };
+
+false;

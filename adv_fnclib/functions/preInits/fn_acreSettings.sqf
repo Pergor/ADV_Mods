@@ -8,9 +8,11 @@ params [
 
 if ( hasInterface && !isServer && _initState == "preInit" ) exitWith {
 	adv_radioSettings_exitState = "exit with preInit";
+	false;
 };
 if ( isServer && _initState == "postInit") exitWith {
 	adv_radioSettings_exitState = "exit with postInit";
+	false;
 };
 
 if ( isClass (configFile >> "CfgPatches" >> "acre_main") ) exitWith {
@@ -96,5 +98,7 @@ if ( isClass (configFile >> "CfgPatches" >> "acre_main") ) exitWith {
 			};
 		};
 	};
+	true;
 };
-nil;
+
+false;

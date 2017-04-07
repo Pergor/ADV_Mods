@@ -37,7 +37,7 @@ adv_safezone_targetPos = switch (typeName _object) do {
 
 adv_safezone_radius = _radius;
 
-_target addEventhandler [
+_index = _target addEventhandler [
 	"fired",
 	{
 		if (_this select 1 == "THROW") then {
@@ -46,4 +46,4 @@ _target addEventhandler [
 	}
 ];
 
-nil;
+_index;

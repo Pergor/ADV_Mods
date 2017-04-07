@@ -44,4 +44,4 @@ params [
 	nil;
 } count _targetArray;
 
-nil;
+true;

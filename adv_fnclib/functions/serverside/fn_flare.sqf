@@ -56,4 +56,4 @@ params [
 	nil;
 } count _spawn;
 
-nil;
+true;

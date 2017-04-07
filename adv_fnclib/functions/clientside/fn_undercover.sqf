@@ -44,4 +44,4 @@ adv_fnclib_undercover_scriptfnc_switch_inVeh = {
 adv_fnclib_undercover_scriptevh_onFoot = ["weapon", {[_this select 0, _this select 1] call adv_fnclib_undercover_scriptfnc_switch_onfoot}] call CBA_fnc_addPlayerEventHandler;
 adv_fnclib_undercover_scriptevh_inVeh = ["vehicle", {[_this select 0, _this select 1] call adv_fnclib_undercover_scriptfnc_switch_inveh}] call CBA_fnc_addPlayerEventHandler;
 
-nil;
+true;

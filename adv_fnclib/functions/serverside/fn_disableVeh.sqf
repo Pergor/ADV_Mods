@@ -16,4 +16,4 @@ if (count _this == 0) exitWith {};
 	nil;
 } count _this;
 	
-nil;
+true;
