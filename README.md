@@ -17,7 +17,7 @@ adv_dropLauncher: Adds action to drop certain disposable launchers after shootin
 
 adv_enemies_hod & adv_enemies_pirates: Adds two new factions. (adv_enemies_hod requires RHSUSAF, RHSAFRF and RHSGREF)
 
-adv_fnclib: Contains a library of missin functions that may prove usefull.
+adv_fnclib: Contains a library of missin functions that may prove useful. - A documentation for the functions, albeit german, can be found here: http://spezialeinheit-luchs.de/Forum/g/posts/t/460/adv-fncLib-und-wie-es-eure-Mission-retten-kann
 
 adv_gasmasks: Adds breathing sounds to gasmasks of Hidden Identity Pack V2.
 
