@@ -6,6 +6,7 @@ class CfgFunctions {
 			class aceFAK {};
 			class aceMedicalItems {};
 			class changeUnit {};
+			class findInGroup {};
 			class fullHeal {};
 			class inGroup {};
 			class insignia {};
