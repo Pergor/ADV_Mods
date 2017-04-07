@@ -11,9 +11,8 @@ _this select 0 = Object or Marker at the spawn Location (object or string);
 _this select 1 = Height (number);
 _this select 2 = Color of Smoke to be attached to the crate if the crate is below 30 meters - or "NONE" (string);
 _this select 3 = Functions to call or code to spawn on the spawned crate. Crate object is _this select 0 in the code or function. (Array of functions or string - optional);
-_this select 4 = Functions to call or code to spawn on the spawned crate. Crate object is _this select 0 in the code or function. (Array of functions or string - optional);
-_this select 5 = Classname of crate (string - optional);
-_this select 6 = Classname of parachute (string - optional);
+_this select 4 = Classname of crate (string - optional);
+_this select 5 = Classname of parachute (string - optional);
 */
 
 if (!isServer && hasInterface) exitWith {};
@@ -71,4 +70,4 @@ _light = createVehicle ["Chemlight_red", (getPosATL _crate), [], 0, "NONE"];
 _IRlight = createVehicle ["B_IRStrobe", (getPosATL _crate), [], 0, "NONE"];
 {_x attachTo [_crate, [0, 0, 1.3]];} forEach [_light,_IRlight];
 
-if (true) exitWith {};
+_crate;

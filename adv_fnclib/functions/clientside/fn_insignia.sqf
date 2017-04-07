@@ -35,6 +35,7 @@ if (isClass (configFile >> "CfgPatches" >> "adv_insignia")) then {
 		_insignium = selectRandom _insigniumArray;
 		[_target,_insignium] remoteExecCall ["BIS_fnc_setUnitInsignia",0,true];
 	};
+	true;
 };
 
-true;
+false;

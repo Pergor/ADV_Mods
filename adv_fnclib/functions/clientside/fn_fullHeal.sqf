@@ -36,3 +36,5 @@ if (isClass(configFile >> "CfgPatches" >> "ace_medical")) exitWith {
 		[_target,false] call ACE_medical_fnc_setUnconscious;
 	};
 };
+
+nil;

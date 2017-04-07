@@ -44,4 +44,4 @@ params [
 	nil;
 } count _targetArray;
 
-if (true) exitWith {};
+nil;

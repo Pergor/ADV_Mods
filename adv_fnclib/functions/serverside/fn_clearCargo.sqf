@@ -11,4 +11,4 @@ if (count _this == 0) exitWith {};
 	};
 } count _this;
 
-if (true) exitWith {true;};
+nil;

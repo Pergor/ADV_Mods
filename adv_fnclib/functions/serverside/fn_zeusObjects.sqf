@@ -56,4 +56,4 @@ switch (typeName _curator) do {
 	};
 };
 
-if (true) exitWith {};
+nil;

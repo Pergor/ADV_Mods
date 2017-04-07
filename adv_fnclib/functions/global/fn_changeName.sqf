@@ -20,6 +20,7 @@ params [
 _wholeName = format ["%1 %2",_firstName,_lastName];
 
 (driver _target) setName [_firstName,_lastName,_wholeName];
-_target setName [_firstName,_lastName,_wholeName];
+_return = [_firstName,_lastName,_wholeName];
 
-if (true) exitWith {};
+_target setName _return;
+_return;

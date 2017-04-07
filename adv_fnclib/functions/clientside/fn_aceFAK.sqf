@@ -145,3 +145,4 @@ if ( !(backpack _unit == "") && _FAKtype > 1 ) then {
 
 [_unit] call adv_fnclib_fnc_aceMedicalItems;
 //[_unit] call compile preprocessFileLineNumbers "functions\gear\fn_aceMedicalItems.sqf";
+nil;

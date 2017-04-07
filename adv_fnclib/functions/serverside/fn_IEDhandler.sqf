@@ -26,3 +26,5 @@ if !(isClass(configFile >> "CfgPatches" >> "ace_explosives")) exitWith {};
 	};
 	nil;
 } count allMines;
+
+nil;

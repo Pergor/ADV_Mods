@@ -61,4 +61,4 @@ _start addAction [
 	},[_target,_name,_text],6,false,true,"","true",5
 ];
 	
-if (true) exitWith {};
+nil;

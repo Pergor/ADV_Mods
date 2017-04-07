@@ -41,4 +41,4 @@ _bomb = createVehicle [_bombType, _targetpos, [], 0, "NONE"];
 _bomb attachTo [_chute, [0, 0, 0]];
 _chute setVelocity [0,0,-50];
 
-if (true) exitWith {};
+_bomb;

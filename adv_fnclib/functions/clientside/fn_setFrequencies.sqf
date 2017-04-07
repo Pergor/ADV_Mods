@@ -23,7 +23,7 @@ if (isClass(configFile >> "CfgPatches" >> "tfar_core")) exitWith {
 		[(call TFAR_fnc_activeSwRadio), _settings select 0] call TFAR_fnc_setSwSettings;
 	};
 	if (call TFAR_fnc_haveLRRadio) then {
-		[(call TFAR_fnc_activeLrRadio), TFAR_freq_lr_west] call TFAR_fnc_setLrSettings;
+		[(call TFAR_fnc_activeLrRadio), _settings select 1] call TFAR_fnc_setLrSettings;
 	};
 	_settings;
 };

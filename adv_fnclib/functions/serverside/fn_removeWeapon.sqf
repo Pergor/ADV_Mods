@@ -30,4 +30,4 @@ private ["_target","_gwh","_handgunWeap","_primWeap","_secWeap"];
 	nil;
 } count _this;
 
-if (true) exitWith {};
+nil;

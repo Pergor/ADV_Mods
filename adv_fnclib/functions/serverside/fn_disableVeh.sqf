@@ -1,6 +1,6 @@
 ﻿/*
 Vehicle disabling Script by belbo
-Ersetzt ein Fahrzeug durch ein anderes
+Disables a vehicle.
 _this = vehicles
 */
 if (!isServer) exitWith {};
@@ -16,4 +16,4 @@ if (count _this == 0) exitWith {};
 	nil;
 } count _this;
 	
-if (true) exitWith{};
+nil;

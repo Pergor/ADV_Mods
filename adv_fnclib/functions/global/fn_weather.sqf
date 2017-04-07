@@ -1,12 +1,11 @@
 ﻿/*
 ADV_fnclib_fnc_weather
 */
-params [
-	["_weather", 99, [0,""]]
-];
 
-[_weather] spawn {
-	_weather = _this select 0;
+_this spawn {
+	params [
+		["_weather", 99, [0,""]]
+	];
 	_weatherValue = if (_weather == "RANDOM") then { (floor (random 9))+1 } else { _weather };
 
 	_weatherArray = switch (_weatherValue) do {
@@ -40,4 +39,4 @@ params [
 	skipTime -24;
 };
 
-true;
+nil;
