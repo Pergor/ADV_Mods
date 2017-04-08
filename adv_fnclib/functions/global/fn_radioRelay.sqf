@@ -1,23 +1,24 @@
 /*
-ADV_fnclib_fnc_radioRelay - by Belbo (QA and approved by Nyaan)
-
-This function turns a vehicle into a radio repeater for use with TFAR. 
-The distance multiplicator is applied to all units of the side provided if at least one radio repeater is up and running.
-If a radio repeater is destroyed, damaged beyond 60% or descended below the given minimum height it will stop working as a radio repeater.
-If the last radio repeater is deactivated, the distance multiplicator is removed for all units of the side provided.
-
-Possible call - has to be executed globally:
-
-in init.sqf:
-[VEHICLE, west, 90] call ADV_fnclib_fnc_radioRelay;
-or
-[VEHICLE, west, 90] call compile preprocessFileLineNumbers "fn_radioRelay.sqf";
-
-or from a local client:
-[VEHICLE, west, 90] remoteExec ["ADV_fnclib_fnc_radioRelay",0];
-or
-{[VEHICLE, west, 90] spawn compile preprocessFileLineNumbers "fn_radioRelay.sqf";} remoteExec ["bis_fnc_spawn",0];
-*/
+ * Author: Belbo (QA and approved by Nyaan)
+ *
+ * This function turns a vehicle into a radio repeater for use with TFAR. 
+ * The distance multiplicator is applied to all units of the side provided if at least one radio repeater is up and running.
+ * If a radio repeater is destroyed, damaged beyond 60% or descended below the given minimum height it will stop working as a radio repeater.
+ * If the last radio repeater is deactivated, the distance multiplicator is removed for all units of the side provided.
+ *
+ * Arguments:
+ * 0: target to become relay - <OBJECT>
+ * 1: side for which relay should be available (optional) - <SIDE>
+ * 2: minimum height (over NN) above which the relay can be switched on (optional) - <NUMBER>
+ *
+ * Return Value:
+ * Script handle <HANDLE>
+ *
+ * Example:
+ * _handle = [MRAP_1, west, 50] call adv_fnclib_fnc_radioRelay;
+ *
+ * Public: Yes/No
+ */
 
 if !(isClass (configFile >> "CfgPatches" >> "task_force_radio")) exitWith {};
 

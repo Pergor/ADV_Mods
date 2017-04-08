@@ -1,7 +1,20 @@
 ﻿/*
-ADV_fnclib_fnc_acreSettings by Belbo
-contains all the variables that are important for acre2
-*/
+ * Author: Belbo
+ *
+ * Contains all the variables important for acre.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * acre present and set? - <BOOL>
+ *
+ * Example:
+ * [] call adv_fnclib_fnc_acreSettings;
+ *
+ * Public: No
+ */
+ 
 params [
 	["_initState", "", [""]]
 ];

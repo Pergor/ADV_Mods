@@ -1,10 +1,19 @@
 ﻿/*
-ADV_fnclib_fnc_undercover
-Makes unit civilian if it has no weapon equipped.
-
-possible call - has to be executed locally on the player's client:
-call ADV_fnclib_fnc_undercover
-*/
+ * Author: Belbo
+ *
+ * Sets player on captive if he has no weapon equipped or isn't seated in an armed vehicle.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * call adv_fnclib_fnc_undercover
+ *
+ * Public: Yes
+ */
 
 private _weapon = currentWeapon player;
 if (_weapon isEqualTo "" || _weapon isEqualTo (binocular player)) then {

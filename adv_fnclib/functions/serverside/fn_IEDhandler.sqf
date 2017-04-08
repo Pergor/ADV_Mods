@@ -1,8 +1,19 @@
 ﻿/*
-adv_fnclib_fnc_IEDhandler;
-
-[] call adv_fnclib_fnc_IEDhandler
-*/
+ * Author: Belbo
+ *
+ * Changes editor placed IEDs into ACE³ IEDs with pressure plate detonator that might be defused by players.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [] call adv_fnclib_fnc_IEDhandler;
+ *
+ * Public: Yes
+ */
 
 if !(isClass(configFile >> "CfgPatches" >> "ace_explosives")) exitWith {};
 

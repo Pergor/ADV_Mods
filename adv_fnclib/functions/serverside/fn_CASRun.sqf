@@ -1,15 +1,22 @@
 ﻿/*
-ADV_fnclib_fnc_CASRun by Belbo
-
-Spawns a CAS run at given position with given direction, given plane class and given type.
-Call with:
-[attackLogic,0,"B_Plane_CAS_01_F",0] call ADV_fnclib_fnc_CASRun;
-
-_this select 0 = position of attack (position in form of [x,y,z], marker or object);
-_this select 1 = direction of attack (number);
-_this select 2 = class of attack plane (string - optional);
-_this select 3 = type of attack run - 0 = gun only, 1 = rockets only, 2 = gun and rockets (scalar - optional);
-*/
+ * Author: Belbo
+ *
+ * Creats CAS run on target
+ *
+ * Arguments:
+ * 0: target position - <ARRAY>, <OBJECT>, <STRING>
+ * 1: direction of attack (optional) - <NUMBER>
+ * 2: class of attack plane (optional) - <STRING>
+ * 3: type of attack run - 0 = gun only, 1 = rockets only, 2 = gun and rockets (optional) - <NUMBER>
+ *
+ * Return Value:
+ * Function executed <BOOL>
+ *
+ * Example:
+ * [attackLogic,0,"B_Plane_CAS_01_F",0] call ADV_fnclib_fnc_CASRun;
+ *
+ * Public: Yes
+ */
 
 if !(isServer || hasInterface) exitWith {};
 

@@ -1,19 +1,26 @@
 ﻿/*
-ADV_fnclib_fnc_paraCrate by Belbo
-
-Spawns a supply crate in the given height.
-Call with:
-[spawnLocation,500,"BLUE",[ADV_fnc_clearCargo,ADV_fnc_crate],"B_CargoNet_01_ammo_F","B_Parachute_02_F"] call ADV_fnclib_fnc_paraCrate;
-or
-["landingMarker",500,"NONE","clearItemCargo (_this select 0);"] call ADV_fnclib_fnc_paraCrate;
-
-_this select 0 = Object or Marker at the spawn Location (object or string);
-_this select 1 = Height (number);
-_this select 2 = Color of Smoke to be attached to the crate if the crate is below 30 meters - or "NONE" (string);
-_this select 3 = Functions to call or code to spawn on the spawned crate. Crate object is _this select 0 in the code or function. (Array of functions or string - optional);
-_this select 4 = Classname of crate (string - optional);
-_this select 5 = Classname of parachute (string - optional);
-*/
+ * Author: Belbo
+ *
+ * Spawns a crate mid air that will slide down hanging from a parachute.
+ *
+ * Arguments:
+ * 0: Target position, can be position, object or marker - <ARRAY>, <OBJECT>, <STRING>
+ * 1: Height (optional) - <NUMBER>
+ * 2: Smoke shell attached to crate upon landing (optional) - <STRING>
+ * 3: Functions or code to be executed. Crate is (_this select 0) inside code. (optional) - <ARRAY>, <STRING>
+ * 4: Classname of crate (optional) - <STRING>
+ * 5: Classname of parachute (optional) - <STRING>
+ *
+ * Return Value:
+ * Spawned crate - <OBJECT>
+ *
+ * Example:
+ * [spawnLocation,500,"BLUE",[adv_fnc_clearCargo,adv_fnc_crateLarge],"B_CargoNet_01_ammo_F","B_Parachute_02_F"] call ADV_fnc_paraCrate;
+ * or
+ * ["landingMarker",500,"NONE","clearItemCargo (_this select 0);"] call ADV_fnclib_fnc_paraCrate;
+ *
+ * Public: Yes
+ */
 
 if (!isServer && hasInterface) exitWith {};
 

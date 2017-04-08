@@ -1,22 +1,22 @@
 ﻿/*
-ADV_fnclib_fnc_flare = spawns a flare at given height over object or marker;
-
-_this select 0 = Object/Objects at spawn location - ARRAY;
-_this select 1 = color of the flare - STRING;
-_this select 2 = spread of actual flare spawn - SCALAR;
-_this select 3 = height - SCALAR;
-
-ex.:
-[[player,player],"red",30,120] call ADV_fnclib_fnc_flare;
-
-*/
-
-/*
-_spawn = [_this, 0, [], [[]]] call BIS_fnc_param;
-_color = [_this, 1, "YELLOW", [""]] call BIS_fnc_param;
-_spread = [_this, 2, 0, [0]] call BIS_fnc_param;
-_height = [_this, 3, 160, [0]] call BIS_fnc_param;
-*/
+ * Author: Belbo
+ *
+ * Spawns a flare at given height over object or marker.
+ *
+ * Arguments:
+ * 0: Object/Objects at spawn location - ARRAY;
+ * 1: color of the flare (optional) - STRING;
+ * 2: spread of actual flare spawn (optional) - SCALAR;
+ * 3: height (optional) - SCALAR;
+ *
+ * Return Value:
+ * Function executed <BOOL>
+ *
+ * Example:
+ * [[player,player],"red",30,120] call ADV_fnclib_fnc_flare;
+ *
+ * Public: Yes
+ */
 
 params [
 	["_spawn", [], [[]]],

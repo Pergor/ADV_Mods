@@ -1,11 +1,19 @@
 ﻿/*
-zeus script by Belbo
-Makes most units placed in the editor and playable units editable by Zeus.
-Call via:
-if (isServer) then {[CURATORMODULENAME] spawn adv_fnclib_fnc_zeusObjects;};
-or:
-if (isServer) then {[] spawn adv_fnclib_fnc_zeusObjects;};
-*/
+ * Author: Belbo
+ *
+ * Adds objects dynamically to curator interface.
+ *
+ * Arguments:
+ * 0: name of curator module (optional). If left empty or <BOOL> objects will be added to all curator modules - <OBJECT>
+ *
+ * Return Value:
+ * Script handle - <HANDLE>
+ *
+ * Example:
+ * _handle = [] call adv_fnclib_fnc_zeusObjects;
+ *
+ * Public: Yes
+ */
 
 if (!isServer) exitWith {};
 

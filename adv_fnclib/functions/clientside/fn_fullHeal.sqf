@@ -1,11 +1,19 @@
 /*
-ADV_fnclib_fnc_fullHeal - by Belbo:
-
-Heals unit completely, with differenct ace_medical-levels and vanilla.
-
-Possible call - has to be called on either the client with [player] or on server with the unit's name:
-[player] call ADV_fnclib_fnc_fullHeal;
-*/
+ * Author: Belbo
+ *
+ * Heals target in vanilla and all ace_medical-levels.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [player] call adv_fnclib_fnc_fullHeal
+ *
+ * Public: No
+ */
 
 params [
 	["_target", player, [objNull]]

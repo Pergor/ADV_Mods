@@ -1,16 +1,22 @@
 ﻿/*
-ADV_fnc_teleport by Belbo
-
-Attaches an action to an object that allows teleport to a provided location from this object.
-
-Possible call - has to be executed on each client locally:
-[START,TARGET] call ADV_fnclib_fnc_teleport;
-
-_this select 0 = objects the action should be attached to. (object)
-_this select 1 = object, marker or position the teleport should lead to. (object, marker, positionATL)
-_this select 2 = Name for the location. (optional - string)
-_this select 3 = Text for the action. Overwrites _this select 2, name of the location. (optional - string)
-*/
+ * Author: Belbo
+ *
+ * Adds an action to an object that allows teleport to a provided location from this object.
+ *
+ * Arguments:
+ * 0: object the action should be attached to. - <OBJECT>
+ * 1: target position of teleport. Can be position, object or marker. - <ARRAY>, <OBJECT>, <STRING>
+ * 2: name of the location to be shown while being teleported (optional) - <STRING>
+ * 3: custom name of the teleport action. Overrides _this select 2 (optional) - <STRING>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [start, target] spawn ADV_fnclib_fnc_teleport;
+ *
+ * Public: Yes
+ */
 
 params [
 	["_start", objNull, [objNull]],

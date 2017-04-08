@@ -1,17 +1,20 @@
 ﻿/*
-adv_fnclib_fnc_changeUnit by Belbo
-
-Changes the vehicleVarName of a unit.
-
-Possible call - has to be executed where unit is local:
-[cursorTarget,"player_12"] call ADV_fnclib_fnc_changeUnit;
--> cursorTarget will be globally known as player_12 afterwards.
-
-_this select 0 = unit that has to be renamed (object).
-_this select 1 = new varName (string)
-
-Returns new vehicleVarName of object or false if object is not local.
-*/
+ * Author: Belbo
+ *
+ * Changes the vehicleVarName of a unit
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ * 1: new vehicleVarName - <STRING>
+ *
+ * Return Value:
+ * new vehicleVarName - <STRING>
+ *
+ * Example:
+ * [cursorTarget, "player_2"] call adv_fnclib_fnc_changeUnit;
+ *
+ * Public: Yes
+ */
 
 params [
 	["_target", objNull, [objNull]],

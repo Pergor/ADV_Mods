@@ -1,6 +1,19 @@
 ﻿/*
-adv_fnclib_fnc_insignia
-*/
+ * Author: Belbo
+ *
+ * Adds insignium to the unit depending on adv_missiontemplate-variables, side and rank of unit.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ *
+ * Return Value:
+ * Insignium applied? - <BOOL>
+ *
+ * Example:
+ * [player] call adv_fnclib_fnc_insignia;
+ *
+ * Public: Yes
+ */
 
 params [
 	["_target", player, [objNull]],

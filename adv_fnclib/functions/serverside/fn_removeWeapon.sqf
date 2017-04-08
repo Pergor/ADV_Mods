@@ -1,15 +1,19 @@
 ﻿/*
-ADV_fnclib_fnc_removeWeapon
-Removes weapons from every unit it is called upon and places them in a ground weapon holder.
-
-example:
-
-[] spawn {
-	waitUntil {captive target_1};
-	[target_1] call ADV_fnclib_fnc_removeWeapon;
-};
-
-*/
+ * Author: Belbo
+ *
+ * Removes all weapons from every unit it is called upon and places them in a ground weapon holder.
+ *
+ * Arguments:
+ * Array of objects - <ARRAY> of <OBJECTS>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [player_1, player_2, ..., player_n] call adv_fnclib_fnc_removeWeapon;
+ *
+ * Public: Yes
+ */
 
 if (!isServer) exitWith {};
 

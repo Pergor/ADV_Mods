@@ -1,7 +1,19 @@
 ﻿/*
-ADV_fnclib_fnc_tfarSettings by Belbo
-contains all the variables that are important for tfar
-*/
+ * Author: Belbo
+ *
+ * Contains all the variables important for tfar.
+ *
+ * Arguments:
+ * None
+ *
+ * Return Value:
+ * tfar present and set? - <BOOL>
+ *
+ * Example:
+ * [] call adv_fnclib_fnc_tfarSettings;
+ *
+ * Public: No
+ */
 
 if (isClass(configFile >> "CfgPatches" >> "tfar_core")) exitWith {
 

@@ -1,10 +1,19 @@
 /*
-adv_fnclib_fnc_setFrequencies:
-
-Forces the frequencies according to tfar-standards for the provided unit.
-
-[player] call adv_fnclib_fnc_setFrequencies;
-*/
+ * Author: Belbo
+ *
+ * Sets the frequencies according to tfar-standards for the provided unit.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ *
+ * Return Value:
+ * New settings - <ARRAY> or false if tfar not present - <BOOL>
+ *
+ * Example:
+ * [player] call adv_fnclib_fnc_setFrequencies;
+ *
+ * Public: No
+ */
 
 params [
 	["_unit", player, [objNull]]

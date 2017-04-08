@@ -1,8 +1,19 @@
 ﻿/*
-fn_aceMedicalItems: adds ACE³ medical items to a unit.
-call like this:
-[_unit] call ADV_fnclib_fnc_aceGear;
-*/
+ * Author: Belbo
+ *
+ * Adds ace medical items to unit - has to be called by adv_fnc_aceFAK/adv_fnc_gear;
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [player] call adv_fnclib_fnc_aceMedicalItems;
+ *
+ * Public: Yes
+ */
 
 params [
 	["_unit", player, [objNull]]

@@ -1,6 +1,19 @@
 ﻿/*
-ADV_fnclib_fnc_weather
-*/
+ * Author: Belbo
+ *
+ * Creates pre set weather conditions for whole mission.
+ *
+ * Arguments:
+ * None.
+ *
+ * Return Value:
+ * Script handle <HANDLE>
+ *
+ * Example:
+ * _handle = [] call adv_fnclib_fnc_weather;
+ *
+ * Public: No
+ */
 
 _handle = _this spawn {
 	params [

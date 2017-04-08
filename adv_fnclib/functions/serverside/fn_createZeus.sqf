@@ -1,14 +1,20 @@
 ﻿/*
-create zeus script by Belbo
-
-Creates a zeus module for a player with a specified unit's name
-
-_this select 0 = string of player's unit - (string)
-_this select 1 = mode (0 = no addons, 1 = Addons present in scenario, 2 = All Addons, 3 = All Addons including unofficial ones)
-
-call like this:
-["zeus_1",2] remoteExecCall ["adv_fnclib_fnc_createZeus",2];
-*/
+ * Author: Belbo
+ *
+ * Creates a curator module and binds it to provided unit
+ *
+ * Arguments:
+ * 0: Name of new curator unit - <STRING>
+ * 1: Curator mode (0 = no addons, 1 = Addons present in scenario, 2 = All Addons, 3 = All Addons including unofficial ones) - <NUMBER>
+ *
+ * Return Value:
+ * Function executed <BOOL>
+ *
+ * Example:
+ * ["zeus_1",3] call adv_fnclib_fnc_createZeus;
+ *
+ * Public: Yes
+ */
 
 if (!isServer) exitWith {};
 

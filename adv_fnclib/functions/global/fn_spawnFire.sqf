@@ -1,19 +1,20 @@
 ﻿/*
-ADV_fnclib_fnc_spawnFire:
-
-Creates a fire or smoke effect at a given object.
-
-Possible calls - has to be executed on each client locally:
-
-[OBJECT,"FIRE_SMALL"] call ADV_fnclib_fnc_spawnFire;
-[OBJECT,"FIRE_MEDIUM"] call ADV_fnclib_fnc_spawnFire;
-[OBJECT,"FIRE_BIG"] call ADV_fnc_fnclib_spawnFire;
-[OBJECT,"FIRE_NODAMAGE"] call ADV_fnc_fnclib_spawnFire;
-[OBJECT,"SMOKE_SMALL"] call ADV_fnclib_fnc_spawnFire;
-[OBJECT,"SMOKE_MEDIUM"] call ADV_fnclib_fnc_spawnFire;
-[OBJECT,"SMOKE_BIG"] call ADV_fnclib_fnc_spawnFire;
-[OBJECT,"LIGHT_SMALL"] call ADV_fnclib_fnc_spawnFire;
-*/
+ * Author: Belbo
+ *
+ * Creates a fire, light or smoke effect at a given object.
+ *
+ * Arguments:
+ * 0: object to attach the effect to - <OBJECT>
+ * 1: type of effect, can be: "FIRE_SMALL", "FIRE_MEDIUM", "FIRE_BIG", "SMOKE_SMALL", "SMOKE_MEDIUM", "SMOKE_BIG", "LIGHT_SMALL" (optional) - <STRING>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [wreck_1, "FIRE_SMALL"] call adv_fnclib_fnc_spawnFire;
+ *
+ * Public: No
+ */
 
 private["_effect","_pos","_fire","_smoke"];
 private["_light","_brightness","_color","_ambient","_intensity","_attenuation"];

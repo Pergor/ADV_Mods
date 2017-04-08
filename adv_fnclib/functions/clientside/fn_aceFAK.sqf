@@ -1,15 +1,20 @@
 /*
-ADV_fnclib_fnc_aceFAK by Belbo:
-
-Adds a predefined amount of ace_medical-items to a unit.
-
-Possible call - has to be executed on the client the unit is local to:
-
-[player,1] call ADV_fnclib_fnc_aceFAK;
-
-_this select 0 = unit to add items to.
-_this select 1 = set of items (1 - small amount (soldier's individual pack); 2 - medium amount (cls equipment); 3 - large amount (medic equipment);)
-*/
+ * Author: Belbo
+ *
+ * Sets a predefined amount of ace_medical-items to be added to a unit by adv_fnc_aceMedicalItems.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ * 1: set of items (1 - small amount (soldier's individual pack); 2 - medium amount (cls equipment); 3 - large amount (medic equipment);) (optional) - <NUMBER>
+ *
+ * Return Value:
+ * Function executed - <BOOL>
+ *
+ * Example:
+ * [player] call adv_fnclib_fnc_aceFAK;
+ *
+ * Public: No
+ */
 
 if !( isClass(configFile >> "CfgPatches" >> "ACE_medical") ) exitWith {};
 

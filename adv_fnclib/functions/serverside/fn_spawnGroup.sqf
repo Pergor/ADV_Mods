@@ -1,20 +1,24 @@
 ﻿/*
-adv_fnclib_fnc_spawnGroup:
-
-Creates a group at a given location.
-If multiple vehicles are spawned, they are placed 10 meters apart.
-If one or multiple vehicles and infantry units are spawned, the vehicles will be placed 10 meters apart and the infantry in a safe distance to the vehicles. 
-The first vehicle will be the leader of any group.
-
-Return value: group of spawned units or vehicles.
-
-possible call, has to be executed on either server or headless client:
-[["O_Soldier_TL_F","O_Soldier_GL_F"],east,spawnLogic] call ADV_fnclib_fnc_spawnGroup;
-
-_this select 0 = units array - format: ["classname","classname",...]
-_this select 1 = side of the units - can either be west, east, independent or civilian
-_this select 2 = spawning location (either object, marker or [x,y,z] coordinates).
-*/
+ * Author: Belbo
+ *
+ * Creates a group at a given location.
+ * If multiple vehicles are spawned, they are placed 10 meters apart.
+ * If one or multiple vehicles and infantry units are spawned, the vehicles will be placed 10 meters apart and the infantry in a safe distance to the vehicles. 
+ * The first vehicle will be the leader of any group.
+ *
+ * Arguments:
+ * 0: unit classnames array - <ARRAY> of <STRINGS>
+ * 1: side of the units - <SIDE>
+ * 2: spawn location (can be position, object or marker) - <ARRAY> , <OBJECT>, <STRING>
+ *
+ * Return Value:
+ * spawned group - <GROUP>
+ *
+ * Example:
+ * [["O_Soldier_TL_F","O_Soldier_GL_F"],east,spawnLogic] call ADV_fnclib_fnc_spawnGroup;
+ *
+ * Public: Yes
+ */
 
 if (!isServer && hasInterface) exitWith {};
 

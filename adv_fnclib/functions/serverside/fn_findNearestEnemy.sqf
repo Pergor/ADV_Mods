@@ -1,13 +1,20 @@
 ﻿/*
-adv_fnclib_fnc_findNearestEnemy: Finds the nearest enemy.
-
-	[player,1000] call adv_fnclib_fnc_findNearestEnemy;
-
-_this select 0 = unit to which the next enemy should be found.
-_this select 1 = radius in which to look for the nearest enemy.
-
-return: closest enemy within radius or Null-Object if none is found.
-*/
+ * Author: Belbo
+ *
+ * Finds the nearest enemy to the target in the provided radius.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ * 1: radius - <NUMBER>
+ *
+ * Return Value:
+ * Found enemy or objNull if no enemy is within radius - <OBJECT>
+ *
+ * Example:
+ * [player,1000] call adv_fnclib_fnc_findNearestEnemy;
+ *
+ * Public: No
+ */
 
 params [
 	["_unit", objNull, [objNull]]

@@ -1,14 +1,21 @@
 /*
-adv_fnclib_fnc_getOppPos:
-
-Returns a position in opposite direction for two positions/objects/markers on a circle with the radius ( (outer position) distance (inner position) ).
-
-_this select 0 = outer position - marker, object or position.
-_this select 1 = inner position - marker, object or position.
-_this select 2 = Does return value have to be a safe position? (optional - Boolean).
-
-Return value: Position
-*/
+ * Author: Belbo
+ *
+ * Returns a position in opposite direction for two positions/objects/markers on a circle with the radius ( (outer position) distance (inner position) ).
+ *
+ * Arguments:
+ * 0: outer position, can be position, object or marker - <ARRAY>, <OBJECT>, <STRING>
+ * 1: inner position, can be position, object or marker - <ARRAY>, <OBJECT>, <STRING>
+ * 2: Does return value have to be a safe position? (optional) - <BOOL>
+ *
+ * Return Value:
+ * Position - <ARRAY>
+ *
+ * Example:
+ * [player,"targetMarker",false] call adv_fnclib_fnc_getOppPos;
+ *
+ * Public: No
+ */
 
 params [
 	["_posA", [], [[], "", objNull]]

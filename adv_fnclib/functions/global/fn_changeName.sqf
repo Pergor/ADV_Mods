@@ -1,15 +1,21 @@
 ﻿/*
-ADV_fnclib_fnc_changeName by Belbo
-
-Changes the name of an AI-unit.
-
-Possible call - has to be executed globally:
-[TARGET,FIRSTNAME,LASTNAME] call ADV_fnclib_fnc_changeName;
-
-_this select 0 = unit that has to be renamed.
-_this select 1 = first name.
-_this select 2 = last name.
-*/
+ * Author: Belbo
+ *
+ * Changes the display name of an AI-unit.
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ * 1: first name - <STRING>
+ * 2: last name - <STRING>
+ *
+ * Return Value:
+ * Array in format ["first name", "last name", "First name Last name"] - <ARRAY> of <STRINGS>
+ *
+ * Example:
+ * [TARGET,"FIRSTNAME","LASTNAME"] call adv_fnclib_fnc_changename;
+ *
+ * Public: No
+ */
 
 params [
 	["_target", objNull, [objNull]],

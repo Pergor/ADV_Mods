@@ -1,11 +1,21 @@
-﻿/*
-adv_fnclib_fnc_safezone by Belbo
-
-defines a zone around an object, marker or position in the given radius that allows no grenade throws within for the target (ie. player).
-
-Possible call - has to be executed on each client locally:
-[TARGET,OBJECT,RADIUS] call adv_fnclib_fnc_safezone;
-*/
+﻿ /*
+ * Author: Belbo
+ *
+ * Defines a zone around an object, marker or position in the given radius that allows no grenade throws within for the target (ie. player).
+ *
+ * Arguments:
+ * 0: target - <OBJECT>
+ * 1: position, can be: position, object, marker - <ARRAY>, <OBJECT>, <STRING>
+ * 2: radius around position to be safe (optional) - <NUMBER>
+ *
+ * Return Value:
+ * fired evh handle - <HANDLE>
+ *
+ * Example:
+ * _handle = [player, "respawn_west", 100] call adv_fnclib_fnc_safeZone;
+ *
+ * Public: No
+ */
 
 params [
 	["_target", player, [objNull]],

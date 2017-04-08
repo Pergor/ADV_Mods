@@ -1,16 +1,21 @@
 ﻿/*
-ADV_fnclib_fnc_paraBomb by Belbo
-
-Spawns a bomb at a chute in the given height.
-Call with:
-[spawnLocation,500] call ADV_fnclib_fnc_paraBomb;
-or
-["landingMarker",500] call ADV_fnclib_fnc_paraBomb;
-
-_this select 0 = Object or Marker at the spawn Location (object or string);
-_this select 1 = Height (number);
-_this select 2 = Type of Bomb (String - optional);
-*/
+ * Author: Belbo
+ *
+ * Creates a bomb in air that slides down with a parachute.
+ *
+ * Arguments:
+ * 0: spawn position/object/marker - <ARRAY>, <OBJECT> or <STRING>
+ * 1: Height (optional) - <NUMBER>
+ * 2: Classname of Bomb (optional) - <STRING>
+ *
+ * Return Value:
+ * Spawned bomb - <OBJECT>
+ *
+ * Example:
+ * _bomb = [spawnLocation,500,"Bo_GBU12_LGB"] call adv_fnclib_fnc_paraBomb;
+ *
+ * Public: Yes
+ */
 
 if !(isServer || hasInterface) exitWith {};
 

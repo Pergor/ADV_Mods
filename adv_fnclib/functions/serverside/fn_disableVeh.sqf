@@ -1,8 +1,20 @@
 ﻿/*
-Vehicle disabling Script by belbo
-Disables a vehicle.
-_this = vehicles
-*/
+ * Author: Belbo
+ *
+ * Disables provided vehicles
+ *
+ * Arguments:
+ * Array of vehicles - <ARRAY> of <OBJECTS>
+ *
+ * Return Value:
+ * Function executed <BOOL>
+ *
+ * Example:
+ * [MRAP_1, MRAP_2, ..., MRAP_n] call adv_fnclib_fnc_disableVeh;
+ *
+ * Public: Yes
+ */
+
 if (!isServer) exitWith {};
 if (count _this == 0) exitWith {};
 
