@@ -26,16 +26,31 @@ adv_fnclib_undercover_scriptfnc_switch_onfoot = {
 		,["_weapon", currentWeapon player, [""]]
 	];
 	if (_weapon isEqualTo (binocular _unit)) exitWith {};
-	if ( _weapon isEqualTo "" && ([_unit,60] call adv_fnclib_fnc_findNearestEnemy) distance _unit > 50 && ([_unit,400] call adv_fnclib_fnc_findNearestEnemy) knowsAbout _unit < 1.5 ) exitWith {
+	
+	private _nextEnemy = [_unit,60] call adv_fnclib_fnc_findNearestEnemy;
+	private _enemyInRadius = [_unit,400] call adv_fnclib_fnc_findNearestEnemy;
+	
+	if ( _weapon isEqualTo "" && _nextEnemy distance _unit > 50 && _enemyInRadius knowsAbout _unit < 1.5 ) exitWith {
 		if !(captive _unit) then {
 			systemChat "You are now undercover.";
 		};
+		
 		_unit setCaptive true;
+		
+		[ { (_unit findNearestEnemy _unit) distance _unit < 5 || _unit getVariable ["adv_undercover_tooClose",false] }, {
+			params ["_unit"];
+			if (captive _unit) then {
+				systemChat "You are no longer undercover.";
+			};
+			_unit setCaptive false;
+		},[_unit]] call CBA_fnc_waitUntilAndExecute;
 	};
+	
 	if (captive _unit) then {
 		systemChat "You are no longer undercover.";
 	};
 	_unit setCaptive false;
+	_unit setVariable ["adv_undercover_tooClose",true];
 };
 
 adv_fnclib_undercover_scriptfnc_switch_inVeh = {
@@ -43,11 +58,14 @@ adv_fnclib_undercover_scriptfnc_switch_inVeh = {
 		["_unit", player, [objNull]]
 		,["_veh", vehicle player, [objNull]]
 	];
+	
 	if ( (_veh currentWeaponTurret [-1]) isEqualTo "" && (_veh currentWeaponTurret [0]) isEqualTo "" ) exitWith {};
+	
 	if (captive _unit) then {
 		systemChat "You are no longer undercover.";
 	};
 	_unit setCaptive false;
+	_unit setVariable ["adv_undercover_tooClose",true];
 };
 
 adv_fnclib_undercover_scriptevh_onFoot = ["weapon", {[_this select 0, _this select 1] call adv_fnclib_undercover_scriptfnc_switch_onfoot}] call CBA_fnc_addPlayerEventHandler;
