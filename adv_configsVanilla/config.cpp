@@ -2,7 +2,17 @@ class CfgPatches
 {
     class adv_configsVanilla
     {
-        units[] = {};
+        units[] = {
+			"adv_Box_NATO_MMG_F"
+			,"adv_Box_NATO_AT_F"
+			,"adv_Box_NATO_AA_F"
+			,"adv_Box_EAST_MMG_F"
+			,"adv_Box_EAST_AT_F"
+			,"adv_Box_EAST_AA_F"
+			,"adv_Box_IND_MMG_F"
+			,"adv_Box_IND_AT_F"
+			,"adv_Box_IND_AA_F"
+		};
         weapons[] = {};
         requiredVersion = 1.60;
         requiredAddons[] = {
@@ -10,8 +20,8 @@ class CfgPatches
 			,"A3_Weapons_F_Machineguns_M200"
 			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
 		};
-		version = "1.02";
-		versionStr = "1.02";
+		version = "1.03";
+		versionStr = "1.03";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
