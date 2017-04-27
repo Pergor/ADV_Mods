@@ -8,8 +8,8 @@ class CfgPatches
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.21";
-		versionStr = "1.21";
+		version = "1.22";
+		versionStr = "1.22";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
