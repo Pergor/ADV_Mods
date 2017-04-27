@@ -20,8 +20,8 @@ private _onlyDoctors = missionNamespace getVariable ["adv_aceCPR_onlyDoctors", f
 //probability depends on medicClass of _caller:
 private _probability = if ( _isMedic > 0 ) then {
 	if ( _isMedic > 1 ) then { 50 } else { 30 };
-//standard is 10:
-} else { 10 };
+//standard is 5:
+} else { 5 };
 
 //if patient has epinephrine in his circulation, the probability rises by 10%.
 private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
