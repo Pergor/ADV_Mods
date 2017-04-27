@@ -9,15 +9,19 @@ Call from initPlayerLocal.sqf via:
 _this spawn {
 	params [
 		["_unit", player, [objNull]],
-		"_secWeap","_gwh"
+		"_gwh"
 	];
-	_secWeap = secondaryWeapon _unit;
-	waitUntil { !( (currentWeapon _unit) isEqualTo _secWeap ) };
-	sleep 2.5;
+	waitUntil { !( (currentWeapon _unit) isEqualTo (secondaryWeapon _unit) ) };
+	sleep 2.8;
+	private _secWeap = secondaryWeapon _unit;
+	if (toUpper _secWeap in ["BWA3_PZF3","BWA3_PZF3_LOADED"]) then {
+		_secWeap = "BWA3_PZF3_USED";
+	};
+	if (toUpper _secWeap in ["BWA3_RGW90","BWA3_RGW90_LOADED"]) then {
+		_secWeap = "BWA3_RGW90_USED";
+	};
 	_gwh = "GroundWeaponHolder" createVehicle position _unit;
-	_gwh addWeaponCargo [_secWeap,1];
-	//{_x addCuratorEditableObjects [[_gwh],false];} forEach allCurators;
+	_gwh addWeaponCargoGlobal [_secWeap,1];
 	_unit removeWeapon _secWeap;
-	//_unit selectWeapon (primaryWeapon _unit);
 };
 true;

@@ -25,7 +25,7 @@ ADV_array_dropLaunch append [
 	,"BWA3_PZF3_LOADED","BWA3_RGW90_LOADED"
 	,"STI_M136"
 	,"UK3CB_BAF_AT4_AP_LAUNCHER","UK3CB_BAF_AT4_CS_AP_LAUNCHER","UK3CB_BAF_NLAW_LAUNCHER"
-	,"CUP_LAUNCH_NLAW","CUP_LAUNCH_RPG18","CUP_LAUNCH_M136"
+	,"CUP_LAUNCH_NLAW","CUP_LAUNCH_RPG18","CUP_LAUNCH_M136","CUP_LAUNCH_M72A6_SPECIAL","CUP_LAUNCH_M72A6"
 ];
 
 if ( !hasInterface ) exitWith {};
@@ -37,7 +37,8 @@ if ( !hasInterface ) exitWith {};
 			params ["_unit","_weapon"];
 			if !( _weapon isEqualTo (secondaryWeapon _unit) ) exitWith {};
 			if ( (toUpper _weapon) in ADV_array_dropLaunch ) exitWith {
-				[_unit] call adv_dropLauncher_fnc_dropLauncher;
+				adv_dropLauncher_debugVars = [_weapon,_unit];
+				[_unit, _weapon] call adv_dropLauncher_fnc_dropLauncher;
 			};
 		}
 	];
