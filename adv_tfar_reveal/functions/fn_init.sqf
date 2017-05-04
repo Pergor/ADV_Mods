@@ -31,7 +31,7 @@ if (!hasInterface && !(isClass(configFile >> "CfgPatches" >> "tfar_core"))) exit
 			
 			//modified by Belbo:
 			private _waypointType = waypointType [group _x, 1];
-			if ( side _x in _enemySides && !(_waypointType isEqualTo "SAD") ) then {
+			if ( side _x in _enemySides && !(_waypointType isEqualTo "SAD") && !((leader (group _x)) getVariable ["adv_tfar_reveal",true]) ) then {
 				_wp = (group _x) addWaypoint [_unit,0,1];
 				_wp setWaypointType "SAD";
 				//systemChat format ["New Waypoint for %1 of the type %2 at the position of %3",_x, waypointType _wp, _unit];
