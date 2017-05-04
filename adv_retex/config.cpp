@@ -36,6 +36,7 @@ class CfgPatches
 			"adv_retex_b_mrap_f",
 			"adv_retex_b_mrap_hmg_f",
 			"adv_retex_b_mrap_gmg_f",
+			"adv_retex_b_kuma_f",
 			"adv_retex_b_mora_f",
 			"adv_retex_b_marid_f",
 			"adv_retex_b_gorgon_f",
@@ -71,8 +72,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.13";
-		versionStr = "1.13";
+		version = "1.14";
+		versionStr = "1.14";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -90,6 +91,7 @@ class cfgFunctions {
 			class setTextureMora {};
 			class setTextureRHSHunter {};
 			class setTextureWDL {};
+			class setTextureNATOKuma {};
 		};
 		class setTextureAAF {
 			file = "adv_retex\functions";
@@ -109,6 +111,7 @@ class CfgVehicles {
 	//vehicle inheritances
 	class I_APC_Wheeled_03_cannon_F;
 	class I_APC_tracked_03_cannon_F;
+	class I_MBT_03_cannon_F;
 	class O_APC_Wheeled_02_base_F;
 	class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
 		class Eventhandlers;
@@ -131,24 +134,47 @@ class CfgVehicles {
 	class adv_retex_b_mrap_f: B_MRAP_01_F {
 		displayName = "Hunter (Desert)";
 		hiddenSelectionsTextures[] = {
-			"adv_retex\textures\hunter\rhs_body.paa",
-			"adv_retex\textures\hunter\rhs_back.paa"
+			"adv_retex\textures\hunter\rhs_body.paa"
+			,"adv_retex\textures\hunter\rhs_back.paa"
 		};
 	};
 	class adv_retex_b_mrap_hmg_f: B_MRAP_01_hmg_F {
 		displayName = "Hunter HMG (Desert)";
 		hiddenSelectionsTextures[] = {
-			"adv_retex\textures\hunter\rhs_body.paa",
-			"adv_retex\textures\hunter\rhs_back.paa",
-			"adv_retex\textures\hunter\rhs_turret.paa"
+			"adv_retex\textures\hunter\rhs_body.paa"
+			,"adv_retex\textures\hunter\rhs_back.paa"
+			,"adv_retex\textures\hunter\rhs_turret.paa"
 		};
 	};
 	class adv_retex_b_mrap_gmg_f: B_MRAP_01_gmg_F {
 		displayName = "Hunter GMG (Desert)";
 		hiddenSelectionsTextures[] = {
-			"adv_retex\textures\hunter\rhs_body.paa",
-			"adv_retex\textures\hunter\rhs_back.paa",
-			"adv_retex\textures\hunter\rhs_turret.paa"
+			"adv_retex\textures\hunter\rhs_body.paa"
+			,"adv_retex\textures\hunter\rhs_back.paa"
+			,"adv_retex\textures\hunter\rhs_turret.paa"
+		};
+	};
+	//kuma
+	class adv_retex_b_kuma_f: I_MBT_03_cannon_F {
+		standard_macro
+		nato_macro
+		class TransportMagazines {
+			natomags
+		};
+		class TransportWeapons {
+			natoweapons
+		};
+		displayName = "MBT-52 Kuma";
+		crew = "B_crew_F";
+		typicalCargo[] = {"B_soldier_F"};
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\kuma\TankBodyTexture.paa"
+			,"adv_retex\textures\kuma\TankTurretTexture.paa"
+			,"adv_retex\textures\kuma\TankTurretMGTexture.paa"
+			,"adv_retex\textures\kuma\TankTurretTexture.paa"
+			,"adv_retex\textures\kuma\TankTurretTexture.paa"
+			,"adv_retex\textures\kuma\TankTrackTexture.paa"
+			,"adv_retex\textures\kuma\TankTrackTexture.paa"
 		};
 	};
 	//mora
@@ -165,8 +191,8 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-			"adv_retex\textures\mora\TurretTexture.paa",
-			"adv_retex\textures\mora\BodyTexture.paa"
+			"adv_retex\textures\mora\TurretTexture.paa"
+			,"adv_retex\textures\mora\BodyTexture.paa"
 		};
 	};
 	//marid
@@ -183,9 +209,9 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-			"adv_retex\textures\marid\MaridBodyTexture1.paa",
-			"adv_retex\textures\marid\MaridBodyTexture2.paa",
-			"adv_retex\textures\marid\MaridRcwcsTexture.paa"
+			"adv_retex\textures\marid\MaridBodyTexture1.paa"
+			,"adv_retex\textures\marid\MaridBodyTexture2.paa"
+			,"adv_retex\textures\marid\MaridRcwcsTexture.paa"
 		};
 		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0)] call adv_retex_fnc_setTextureMarid;};"; };
 	};
@@ -203,10 +229,10 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
-			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_co.paa",
-			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext2_co.paa",
-			"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa",
-			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
+			"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_co.paa"
+			,"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext2_co.paa"
+			,"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa"
+			,"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
 		};
 	};
 	//strider
@@ -223,8 +249,8 @@ class CfgVehicles {
 			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
-			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
-			"a3\data_f\vehicles\turret_co.paa"
+			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa"
+			,"a3\data_f\vehicles\turret_co.paa"
 		};
 	};
 	class adv_retex_b_strider_hmg_f: I_MRAP_03_hmg_F {
@@ -240,8 +266,8 @@ class CfgVehicles {
 			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
-			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
-			"a3\data_f\vehicles\turret_co.paa"
+			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa"
+			,"a3\data_f\vehicles\turret_co.paa"
 		};
 	};
 	class adv_retex_b_strider_gmg_f: I_MRAP_03_gmg_F {
@@ -257,8 +283,8 @@ class CfgVehicles {
 			natoweapons
 		};
 		hiddenSelectionsTextures[] = {
-			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa",
-			"a3\data_f\vehicles\turret_co.paa"
+			"a3\soft_f_beta\mrap_03\data\mrap_03_ext_co.paa"
+			,"a3\data_f\vehicles\turret_co.paa"
 		};
 	};
 	//mohawk (dahoman)
@@ -268,9 +294,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (Dahoman)";
 		crew = "B_helipilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
 		};
 	};
 	//mohawk (ion)
@@ -280,9 +306,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (ION)";
 		crew = "B_helipilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
 		};
 	};
 	//mh9
@@ -342,9 +368,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (Dahoman)";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
 		};
 	};
 	//mohawk (ion)
@@ -354,9 +380,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (ION)";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
 		};
 	};
 	//orca
@@ -376,9 +402,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (Dahoman)";
 		crew = "C_man_pilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
 		};
 	};
 	//mohawk (ion)
@@ -388,9 +414,9 @@ class CfgVehicles {
 		displayName = "CH-49 Mohawk (ION)";
 		crew = "C_man_pilot_F";
 		hiddenSelectionsTextures[] = {
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa",
-			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
+			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
 		};
 	};
 	//orca
