@@ -16,7 +16,7 @@ if (_inState) then {
 
 _return = _target getVariable "ace_medical_reviveStartTime";
 //diagnostics:
-if (adv_aceCPR_diag) then {
+if (missionNamespace getVariable ["adv_aceCPR_diag",false]) then {
 	if !(local _caller) then {
 		["adv_aceCPR_evh_log", [format ["adv_aceCPR - New reviveStartTime was %1, with a difference to cba_missiontime of %2 seconds.",_return, (CBA_missionTime - _return)]], _caller] call CBA_fnc_targetEvent;
 	};

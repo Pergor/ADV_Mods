@@ -11,6 +11,4 @@ ADV-aceCPR - by Belbo
 //for diagnostic purposes only:
 ["adv_aceCPR_evh_log", { diag_Log (format ["%1",_this]) }] call CBA_fnc_addEventHandler;
 
-if (isNil "adv_aceCPR_diag") then {
-	adv_aceCPR_diag = false;
-};
+missionNamespace setVariable ["adv_aceCPR_diag",false];
