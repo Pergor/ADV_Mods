@@ -72,8 +72,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.14";
-		versionStr = "1.14";
+		version = "1.15";
+		versionStr = "1.15";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -209,9 +209,14 @@ class CfgVehicles {
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\marid\apc_wheeled_02_ext_01_blufor_co.paa"
+			,"adv_retex\textures\marid\apc_wheeled_02_ext_02_blufor_co.paa"
+			,"a3\data_f\vehicles\turret_co.paa"
+			/*
 			"adv_retex\textures\marid\MaridBodyTexture1.paa"
 			,"adv_retex\textures\marid\MaridBodyTexture2.paa"
 			,"adv_retex\textures\marid\MaridRcwcsTexture.paa"
+			*/
 		};
 		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0)] call adv_retex_fnc_setTextureMarid;};"; };
 	};
