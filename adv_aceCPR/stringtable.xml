@@ -2,9 +2,23 @@
 <Project name="adv">
     <Package name="aceCPR">
         <Key ID="STR_ADV_ACECPR_CPR_COMPLETED">
-			<Original>%1 stabilized the patient.</Original>
-            <English>%1 stabilized the patient.</English>
-            <German>%1 hat den Patienten stabilisiert.</German>
+			<Original>%1 stabilized the patient</Original>
+            <English>%1 stabilized the patient</English>
+            <German>%1 hat den Patienten stabilisiert</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_CPR_EXECUTE">
+			<Original>%1 performed CPR</Original>
+			<English>%1 performed CPR</English>
+			<Polish>%1 wykonał cykl RKO</Polish>
+			<Czech>%1 provádí CPR</Czech>
+			<German>%1 hat eine HLW durchgeführt</German>
+			<Italian>%1 ha eseguito CPR</Italian>
+			<Portuguese>%1 realizou RCP</Portuguese>
+			<Russian>%1 провел сердечно-легочную реанимацию</Russian>
+			<Spanish>%1 realicó RCP</Spanish>
+			<French>%1 à fait une RCP</French>
+			<Japanese>%1 は心肺蘇生をした</Japanese>
+			<Korean>%1 (이)가 심폐소생술을 실시했다</Korean>
         </Key>
 		</Package>
 </Project>
