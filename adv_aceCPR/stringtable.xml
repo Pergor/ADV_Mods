@@ -2,9 +2,9 @@
 <Project name="adv">
     <Package name="aceCPR">
         <Key ID="STR_ADV_ACECPR_CPR_COMPLETED">
-			<Original>%1 stabilized the patient</Original>
-            <English>%1 stabilized the patient</English>
-            <German>%1 hat den Patienten stabilisiert</German>
+			<Original>%1 stabilized the patient with CPR</Original>
+            <English>%1 stabilized the patient with CPR</English>
+            <German>%1 hat den Patienten mit HLW stabilisiert</German>
         </Key>
         <Key ID="STR_ADV_ACECPR_CPR_EXECUTE">
 			<Original>%1 performed CPR</Original>
