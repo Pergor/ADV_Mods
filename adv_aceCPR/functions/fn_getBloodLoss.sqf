@@ -11,12 +11,7 @@ private _totalBloodLoss = 0;
 } forEach (_target getVariable ["ace_medical_openWounds", []]);
 
 //diagnostics:
-if (missionNamespace getVariable ["adv_aceCPR_diag",false]) then {
-	if !(local _caller) then {
-		["adv_aceCPR_evh_log", [format ["adv_aceCPR - The patient has a bloodloss of %1.",_totalBloodLoss]], _caller] call CBA_fnc_targetEvent;
-	};
-	["adv_aceCPR_evh_log", [format ["adv_aceCPR - The patient has a bloodloss of %1.",_totalBloodLoss]]] call CBA_fnc_localEvent;
-};
+[_caller,format ["the patient has a bloodloss of %1.",_totalBloodLoss]] call adv_aceCPR_fnc_diag;
 
 //return
 _totalBloodLoss;
