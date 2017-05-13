@@ -10,6 +10,9 @@ params [
 //diagnostics:
 [_target,"custom CPR is being executed"] call adv_aceCPR_fnc_diag;
 
+[_target, "activity", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
+[_target, "activity_view", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
+
 //execute custom CPR local to the unit:
 call {
 	if (local _target) exitWith {
