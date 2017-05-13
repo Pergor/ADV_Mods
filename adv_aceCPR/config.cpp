@@ -8,8 +8,8 @@ class CfgPatches
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.3";
-		versionStr = "1.3";
+		version = "1.3.1";
+		versionStr = "1.3.1";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -37,6 +37,7 @@ class ACE_Medical_Actions {
 		class fieldDressing;
 		class CPR: fieldDressing {
 			callbackSuccess = "adv_aceCPR_fnc_action";
+			animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
 		};
 	};
 };
