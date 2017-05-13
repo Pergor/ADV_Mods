@@ -83,7 +83,7 @@ if ( _probability >= _diceRoll ) exitWith {
 		_target setVariable ["ace_medical_bloodVolume",30];
 	};
 	
-	//log the custom cpr success to the treatment log (execution of cpr action is logged by regular ace-cpr):
+	//log the custom cpr success to the treatment log:
 	[_target, "activity", localize "STR_ADV_ACECPR_CPR_COMPLETED", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 	[_target, "activity_view", localize "STR_ADV_ACECPR_CPR_COMPLETED", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 
