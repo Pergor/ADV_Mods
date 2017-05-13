@@ -25,7 +25,7 @@ private _probability = call {
 	if ( _isMedic isEqualTo 1 ) exitWith {
 		if ( _onlyDoctors > 1 ) then {0} else { _probabilities select 1 };
 	};
-	if ( _onlyDoctors > 0 ) then {0} else { _probabilities 2 };
+	if ( _onlyDoctors > 0 ) then {0} else { _probabilities select 2 };
 };
 //diagnostics
 [_caller,format ["probability started at %1, with a adv_aceCPR_probabilities of %2",_probability, _probabilities]] call adv_aceCPR_fnc_diag;
@@ -93,5 +93,8 @@ if ( _probability >= _diceRoll ) exitWith {
 	//return:
 	true;
 };
+
+[_target, "activity", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
+[_target, "activity_view", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 
 false;
