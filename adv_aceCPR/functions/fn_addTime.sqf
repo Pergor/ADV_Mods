@@ -10,13 +10,14 @@ private _inState = _target getVariable ["ace_medical_inReviveState",false];
 if (_inState) then {
 	private _reviveStartTime = _target getVariable ["ace_medical_reviveStartTime",0];
 	if (_reviveStartTime > 0) then {
-		_target setVariable ["ace_medical_reviveStartTime", (_reviveStartTime + 15 + (random 5)) min CBA_missionTime];
+		private _timeAdded = _reviveStartTime + 15 + (random 5);
+		_target setVariable ["ace_medical_reviveStartTime", _timeAdded min CBA_missionTime];
 	};
 };
 _return = _target getVariable "ace_medical_reviveStartTime";
 
 //diagnostics:
-[_target,format ["new reviveStartTime was %1, with a difference to cba_missiontime of %2 seconds.",_return, (CBA_missionTime - _return)]] call adv_aceCPR_fnc_diag;
+[_target,format ["added time was %1. new reviveStartTime was %2, with a difference to cba_missiontime of %3 seconds.",_timeAdded, _return, (CBA_missionTime - _return)]] call adv_aceCPR_fnc_diag;
 
 //return:
 _return;
