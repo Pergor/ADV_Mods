@@ -11,7 +11,7 @@ private _totalBloodLoss = 0;
 } forEach (_target getVariable ["ace_medical_openWounds", []]);
 
 //diagnostics:
-[_caller,format ["the patient has a bloodloss of %1.",_totalBloodLoss]] call adv_aceCPR_fnc_diag;
+[_caller,format ["the patient has a bloodloss of %1",_totalBloodLoss]] call adv_aceCPR_fnc_diag;
 
 //return
 _totalBloodLoss;
