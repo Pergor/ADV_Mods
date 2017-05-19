@@ -118,7 +118,7 @@ class CfgVehicles {
 	class adv_pirates_soldier_AR_f : adv_pirates_soldier_1_f {
 		displayName = "Pirat (LMG)";
 		icon = "iconManMG";
-		uniformClass = "U_I_C_Soldier_Para_1_F"
+		uniformClass = "U_I_C_Soldier_Para_1_F";
 		linkedItems[] = {"V_TacChestrig_grn_F", standard_items};
 		respawnLinkedItems[] = {"V_TacChestrig_grn_F", standard_items};
 
