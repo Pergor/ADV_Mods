@@ -9,66 +9,17 @@ if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 	[_caller,"target was too long in revive state"] call adv_aceCPR_fnc_diag;
 };
 
-//probability for custom cpr success:
-private _isMedic = _caller getVariable ["ACE_medical_medicClass", 0];
-private _onlyDoctors = missionNamespace getVariable ["adv_aceCPR_onlyDoctors", 0];
-private _probabilities = missionNamespace getVariable ["adv_aceCPR_probabilities", [40,15,5]];
-if ( _onlyDoctors isEqualType true ) then {
-	_onlyDoctors = if (_onlyDoctors) then {2} else {0};
-};
-
-//probability depends on medicClass of _caller:
-private _probability = call {
-	if ( _isMedic isEqualTo 2 ) exitWith {
-		_probabilities select 0
-	};
-	if ( _isMedic isEqualTo 1 ) exitWith {
-		if ( _onlyDoctors > 1 ) then {0} else { _probabilities select 1 };
-	};
-	if ( _onlyDoctors > 0 ) then {0} else { _probabilities select 2 };
-};
-//diagnostics
-[_caller,format ["probability started at %1, with a adv_aceCPR_probabilities of %2",_probability, _probabilities]] call adv_aceCPR_fnc_diag;
-
-//if patient has epinephrine in his circulation, the probability rises by 10%.
-private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
-if (_gotEpi > 0.5) then {
-	_probability = _probability + 10;
-	
-	//diagnostics:
-	[_caller,format ["probability has been raised by 10% due to epinephrine. New probability is %1",_probability]] call adv_aceCPR_fnc_diag;
-};
-
-//reduces probability depending on total blood loss of patient:
-private _bloodLoss = [_caller, _target] call adv_aceCPR_fnc_getBloodLoss;
-call {
-	if (_bloodLoss >= 0.3) exitWith {
-		_probability = _probability - 20;
-
-		//diagnostics:
-		[_caller,format ["probability has been reduced by 20% due to blood loss. New probability is %1",_probability]] call adv_aceCPR_fnc_diag;
-	};
-	if (_bloodLoss >= 0.15) exitWith {
-		_probability = _probability - 10;
-		
-		//diagnostics:
-		[_caller,format ["probability has been reduced by 10% due to blood loss. New probability is %1",_probability]] call adv_aceCPR_fnc_diag;
-	};
-};
+//what's our probability?
+private _probability = [_caller,_target] call ADV_aceCPR_fnc_probability;
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
-//and let at least a chance of 2%...:
-if ( _probability < 1 && _onlyDoctors isEqualTo 0 ) then {
-	_probability = 2;
-};
-//diagnostics:
-[_caller,format ["resulting probability was at %1 per-cent, and the dice-roll was %2.",_probability, _diceRoll]] call adv_aceCPR_fnc_diag;
 
 if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
 	_target setVariable ["ace_medical_inReviveState",false,true];
 	_target setVariable ["ace_medical_inCardiacArrest",nil, true];
+	private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 	
 	//if player has a higher bloodvolume, the new heart rate will be lower.
 	call {

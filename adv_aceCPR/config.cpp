@@ -22,12 +22,13 @@ class CfgFunctions {
 			file = "adv_aceCPR\functions";
 			class action {};
 			class addTime {};
-			class init { postInit = 1; };
 			class canCPR {};
 			class CPR {};
 			class CPR_Local {};
-			class getBloodLoss {};
 			class diag {};
+			class getBloodLoss {};
+			class init { postInit = 1; };
+			class probability {};
 		};
 	};
 };
