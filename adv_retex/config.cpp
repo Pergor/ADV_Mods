@@ -325,7 +325,7 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
 	};	
 	//ah9
-	class adv_retex_b_ah9_black_f: B_Heli_Light_01_armed_F {
+	class adv_retex_b_ah9_black_f: B_Heli_Light_01_dynamicLoadout_F {
 		standard_macro
 		nato_macro
 		displayName = "AH-9 Pawnee (Black)";
@@ -351,14 +351,14 @@ class CfgVehicles {
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
 	};	
 	//ah9
-	class adv_retex_i_ah9_f: B_Heli_Light_01_armed_F {
+	class adv_retex_i_ah9_f: B_Heli_Light_01_dynamicLoadout_F {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
 	};
-	class adv_retex_i_ah9_black_f: B_Heli_Light_01_armed_F {
+	class adv_retex_i_ah9_black_f: B_Heli_Light_01_dynamicLoadout_F {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee (Black)";
@@ -391,7 +391,7 @@ class CfgVehicles {
 		};
 	};
 	//orca
-	class adv_retex_i_orca_f: O_Heli_Light_02_F {
+	class adv_retex_i_orca_f: O_Heli_Light_02_dynamicLoadout_F {
 		standard_macro
 		aaf_macro
 		displayName = "PO-30 Orca";
