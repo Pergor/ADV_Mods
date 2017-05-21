@@ -30,7 +30,7 @@ private _probability = call {
 //private _gotAtropine = _target getVariable ["ace_medical_atropine_insystem",0];
 private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 if (_gotEpi > 0.5) then {
-	private _probabilityGain = 8 + (floor random 8)
+	private _probabilityGain = 8 + (floor random 8);
 	_probability = _probability + _probabilityGain;
 	
 	//diagnostics:
