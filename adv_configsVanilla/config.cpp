@@ -18,10 +18,12 @@ class CfgPatches
         requiredAddons[] = {
 			"A3_Weapons_F"
 			,"A3_Weapons_F_Machineguns_M200"
+			,"A3_Weapons_F_Mark_Machineguns_M200"
 			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
+			,"A3_Characters_F"
 		};
-		version = "1.03";
-		versionStr = "1.03";
+		version = "1.04";
+		versionStr = "1.04";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -74,6 +76,7 @@ class CfgAmmo {
 	class SmokeShell;
 	class SmokeShellArty : SmokeShell {
 		effectsSmoke = "SmokeShellWhiteEffect";
+		timeToLive = 90;
 	};
 };
 
@@ -117,6 +120,14 @@ class CfgWeapons
 		};
 	};
 	*/
+	class H_HelmetB;
+	
+	class H_PilotHelmetHeli_B: H_HelmetB {
+		subItems[] = {"Integrated_NVG_F"};
+	};
+	class H_CrewHelmetHeli_B: H_HelmetB {
+		subItems[] = {"Integrated_NVG_F"};
+	};
 };
 
 class CfgVehicles {
