@@ -6,15 +6,13 @@ class CfgPatches
         weapons[] = {};
         requiredVersion = 1.60;
         requiredAddons[] = {
-			"A3_Weapons_F"
-			,"A3_Weapons_F_Machineguns_M200"
-			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
-			,"adv_configsVanilla"
+			"adv_configsVanilla"
+			,"ace_smallarms"
 			,"ace_ballistics"
 			,"ace_grenades"
 		};
-		version = "1.0";
-		versionStr = "1.0";
+		version = "1.01";
+		versionStr = "1.01";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
