@@ -22,8 +22,8 @@ class CfgPatches
 			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
 			,"A3_Characters_F"
 		};
-		version = "1.04";
-		versionStr = "1.04";
+		version = "1.05";
+		versionStr = "1.05";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -120,12 +120,47 @@ class CfgWeapons
 		};
 	};
 	*/
+	/*
 	class H_HelmetB;
 	
 	class H_PilotHelmetHeli_B: H_HelmetB {
 		subItems[] = {"Integrated_NVG_F"};
 	};
 	class H_CrewHelmetHeli_B: H_HelmetB {
+		subItems[] = {"Integrated_NVG_F"};
+	};
+	*/
+	class H_PilotHelmetHeli_B;
+	class H_CrewHelmetHeli_B;
+	class H_PilotHelmetHeli_O;
+	class H_CrewHelmetHeli_O;
+	class H_PilotHelmetHeli_I;
+	class H_CrewHelmetHeli_I;
+	
+	class H_PilotHelmetHeli_B_NVG: H_PilotHelmetHeli_B {
+		displayName = "Heli Pilot Helmet NVG [NATO]";
+		subItems[] = {"Integrated_NVG_F"};
+	};	
+	class H_CrewHelmetHeli_B_NVG: H_CrewHelmetHeli_B {
+		displayName = "Heli Crew Helmet NVG [NATO]";
+		subItems[] = {"Integrated_NVG_F"};
+	};
+	
+	class H_PilotHelmetHeli_O_NVG: H_PilotHelmetHeli_O {
+		displayName = "Heli Pilot Helmet NVG [CSAT]";
+		subItems[] = {"Integrated_NVG_F"};
+	};	
+	class H_CrewHelmetHeli_O_NVG: H_CrewHelmetHeli_O {
+		displayName = "Heli Crew Helmet NVG [CSAT]";
+		subItems[] = {"Integrated_NVG_F"};
+	};
+	
+	class H_PilotHelmetHeli_I_NVG: H_PilotHelmetHeli_I {
+		displayName = "Heli Pilot Helmet NVG [AAF]";
+		subItems[] = {"Integrated_NVG_F"};
+	};	
+	class H_CrewHelmetHeli_I_NVG: H_CrewHelmetHeli_I {
+		displayName = "Heli Crew Helmet NVG [AAF]";
 		subItems[] = {"Integrated_NVG_F"};
 	};
 };
