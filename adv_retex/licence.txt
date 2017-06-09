@@ -1,7 +1,5 @@
 ﻿This addon is made by Belbo.
 
-Some textures curtesy of Stevenson or Nightmare515.
-
 This file must not be removed from the folder and must be contained in every work based on this addon or parts of it.
 
 This addon is published under the APL-SA licence:
@@ -15,4 +13,4 @@ This addon is published under the APL-SA licence:
 
 Noncommercial includes monetized servers: This addon or parts or derivatives of it may not be used on monetized servers.
 Altis Life: This addon or parts or derivatives of it may not be used in any derivative of Life gamemode.
-Steam Workshop: This addon or parts or derivatives of it may not be uploaded to Steam Workshop, neither individually nor as part of a collection.
+Steam Workshop: This addon or parts or derivatives of it may not be uploaded to Steam Workshop, neither individually nor as part of a collection without written consent of the author.

@@ -55,4 +55,4 @@ adv_tfar_backpacks: Adds tfar-LRradios to other sides. (Requires TFAR)
 
 	Noncommercial includes monetized servers: This addon or parts or derivatives of it may not be used on monetized servers.
 	Altis Life: This addon or parts or derivatives of it may not be used in any derivative of Life gamemode.
-	Steam Workshop: This addon or parts or derivatives of it may not be uploaded to Steam Workshop, neither individually nor as part of a collection.
+	Steam Workshop: This addon or parts or derivatives of it may not be uploaded to Steam Workshop, neither individually nor as part of a collection without written consent of the author.
