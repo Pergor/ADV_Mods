@@ -25,7 +25,8 @@ class CfgFactionClasses
 {
     class UNSUNG_W
     {
-        macro_faction_radios
+		personal_tf_faction_radio_api = "uns_tfar_anprc25";
+		rifleman_tf_faction_radio_api = "uns_tfar_anprc90";
     };
 };
 
