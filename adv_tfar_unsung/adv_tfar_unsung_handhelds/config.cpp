@@ -87,4 +87,15 @@ class CfgVehicles
 			macro_additem(uns_tfar_anprc90,1);
 		};
 	};
+	
+	class item_uns_tfar_anprc25: Item_Base_F {
+		scope = 1;
+		scopeCurator = 1;
+		displayName = "AN/PRC-25";
+		author = "Belbo";
+		vehicleClass = "Items";
+		class TransportItems {
+			macro_additem(uns_tfar_anprc25,1);
+		};
+	};
 };
