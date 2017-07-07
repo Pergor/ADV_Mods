@@ -4,12 +4,12 @@ class CfgPatches
     {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 1.68;
+        requiredVersion = 1.72;
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.3.1";
-		versionStr = "1.3.1";
+		version = "1.3.2";
+		versionStr = "1.3.2";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
