@@ -6,7 +6,7 @@ params ["_caller", "_target"];
 
 if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 	//diagnostics:
-	[_caller,"target was too long in revive state"] call adv_aceCPR_fnc_diag;
+	[_caller,"custom CPR on target not possible"] call adv_aceCPR_fnc_diag;
 };
 
 //what's our probability?
@@ -18,7 +18,7 @@ private _diceRoll = 1+floor(random 100);
 if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
 	_target setVariable ["ace_medical_inReviveState",false,true];
-	_target setVariable ["ace_medical_inCardiacArrest",nil, true];
+	_target setVariable ["ace_medical_inCardiacArrest",nil,true];
 	private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 	
 	//if player has a higher bloodvolume, the new heart rate will be lower.
