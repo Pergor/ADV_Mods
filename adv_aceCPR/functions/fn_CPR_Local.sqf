@@ -45,6 +45,10 @@ if ( _probability >= _diceRoll ) exitWith {
 	true;
 };
 
+//diagnostics:
+[_caller,"patient has not been stabilized"] call adv_aceCPR_fnc_diag;
+
+//log the custom cpr to the treatment log:
 [_target, "activity", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 [_target, "activity_view", localize "STR_ADV_ACECPR_CPR_EXECUTE", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 
