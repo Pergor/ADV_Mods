@@ -27,11 +27,12 @@ call {
 	["adv_aceCPR_evh_addTime", [_caller, _target], _target] call CBA_fnc_targetEvent;
 };
 
-//if the target is in cardiac arrest, only regular cpr should be used:
-private _inCardiac = _target getVariable["ace_medical_inCardiacArrest",false];
+//if the target is just in cardiac arrest, only regular cpr should be used:
+private _inCardiac = _target getVariable ["ace_medical_inCardiacArrest",false];
+private _inRevive = _target getVariable ["ace_medical_inReviveState",false];
 
 //if necessary execute the custom cpr action:
-if ( (missionNamespace getVariable ["ace_medical_enableRevive",0]) > 0 && !_inCardiac ) exitWith {
+if ( (missionNamespace getVariable ["ace_medical_enableRevive",0]) > 0 && _inRevive ) exitWith {
 	//diagnostics:
 	[_target,"fnc_cpr is being executed"] call adv_aceCPR_fnc_diag;
 	

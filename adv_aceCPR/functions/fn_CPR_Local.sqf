@@ -4,6 +4,7 @@ ADV_aceCPR_fnc_CPR_Local - by Belbo
 
 params ["_caller", "_target"];
 
+//execute custom CPR local to the unit:
 if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 	//diagnostics:
 	[_caller,"custom CPR on target not possible"] call adv_aceCPR_fnc_diag;
@@ -15,23 +16,27 @@ private _probability = [_caller,_target] call ADV_aceCPR_fnc_probability;
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
 
+//diagnostics:
+[_caller,format ["resulting probability was at %1 per-cent, and the dice-roll was %2.",_probability, _diceRoll]] call adv_aceCPR_fnc_diag;
+
 if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
 	_target setVariable ["ace_medical_inReviveState",false,true];
+	//_target setVariable ["ace_medical_heartRateAdjustments",[],true];
 	_target setVariable ["ace_medical_inCardiacArrest",nil,true];
 	private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 	
 	//if player has a higher bloodvolume, the new heart rate will be lower.
 	call {
 		if (_target getVariable "ace_medical_bloodVolume" > 60 && !(_gotEpi > 0.5)) exitWith {
-			_target setVariable ["ace_medical_heartRate",30];
+			_target setVariable ["ace_medical_heartRate",30, true];
 		};
-		_target setVariable ["ace_medical_heartRate",40];
+		_target setVariable ["ace_medical_heartRate",40, true];
 	};
 	
 	//if the player's bloodVolume is below the minimal value, it will be reset to 30:
 	if (_target getVariable "ace_medical_bloodVolume" < 30) then {
-		_target setVariable ["ace_medical_bloodVolume",30];
+		_target setVariable ["ace_medical_bloodVolume",30, true];
 	};
 	
 	//log the custom cpr success to the treatment log:

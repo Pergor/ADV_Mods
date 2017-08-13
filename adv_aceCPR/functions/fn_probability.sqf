@@ -60,7 +60,5 @@ call {
 if ( _probability < 1 ) then {
 	_probability = 2;
 };
-//diagnostics:
-[_caller,format ["resulting probability was at %1 per-cent, and the dice-roll was %2.",_probability, _diceRoll]] call adv_aceCPR_fnc_diag;
 
 _probability;
