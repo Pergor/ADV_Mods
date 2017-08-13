@@ -6,8 +6,8 @@
         weapons[] = {};
         requiredVersion = 1.60;
         requiredAddons[] = {};
-		version = "1.22";
-		versionStr = "1.22";
+		version = "1.23";
+		versionStr = "1.23";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
