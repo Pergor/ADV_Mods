@@ -19,17 +19,25 @@
 params [
 	["_unit", objNull, [objNull]]
 	,["_radius", 2000, [0]]
-	,"_closest"
 ];
+
+/*
 //maybe there already is one?
-_closest = (_unit findNearestEnemy _unit);
-if ( !isNull _closest ) exitWith {
+private _closest = (_unit findNearestEnemy _unit);
+if ( !isNull _closest && (_unit distance _closest) < 100 ) exitWith {
 	_closest;
 };
+*/
+
+//define the output if no enemy is found:
+private _closest = objNull;
+
 //who are our enemies?
-private _enemySides = [side _unit] call BIS_fnc_enemySides;
+private _enemySides = [side group _unit] call BIS_fnc_enemySides;
+
 //are there any enemies within the radius?
 private _nearEnemies = allUnits select { (_x distance _unit) < _radius && (side _x) in _enemySides};
+
 //let's loop through the enemies to find the closest one:
 private _closestdist = _radius+1;
 {
@@ -38,5 +46,6 @@ private _closestdist = _radius+1;
 		_closestdist = _x distance _unit;
 	};
 } forEach _nearEnemies;
+
 //return the closest at the end of the function:
 _closest;
