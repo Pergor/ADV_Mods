@@ -22,8 +22,8 @@ class CfgPatches
 			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
 			,"A3_Characters_F"
 		};
-		version = "1.05";
-		versionStr = "1.05";
+		version = "1.06";
+		versionStr = "1.06";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -64,20 +64,67 @@ class cfgMagazines {
 	};
 };
 
+//thanks to RAGC Halifax for the cfgCloudlets patch!
+class CfgCloudlets
+{
+	class SmokeShellWhiteSmall;
+	class ragc_mortar_smoke: SmokeShellWhiteSmall
+	{
+		animationSpeedCoef=0.75;
+		colorCoef[] = {"colorR", "colorG", "colorB", 3};
+		sizeCoef = 3;
+		interval = 0.08;
+		lifeTime = 40;
+		moveVelocity[] = {0,0.1,0};
+		weight = 6.4;
+		volume = 5;
+	};
+};
+
+class ragc_mortar_effect_smoke
+{
+	class SmokeShellWhite
+	{
+		type = "ragc_mortar_smoke";
+		simulation = "particles";
+		position[] = {0,0,0};
+		intensity = 20;
+		interval = 0.08;
+	};
+};
+
 class CfgAmmo {
 	class FlareCore;
-	class Flare_82mm_AMOS_White : FlareCore {
+	class Flare_82mm_AMOS_White: FlareCore {
         intensity = 120000;
         flareSize = 18;
 		timeToLive = 60;
 		aimAboveTarget[] = {20,40,80,120,160,200,240};
 		aimAboveDefault = 4;
 	};
+	
+	class SmokeShell;
+	class SmokeShellArty: SmokeShell
+	{
+		effectsSmoke = "ragc_mortar_effect_smoke";
+		timeToLive = 150;
+	};
+	class ShotDeployBase;
+	class Smoke_82mm_AMOS_White: ShotDeployBase
+	{
+		submunitionAmmo = "SmokeShellArty";
+		effectsSmoke = "ragc_mortar_effect_smoke";
+		timeToLive = 150;
+	};
+
+	/*
 	class SmokeShell;
 	class SmokeShellArty : SmokeShell {
-		effectsSmoke = "SmokeShellWhiteEffect";
+		//effectsSmoke = "SmokeShellWhiteEffect";
+		effectsSmoke = "SmokeShellWhiteArty";
 		timeToLive = 90;
 	};
+	*/
 };
 
 
