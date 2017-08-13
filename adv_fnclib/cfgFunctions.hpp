@@ -13,6 +13,7 @@ class CfgFunctions {
 			class safeZone {};
 			class setFrequencies {};
 			class teleport {};
+			class timedHint {};
 			class undercover {};
 		};
 		class global {
