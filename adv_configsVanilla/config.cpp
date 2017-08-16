@@ -73,7 +73,8 @@ class CfgCloudlets
 		animationSpeedCoef=0.75;
 		colorCoef[] = {"colorR", "colorG", "colorB", 3};
 		sizeCoef = 3;
-		interval = 0.08;
+		//interval = 0.08;
+		interval = 0.04;
 		lifeTime = 40;
 		moveVelocity[] = {0,0.1,0};
 		weight = 6.4;
@@ -89,7 +90,8 @@ class ragc_mortar_effect_smoke
 		simulation = "particles";
 		position[] = {0,0,0};
 		intensity = 20;
-		interval = 0.08;
+		//interval = 0.08;
+		interval = 0.04;
 	};
 };
 
