@@ -2,7 +2,9 @@ class CfgPatches
 {
     class adv_configsAce
     {
-        units[] = {};
+        units[] = {
+			"adv_Box_82mmShells_F"
+		};
         weapons[] = {};
         requiredVersion = 1.60;
         requiredAddons[] = {
@@ -17,6 +19,26 @@ class CfgPatches
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
 };
+
+#define MACRO_ADDWEAPON(WEAPON,COUNT) class _xx_##WEAPON { \
+    weapon = #WEAPON; \
+    count = COUNT; \
+}
+
+#define MACRO_ADDMAGAZINE(MAGAZINE,COUNT) class _xx_##MAGAZINE { \
+    magazine = #MAGAZINE; \
+    count = COUNT; \
+}
+
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+    name = #ITEM; \
+    count = COUNT; \
+}
+
+#define MACRO_ADDBACKPACK(BACKPACK,COUNT) class _xx_##BACKPACK { \
+    backpack = #BACKPACK; \
+    count = COUNT; \
+}
 
 #define standard_flare intensity = 50000;\
 	flareSize = 18;\
@@ -51,4 +73,23 @@ class CfgWeapons
 	class LMG_03_base_F: Rifle_Long_Base_F {
 		magazines[] += {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 	};
+};
+
+class cfgVehicles
+{
+	class Box_Syndicate_WpsLaunch_F;
+	
+	class adv_Box_82mmShells_F : Box_Syndicate_WpsLaunch_F {
+		author = "[SeL] Belbo";
+		displayName = "82mm Mortar Ammo";
+		
+		class TransportWeapons {};
+		class TransportMagazines {
+			MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_HE,16);
+			MACRO_ADDMAGAZINE(ACE_1Rnd_82mm_Mo_Smoke,8);
+		};
+		class TransportItems {};
+		class TransportBackpacks {};
+	};
+
 };
