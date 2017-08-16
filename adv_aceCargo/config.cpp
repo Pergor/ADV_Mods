@@ -1,5 +1,7 @@
 ﻿#define macro_6 ace_cargo_space = 6;\
 		ace_cargo_hasCargo = 1;
+#define macro_8 ace_cargo_space = 8;\
+		ace_cargo_hasCargo = 1;
 #define macro_10 ace_cargo_space = 10;\
 		ace_cargo_hasCargo = 1;
 #define macro_20 ace_cargo_space = 20;\
@@ -66,7 +68,7 @@ class CfgVehicles {
 	*/
 	
 	class Car: LandVehicle {
-		macro_6
+		macro_8
 	};
 	
 	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
