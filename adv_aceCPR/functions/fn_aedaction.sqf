@@ -10,9 +10,6 @@ params [
 	,"_items"
 ];
 
-
-
-//if the target is just in cardiac arrest, only regular cpr should be used:
 private _inCardiac = _target getVariable ["ace_medical_inCardiacArrest",false];
 private _inRevive = _target getVariable ["ace_medical_inReviveState",false];
 
@@ -32,7 +29,7 @@ if ( _inCardiac ) exitWith {
 		[_target,"target is not local to the caller"] call adv_aceCPR_fnc_diag;
 		
 		//aed event:
-		["adv_aceCPR_evh_CPR_Local", [_caller, _target], _target] call CBA_fnc_targetEvent;
+		["adv_aceCPR_evh_AED_Local", [_caller, _target], _target] call CBA_fnc_targetEvent;
 	};
 };
 
