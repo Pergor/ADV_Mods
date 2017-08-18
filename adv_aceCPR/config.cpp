@@ -12,8 +12,8 @@ class CfgPatches
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.0";
-		versionStr = "1.4.0";
+		version = "1.4.1";
+		versionStr = "1.4.1";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -32,6 +32,7 @@ class CfgFunctions {
 			class action {};
 			class addTime {};
 			class aedaction {};
+			class aedsound {};
 			class AED_Local {};
 			class canCPR {};
 			class CPR {};
@@ -117,12 +118,13 @@ class ACE_Medical_Actions {
 		class Defibrillator: CPR {
             displayName = "Automated External Defibrillator";
 			displayNameProgress = "Using the defibrillator...";
-			condition = "!([(_this select 1)] call ace_common_fnc_isAwake) && ((_this select 1) getVariable ['ace_medical_inCardiacArrest',false])";
 			items[] = {"adv_aceCPR_AED"};
 			treatmentTime = 8;
+			requiredMedic = 1;
 			callbackSuccess = "adv_aceCPR_fnc_aedaction";
+			callbackProgress = "adv_aceCPR_fnc_aedsound";
 			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
-			animationCaller = "AinvPknlMstpSlayWnonDnon_medic";
+			animationCaller = "AinvPknlMstpSnonWnonDnon_medic3";
 		};
 	};
 };
