@@ -5,7 +5,7 @@ ADV_aceCPR_fnc_AED_Local - by Belbo
 params ["_caller", "_target"];
 
 //what's our probability?
-private _probability = 80;
+private _probability = 85;
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
