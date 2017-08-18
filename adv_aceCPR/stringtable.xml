@@ -20,5 +20,15 @@
             <English>%1 performed CPR and stabilized the patient</English>
             <German>%1 hat HLW durchgeführt und den Patienten stabilisiert</German>
         </Key>
+        <Key ID="STR_ADV_ACECPR_AED_EXECUTE">
+			<Original>%1 used the Defibrillator</Original>
+			<English>%1 used the Defibrillator</English>
+			<German>%1 hat den Defibrillator genutzt</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_AED_COMPLETED">
+			<Original>%1 used the Defibrillator and stabilized the patient</Original>
+            <English>%1 used the Defibrillator and stabilized the patient</English>
+            <German>%1 hat den Patienten mit Defibrillator stabilisiert</German>
+        </Key>
 		</Package>
 </Project>
