@@ -23,7 +23,7 @@ if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
 	_target setVariable ["ace_medical_inReviveState",false,true];
 	//_target setVariable ["ace_medical_heartRateAdjustments",[],true];
-	_target setVariable ["ace_medical_inCardiacArrest",nil,true];
+	_target setVariable ["ace_medical_inCardiacArrest",false,true];
 	private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 	
 	//if player has a higher bloodvolume, the new heart rate will be lower.
