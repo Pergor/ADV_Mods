@@ -49,6 +49,7 @@ _ACE_salineIV_250 = 0;
 _ACE_bodyBag = 0;
 _ACE_surgicalKit = 0;
 _ACE_personalAidKit = 0;
+_ACE_advACESplint = 0;
 
 _mediKit = 0;
 _FirstAidKits = 0;
@@ -101,6 +102,7 @@ switch _FAKtype do {
 			if ( (missionnamespace getVariable ["ace_medical_consumeItem_SurgicalKit",0]) > 0 ) then {
 				_ACE_surgicalKit = 5;
 			};
+			_ACE_advACESplint = 4;
 		} else {
 			_ACE_fieldDressing = 48;
 			_ACE_epinephrine = 6;
@@ -131,9 +133,13 @@ switch _FAKtype do {
 			if !(isClass(configFile >> "CfgPatches" >> "adv_aceCPR")) then {
 				_ACE_personalAidKit = 1;
 			};
+			if ( isClass(configFile >> "CfgWeapons" >> "adv_aceCPR_AED") && missionNamespace getVariable ["adv_par_ace_aceCPR_AED",1] > 0 ) then {
+				_ACE_advACECPR_AED = 1;
+			};
 			if ( (missionnamespace getVariable ["ace_medical_consumeItem_SurgicalKit",0]) > 0 ) then {
 				_ACE_surgicalKit = 5;
 			};
+			_ACE_advACESplint = 12;
 		} else {
 			_ACE_fieldDressing = 64;
 			_ACE_epinephrine = 12;
