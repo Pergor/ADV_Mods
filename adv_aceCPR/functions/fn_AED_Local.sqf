@@ -4,14 +4,22 @@ ADV_aceCPR_fnc_AED_Local - by Belbo
 
 params ["_caller", "_target"];
 
+//backwards compatibility:
+private _probabilities = missionNamespace getVariable ["adv_aceCPR_probabilities", [40,15,5,85]];
+if (count _probabilities isEqualTo 3) then {
+	_probabilities pushBack 85;
+};
 //what's our probability?
-private _probability = 85;
+private _probability = _probabilities select 3;
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
 
 //diagnostics:
 [_caller,format ["probability was at %1 per-cent, and the dice-roll was %2.",_probability, _diceRoll]] call adv_aceCPR_fnc_diag;
+
+//adds pain with each defib use:
+[_target, 0.4] call ace_medical_fnc_adjustPainLevel;
 
 if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
@@ -32,10 +40,22 @@ if ( _probability >= _diceRoll ) exitWith {
 
 	//diagnostics:
 	[_caller,"patient has been succesfully stabilized"] call adv_aceCPR_fnc_diag;
+	
+	//show pulse after AED:
+	if (!local _caller) then {
+		["adv_aceCPR_evh_showPulse", [_caller, _target], _caller] call CBA_fnc_targetEvent;
+	};
+	["adv_aceCPR_evh_showPulse", [_caller, _target]] call CBA_fnc_localEvent;
 
 	//return:
 	true;
 };
+
+//show pulse after AED:
+if (!local _caller) then {
+	["adv_aceCPR_evh_showPulse", [_caller, _target], _caller] call CBA_fnc_targetEvent;
+};
+["adv_aceCPR_evh_showPulse", [_caller, _target]] call CBA_fnc_localEvent;
 
 //diagnostics:
 [_caller,"patient has not been stabilized"] call adv_aceCPR_fnc_diag;
