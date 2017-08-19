@@ -1,4 +1,4 @@
-class CfgPatches
+﻿class CfgPatches
 {
     class adv_aceCPR
     {
@@ -12,8 +12,8 @@ class CfgPatches
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.1";
-		versionStr = "1.4.1";
+		version = "1.4.3";
+		versionStr = "1.4.3";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -56,7 +56,7 @@ class cfgWeapons {
         descriptionShort = "Use to resuscitate player";
         descriptionUse = "Use to resuscitate player";
         class ItemInfo: InventoryItem_Base_F {
-            mass = 20;
+            mass = 30;
         };
 	};
 };
