@@ -68,7 +68,7 @@ class CfgVehicles {
 	*/
 	
 	class Car: LandVehicle {
-		macro_8
+		macro_6
 	};
 	
 	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
