@@ -2,17 +2,10 @@
 
 This file must not be removed from the folder and must be contained in every work based on this addon or parts of it.
 
-This addon is published under the APL-SA licence:
+This addon - as a whole - is allowed to be copied, distributed or modified as per the GPL-2.0 licence. https://opensource.org/licenses/GPL-2.0
 
-"	With this licence you are free to adapt (i.e. modify, rework or update) and share (i.e. copy, distribute or transmit) the material under the following conditions:
-	Attribution - You must attribute the material in the manner specified by the author or licensor (but not in any way that suggests that they endorse you or your use of the material).
-	Noncommercial - You may not use this material for any commercial purposes.
-	Arma Only - You may not convert or adapt this material to be used in other games than Arma.
-	Share Alike - If you adapt, or build upon this material, you may distribute the resulting material only under the same license.	" 
-( http://www.bistudio.com/community/licenses/arma-public-license-share-alike )
+Additional terms apply for using this addon:
+You may not use this addon or parts or derivatives on it for any commercial purposes, including monetized game servers.
+This addon or parts or derivatives of it may not be used in any derivative of Life gamemode.
 
-Noncommercial includes monetized servers: This addon or parts or derivatives of it may not be used on monetized servers.
-Altis Life: This addon or parts or derivatives of it may not be used in any derivative of Life gamemode.
-Steam Workshop: This addon or parts or derivatives of it may not be uploaded to Steam Workshop, neither individually nor as part of a collection without written consent of the author.
-
-For the audio files contained in this mod a different licence might apply.
+Different licences may apply to parts of this addon if it's not copied or distributed as a whole. 
