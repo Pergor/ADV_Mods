@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="adv">
+    <Package name="aceSplint">
+        <Key ID="STR_ADV_ACESPLINT_DISPLAYNAME">
+			<Original>SAM splint</Original>
+            <English>SAM splint</English>
+            <German>Alu-Polsterschiene</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_DESCRIPTION">
+			<Original>Use to splint damaged limb</Original>
+            <English>Use to splint damaged limb</English>
+            <German>Zum Schienen verletzter Gliedmaßen</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_APPLIED">
+			<Original>%1 applied splint to %3</Original>
+			<English>%1 applied splint to %3</English>
+			<German>%1 hat %3 geschient</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_ACTION">
+			<Original>Apply SAM splint</Original>
+            <English>Apply SAM splint</English>
+            <German>Alu-Polsterschiene</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_PROGRESS">
+			<Original>Applying splint...</Original>
+            <English>Applying splint...</English>
+            <German>Gliedmaß wird geschient...</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_ARM">
+			<Original>arm</Original>
+            <English>arm</English>
+            <German>Arm</German>
+        </Key>
+        <Key ID="STR_ADV_ACESPLINT_LEG">
+			<Original>leg</Original>
+            <English>leg</English>
+            <German>Bein</German>
+        </Key>
+		</Package>
+</Project>
