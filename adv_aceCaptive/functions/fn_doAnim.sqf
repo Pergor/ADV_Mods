@@ -20,7 +20,7 @@ if (_state isEqualTo 'down') exitWith {
 		_unit setVariable ["ace_captives_handcuffAnimEHID", _animChangedEHID];
 		
 		[_unit] call ace_common_fnc_fixLoweredRifleAnimation;
-		[_unit, "Acts_AidlPsitMstpSsurWnonDnon01", 2] call ace_common_fnc_doAnimation;
+		[_unit, "Acts_ExecutionVictim_Loop", 2] call ace_common_fnc_doAnimation;
 
 	}, [_unit], 0.01] call CBA_fnc_waitAndExecute;
 };
