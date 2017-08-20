@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="adv">
+    <Package name="aceCPR">
+        <Key ID="STR_ADV_ACECAPTIVE_DOWN">
+			<Original>On your knees!</Original>
+			<English>On your knees!</English>
+			<German>Auf die Knie!</German>
+        </Key>
+        <Key ID="STR_ADV_ACECAPTIVE_UP">
+			<Original>Get up!</Original>
+			<English>Get up!</English>
+			<German>Steh' auf!</German>
+        </Key>
+		</Package>
+</Project>
