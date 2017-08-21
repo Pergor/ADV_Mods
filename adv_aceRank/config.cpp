@@ -20,6 +20,7 @@ class CfgFunctions {
 		tag = "adv_aceRank";
 		class init {
 			file = "adv_aceRank\functions";
+			class init { postInit = 1; };
 			class isHigher {};
 			class setRank {};
 		};

@@ -6,5 +6,30 @@
 			<English>Set Rank</English>
 			<German>Dienstgrad</German>
         </Key>
+        <Key ID="STR_ADV_ACERANK_CONFIRMATION">
+			<Original>Confirm new rank</Original>
+			<English>Confirm new rank</English>
+			<German>Bestätige neuen Dienstgrad</German>
+        </Key>
+        <Key ID="STR_ADV_ACERANK_MESSAGE">
+			<Original>Are you sure you want to set a new rank for %1?</Original>
+			<English>Are you sure you want to set a new rank for %1?</English>
+			<German>Bist du sicher, dass %1 den neuen Dienstgrad haben soll?</German>
+        </Key>
+        <Key ID="STR_ADV_ACERANK_CONFIRM">
+			<Original>Confirm new rank</Original>
+			<English>Confirm new rank</English>
+			<German>Bestätige neuen Dienstgrad</German>
+        </Key>
+        <Key ID="STR_ADV_ACERANK_SHOW_1">
+			<Original>Rank</Original>
+			<English>Rank</English>
+			<German>Dienstgrad</German>
+        </Key>
+        <Key ID="STR_ADV_ACERANK_SHOW">
+			<Original>Your new rank is %1.</Original>
+			<English>Your new rank is %1.</English>
+			<German>Dein neuer Dienstgrad ist ""%1"".</German>
+        </Key>
 		</Package>
 </Project>
