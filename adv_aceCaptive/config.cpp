@@ -45,7 +45,7 @@ class cfgVehicles {
                     statement = "[_player, _target, true] call ace_captive_fnc_doEscortCaptive";
                     exceptions[] = {};
                     showDisabled = 1;
-                    icon = "\ace_captive\UI\captive_ca.paa";
+                    icon = "\z\ace\addons\captive\UI\captive_ca.paa";
 					priority = 2.3;
 				};
 				*/
