@@ -7,6 +7,7 @@ if (_state isEqualTo 'down') exitWith {
 	[{
 		params ["_unit"];
 		if !(_unit getVariable ["ace_captives_isHandcuffed", false]) exitWith {};
+		_unit disableAI "MOVE";
 
 		//Adding custom animation changed evh:
 		//If we get a change in animation then redo the animation (handles people vaulting to break the animation chain)
@@ -29,6 +30,8 @@ if (_state isEqualTo 'down') exitWith {
 [{
 	params ["_unit"];
 	if (!(_unit getVariable ["ace_captives_isHandcuffed", false])) exitWith {};
+	
+	_unit enableAI "MOVE";
 
 	if ((vehicle _unit) == _unit) then {
 		[_unit] call ace_common_fnc_fixLoweredRifleAnimation;
