@@ -20,6 +20,9 @@ private _diceRoll = 1+floor(random 100);
 
 //adds pain with each defib use:
 [_target, 0.4] call ace_medical_fnc_adjustPainLevel;
+//to units standing too close to _target as well:
+private _bystanders = ( allUnits select {_x distance _target < 1.7} ) - [_caller];
+{ [_x, 0.2] call ace_medical_fnc_adjustPainLevel; nil; } count _bystanders;
 
 if ( _probability >= _diceRoll ) exitWith {
 	//resetting the values of the target:
