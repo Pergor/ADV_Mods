@@ -20,7 +20,7 @@ params ["_unit","_target"];
 //Alive, handcuffed, not being escored, and not unconscious
 //added last line
 
-(_target getVariable ["ace_captive_isHandcuffed", false]) &&
+(_target getVariable ["ace_captives_isHandcuffed", false]) &&
 {isNull (attachedTo _target)} &&
 {alive _target} &&
 {!(_target getVariable ["ACE_isUnconscious", false])} &&

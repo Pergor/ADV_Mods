@@ -8,8 +8,8 @@
         requiredAddons[] = {
 			"ace_captives"
 		};
-		version = "1.0";
-		versionStr = "1.0";
+		version = "1.0.1";
+		versionStr = "1.0.1";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -32,23 +32,13 @@ class CfgFunctions {
 
 class cfgVehicles {
 	
-	//ace_actions:
 	class Man;
 	class CAManBase: Man {
 		class ACE_Actions {
 			class ACE_MainActions {
-				/*
 				class ACE_EscortCaptive {
-                    displayName = "$STR_ACE_captives_EscortCaptive";
-                    distance = 4;
 					condition = "[_player, _target] call adv_aceCaptive_fnc_canEscortCaptive";
-                    statement = "[_player, _target, true] call ace_captive_fnc_doEscortCaptive";
-                    exceptions[] = {};
-                    showDisabled = 1;
-                    icon = "\z\ace\addons\captive\UI\captive_ca.paa";
-					priority = 2.3;
 				};
-				*/
 				class adv_aceCaptive_down
 				{
 					displayName = "$STR_ADV_ACECAPTIVE_DOWN";
