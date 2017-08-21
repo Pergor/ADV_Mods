@@ -19,14 +19,14 @@ private _callerAnim = call {
 
 if (toLower _animState == toLower _captiveAceAnim) exitWith {
 	if (local _target) exitWith {
-		["adv_aceCaptive_evh_doAnim", [_target,"down"]] call CBA_fnc_localEvent;
+		["adv_aceCaptives_evh_doAnim", [_target,"down"]] call CBA_fnc_localEvent;
 	};
-	["adv_aceCaptive_evh_doAnim", [_target,"down"], _target] call CBA_fnc_targetEvent;
+	["adv_aceCaptives_evh_doAnim", [_target,"down"], _target] call CBA_fnc_targetEvent;
 };
 
 if (local _target) exitWith {
-	["adv_aceCaptive_evh_doAnim", [_target,"up"]] call CBA_fnc_localEvent;
+	["adv_aceCaptives_evh_doAnim", [_target,"up"]] call CBA_fnc_localEvent;
 };
-["adv_aceCaptive_evh_doAnim", [_target,"up"], _target] call CBA_fnc_targetEvent;
+["adv_aceCaptives_evh_doAnim", [_target,"up"], _target] call CBA_fnc_targetEvent;
 
 nil;

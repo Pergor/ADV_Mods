@@ -1,6 +1,6 @@
 ﻿class CfgPatches
 {
-    class adv_aceCaptive
+    class adv_aceCaptives
     {
         units[] = {};
         weapons[] = {};
@@ -16,10 +16,10 @@
 };
 
 class CfgFunctions {
-	class adv_aceCaptive {
-		tag = "adv_aceCaptive";
+	class adv_aceCaptives {
+		tag = "adv_aceCaptives";
 		class init {
-			file = "adv_aceCaptive\functions";
+			file = "adv_aceCaptives\functions";
 			class canEscortCaptive {};
 			class changeAnim {};
 			class doAnim {};
@@ -37,13 +37,13 @@ class cfgVehicles {
 		class ACE_Actions {
 			class ACE_MainActions {
 				class ACE_EscortCaptive {
-					condition = "[_player, _target] call adv_aceCaptive_fnc_canEscortCaptive";
+					condition = "[_player, _target] call adv_aceCaptives_fnc_canEscortCaptive";
 				};
 				class adv_aceCaptive_down
 				{
-					displayName = "$STR_ADV_ACECAPTIVE_DOWN";
-					condition = "[_target,'down'] call adv_aceCaptive_fnc_isCaptive";
-					statement = "[_player,_target] call adv_aceCaptive_fnc_changeAnim";
+					displayName = "$STR_ADV_ACECAPTIVES_DOWN";
+					condition = "[_target,'down'] call adv_aceCaptives_fnc_isCaptive";
+					statement = "[_player,_target] call adv_aceCaptives_fnc_changeAnim";
 					showDisabled = 0;
 					priority = 0;
 					distance = 5;
@@ -51,9 +51,9 @@ class cfgVehicles {
 				};
 				class adv_aceCaptive_up
 				{
-					displayName = "$STR_ADV_ACECAPTIVE_UP";
-					condition = "[_target,'up'] call adv_aceCaptive_fnc_isCaptive";
-					statement = "[_player,_target] call adv_aceCaptive_fnc_changeAnim";
+					displayName = "$STR_ADV_ACECAPTIVES_UP";
+					condition = "[_target,'up'] call adv_aceCaptives_fnc_isCaptive";
+					statement = "[_player,_target] call adv_aceCaptives_fnc_changeAnim";
 					showDisabled = 0;
 					priority = 0;
 					distance = 5;
