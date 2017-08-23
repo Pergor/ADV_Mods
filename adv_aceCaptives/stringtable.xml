@@ -2,9 +2,9 @@
 <Project name="adv">
     <Package name="ACECAPTIVES">
         <Key ID="STR_ADV_ACECAPTIVES_DOWN">
-			<Original>On your knees!</Original>
-			<English>On your knees!</English>
-			<German>Auf die Knie!</German>
+			<Original>Sit down!</Original>
+			<English>Sit down!</English>
+			<German>Hinsetzen!</German>
         </Key>
         <Key ID="STR_ADV_ACECAPTIVES_UP">
 			<Original>Get up!</Original>
