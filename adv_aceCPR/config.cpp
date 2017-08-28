@@ -114,6 +114,8 @@ class ACE_Medical_Actions {
 			condition = "!([(_this select 1)] call ace_common_fnc_isAwake) && ((_this select 1) getVariable ['ace_medical_inCardiacArrest',false])";
 			callbackSuccess = "adv_aceCPR_fnc_action";
 			animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
+			animationPatientUnconsciousExcludeOn[] = {""};
+			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
 		};
 		class Defibrillator: CPR {
             displayName = "Automated External Defibrillator";
@@ -123,6 +125,7 @@ class ACE_Medical_Actions {
 			requiredMedic = 1;
 			callbackSuccess = "adv_aceCPR_fnc_aedaction";
 			callbackProgress = "adv_aceCPR_fnc_aedsound";
+			animationPatientUnconsciousExcludeOn[] = {""};			
 			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
 			animationCaller = "AinvPknlMstpSnonWnonDnon_medic3";
 		};
