@@ -6,6 +6,8 @@ class CfgPatches
 			"adv_gen_commander_F"
 			,"adv_gen_soldier_F"
 			,"adv_gen_offroad_01_gen_F"
+			,"B_Offroad_02_gen_F"
+			,"adv_gen_Offroad_02_gen_F"
 		};
         weapons[] = {};
         requiredVersion = 1.60;
