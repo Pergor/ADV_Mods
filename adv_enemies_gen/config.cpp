@@ -7,6 +7,8 @@ class CfgPatches
 			,"adv_gen_soldier_F"
 			,"adv_gen_offroad_01_gen_F"
 			,"B_Offroad_02_gen_F"
+			,"B_GEN_Offroad_01_armed_F"
+			,"adv_gen_offroad_01_armed_F"
 			,"adv_gen_Offroad_02_gen_F"
 		};
         weapons[] = {};
