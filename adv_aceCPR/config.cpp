@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.2";
-		versionStr = "1.4.2";
+		version = "1.4.3";
+		versionStr = "1.4.3";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -111,7 +111,6 @@ class ACE_Medical_Actions {
 	class Advanced {
 		class fieldDressing;
 		class CPR: fieldDressing {
-			condition = "!([(_this select 1)] call ace_common_fnc_isAwake) && ((_this select 1) getVariable ['ace_medical_inCardiacArrest',false])";
 			callbackSuccess = "adv_aceCPR_fnc_action";
 			animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
 			animationPatientUnconsciousExcludeOn[] = {""};
