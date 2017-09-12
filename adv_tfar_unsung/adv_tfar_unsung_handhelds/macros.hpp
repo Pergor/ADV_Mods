@@ -1,4 +1,4 @@
-﻿#define macro_additem(item,count) 	class _xx_##ITEM {\
+﻿#define macro_additem(ITEM,ICOUNT) 	class _xx_##ITEM {\
 										name = #ITEM;\
-										count = COUNT;\
+										count = ICOUNT;\
 									};
