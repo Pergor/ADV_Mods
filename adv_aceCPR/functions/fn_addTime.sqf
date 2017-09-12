@@ -9,12 +9,11 @@ private _reviveStartTime = _target getVariable ["ace_medical_reviveStartTime",ni
 private _timeAdded = 0;
 
 //if target is in reviveState it will gain 15 additional seconds of revive time:
-if (_inState) then {
-	if (!isNil "_reviveStartTime") then {
-		_timeAdded = _reviveStartTime + 15 + (random 5);
-		_target setVariable ["ace_medical_reviveStartTime", _timeAdded min CBA_missionTime];
-	};
+if (!isNil "_reviveStartTime") then {
+	_timeAdded = _reviveStartTime + 15 + (random 5);
+	_target setVariable ["ace_medical_reviveStartTime", _timeAdded min CBA_missionTime];
 };
+
 _return = _target getVariable "ace_medical_reviveStartTime";
 
 //diagnostics:
