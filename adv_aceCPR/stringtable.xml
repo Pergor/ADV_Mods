@@ -20,6 +20,11 @@
             <English>%1 performed CPR and stabilized the patient</English>
             <German>%1 hat HLW durchgeführt und den Patienten stabilisiert</German>
         </Key>
+        <Key ID="STR_ADV_ACECPR_CPR_FATAL">
+			<Original>%1 performed CPR - but the patient will not wake up</Original>
+            <English>%1 performed CPR - but the patient will not wake up</English>
+            <German>%1 hat HLW durchgeführt - der Patient ist nicht mehr zu retten</German>
+        </Key>
         <Key ID="STR_ADV_ACECPR_AED_EXECUTE">
 			<Original>%1 used the Defibrillator</Original>
 			<English>%1 used the Defibrillator</English>
