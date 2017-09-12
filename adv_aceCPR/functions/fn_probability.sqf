@@ -28,11 +28,20 @@ private _probability = call {
 //exit if probability has been set to 0:
 if ( _probability isEqualTo 0 ) exitWith {0};
 
-//if patient has epinephrine in his circulation, the probability rises based on amount of epi in system:
-//private _gotMorphine = _target getVariable ["ace_medical_morphine_insystem",0];
 //private _gotAdenosine = _target getVariable ["ace_medical_adenosine_insystem",0];
 //private _gotAtropine = _target getVariable ["ace_medical_atropine_insystem",0];
+
+//if patient has morphine or epinephrine in his circulation, the probability changes depending on amount of medication in system:
+private _gotMorphine = _target getVariable ["ace_medical_morphine_insystem",0];
 private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
+if (_gotMorphine > 0) then {
+	private _probabilityGain = 10*_gotEpi;
+	_probability = _probability - (round _probabilityGain);
+	
+	//diagnostics:
+	[_caller,format ["probability has been reduced by %1 due to morphine. New probability is %2",_probabilityGain,_probability]] call adv_aceCPR_fnc_diag;
+};
+
 if (_gotEpi > 0) then {
 	//private _probabilityGain = 8 + (floor random 8);
 	private _probabilityGain = 20*_gotEpi;
@@ -48,18 +57,15 @@ call {
 	if (_bloodLoss >= 0.3) exitWith {
 		private _probabilityLoss = 10 + (floor random 15);
 		_probability = _probability - _probabilityLoss;
-
-		//diagnostics:
-		[_caller,format ["probability has been reduced by %1 due to blood loss. New probability is %2",_probabilityLoss,_probability]] call adv_aceCPR_fnc_diag;
 	};
 	if (_bloodLoss >= 0.15) exitWith {
 		private _probabilityLoss = 5 + (floor random 8);
-		_probability = _probability - _probabilityLoss;
-		
-		//diagnostics:
-		[_caller,format ["probability has been reduced by %1 due to blood loss. New probability is %2",_probabilityLoss,_probability]] call adv_aceCPR_fnc_diag;
+		_probability = _probability - _probabilityLoss;	
 	};
 };
+
+//diagnostics:
+[_caller,format ["probability has been reduced by %1 due to blood loss. New probability is %2",_probabilityLoss,_probability]] call adv_aceCPR_fnc_diag;
 
 //and let at least a chance of 2%...:
 if ( _probability < 1 ) then {
