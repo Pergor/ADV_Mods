@@ -29,14 +29,13 @@ class CfgFunctions {
 		tag = "adv_aceCPR";
 		class init {
 			file = "adv_aceCPR\functions";
-			class action {};
 			class addTime {};
-			class aedaction {};
-			class aedsound {};
-			class AED_Local {};
+			class AED_action {};
+			class AED_sound {};
+			class AED_local {};
 			class canCPR {};
-			class CPR {};
-			class CPR_Local {};
+			class CPR_action {};
+			class CPR_local {};
 			class diag {};
 			class getBloodLoss {};
 			class init { postInit = 1; };
@@ -111,7 +110,7 @@ class ACE_Medical_Actions {
 	class Advanced {
 		class fieldDressing;
 		class CPR: fieldDressing {
-			callbackSuccess = "adv_aceCPR_fnc_action";
+			callbackSuccess = "adv_aceCPR_fnc_CPR_action";
 			animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
 			animationPatientUnconsciousExcludeOn[] = {""};
 			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
@@ -122,8 +121,8 @@ class ACE_Medical_Actions {
 			items[] = {"adv_aceCPR_AED"};
 			treatmentTime = 8;
 			requiredMedic = 1;
-			callbackSuccess = "adv_aceCPR_fnc_aedaction";
-			callbackProgress = "adv_aceCPR_fnc_aedsound";
+			callbackSuccess = "adv_aceCPR_fnc_AED_action";
+			callbackProgress = "adv_aceCPR_fnc_AED_sound";
 			animationPatientUnconsciousExcludeOn[] = {""};			
 			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
 			animationCaller = "AinvPknlMstpSnonWnonDnon_medic3";
