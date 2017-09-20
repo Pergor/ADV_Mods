@@ -41,7 +41,7 @@ if ( _probability >= _diceRoll ) exitWith {
 	private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
 	
 	//if player has a higher bloodvolume, the new heart rate will be lower.
-	if ( _reviveEnabled ) then {
+	if ( _reviveEnabled > 0 ) then {
 		call {
 			if (_target getVariable "ace_medical_bloodVolume" > 60 && !(_gotEpi > 0.5)) exitWith {
 				_target setVariable ["ace_medical_heartRate",30, true];
