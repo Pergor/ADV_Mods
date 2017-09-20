@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.4";
-		versionStr = "1.4.4";
+		version = "1.4.5";
+		versionStr = "1.4.5";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
