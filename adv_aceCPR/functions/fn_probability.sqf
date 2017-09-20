@@ -33,16 +33,19 @@ if ( _probability isEqualTo 0 ) exitWith {0};
 
 //if patient has morphine or epinephrine in his circulation, the probability changes depending on amount of medication in system:
 private _gotMorphine = _target getVariable ["ace_medical_morphine_insystem",0];
-private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
-if (_gotMorphine > 0) then {
-	private _probabilityGain = 10*_gotEpi;
+private _gotAtropine = _target getVariable ["ace_medical_atropine_insystem",0];
+private _gotAdenosine = _target getVariable ["ace_medical_adenosine_insystem",0];
+private _reduction = _gotMorphine+_gotAtropine+_gotAdenosine;
+if ( _reduction > 0 ) then {
+	private _probabilityGain = 10*_reduction;
 	_probability = _probability - (round _probabilityGain);
 	
 	//diagnostics:
 	[_caller,format ["probability has been reduced by %1 due to morphine. New probability is %2",_probabilityGain,_probability]] call adv_aceCPR_fnc_diag;
 };
 
-if (_gotEpi > 0) then {
+private _gotEpi = _target getVariable ["ace_medical_epinephrine_insystem",0];
+if ( _gotEpi > 0 ) then {
 	//private _probabilityGain = 8 + (floor random 8);
 	private _probabilityGain = 20*_gotEpi;
 	_probability = _probability + (round _probabilityGain);
