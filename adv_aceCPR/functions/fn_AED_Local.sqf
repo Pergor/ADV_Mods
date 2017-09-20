@@ -28,7 +28,7 @@ if ( _probability >= _diceRoll ) exitWith {
 	_target setVariable ["ace_medical_inReviveState",false,true];
 	_target setVariable ["ace_medical_inCardiacArrest",false,true];
 	
-	if ( _reviveEnabled ) then {
+	if (_reviveEnabled > 0) then {
 		//sets the heartrate higher than CPR:
 		_target setVariable ["ace_medical_heartRate",40, true];
 		
