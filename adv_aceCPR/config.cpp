@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.5";
-		versionStr = "1.4.5";
+		version = "1.4.6";
+		versionStr = "1.4.6";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -52,6 +52,7 @@ class cfgWeapons {
         scope = 2;
         displayName = "Automated External Defibrillator";
         picture = "\adv_aceCPR\ui\defib.paa";
+		model = "\A3\Structures_F_EPA\Items\Medical\Defibrillator_F.p3d";
         descriptionShort = "Use to resuscitate player";
         descriptionUse = "Use to resuscitate player";
         class ItemInfo: InventoryItem_Base_F {
@@ -69,6 +70,7 @@ class cfgVehicles {
         displayName = "Automated External Defibrillator";
         author = "[SeL] Belbo";
         vehicleClass = "Items";
+		model = "\A3\Structures_F_EPA\Items\Medical\Defibrillator_F.p3d";
         class TransportItems {
             MACRO_ADDITEM(adv_aceCPR_AED,1);
         };
