@@ -12,9 +12,10 @@ class CfgPatches
 			,"ace_smallarms"
 			,"ace_ballistics"
 			,"ace_grenades"
+			,"ace_realisticweights"
 		};
-		version = "1.01";
-		versionStr = "1.01";
+		version = "1.02";
+		versionStr = "1.02";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -64,8 +65,26 @@ class CfgAmmo {
 
 class CfgWeapons
 {
-	class Rifle_Long_Base_F;
+	//inheritances:
+	class ACE_ItemCore;
 	
+    class Rifle_Base_F;
+    class Rifle_Long_Base_F: Rifle_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class Rifle_Short_Base_F: Rifle_Base_F {
+        class WeaponSlotsInfo;
+    };
+    class Launcher;
+    class Launcher_Base_F: Launcher {
+        class WeaponSlotsInfo;
+    };
+    class Pistol;
+    class Pistol_Base_F: Pistol {
+        class WeaponSlotsInfo;
+	};
+	
+	//lmgs:
 	class LMG_Mk200_F: Rifle_Long_Base_F {
 		magazines[] += {"200Rnd_65x39_cased_Box_red","200Rnd_65x39_cased_Box_Tracer_red","30Rnd_65x39_caseless_mag","30Rnd_65x39_caseless_mag_Tracer","100Rnd_65x39_caseless_mag_Tracer","100Rnd_65x39_caseless_mag"};
 	};
@@ -73,12 +92,30 @@ class CfgWeapons
 	class LMG_03_base_F: Rifle_Long_Base_F {
 		magazines[] += {"30Rnd_556x45_Stanag","30Rnd_556x45_Stanag_green","30Rnd_556x45_Stanag_red","30Rnd_556x45_Stanag_Tracer_Red","30Rnd_556x45_Stanag_Tracer_Green","30Rnd_556x45_Stanag_Tracer_Yellow"};
 	};
+	
+	//launchers:
+	class launch_NLAW_F: Launcher_Base_F {
+        class WeaponSlotsInfo: WeaponSlotsInfo {
+            mass = 120;
+        };
+	};
+	
+	class ACE_personalAidKit: ACE_ItemCore {
+		model = "\A3\Props_F_Orange\Humanitarian\Camps\FirstAidKit_01_closed_F.p3d";
+	};
 };
 
 class cfgVehicles
 {
+	//inheritances
+	class Item_Base_F;
 	class Box_Syndicate_WpsLaunch_F;
 	
+	class ACE_personalAidKitItem: Item_Base_F {
+		model = "\A3\Props_F_Orange\Humanitarian\Camps\FirstAidKit_01_closed_F.p3d";
+	};
+	
+	//boxes
 	class adv_Box_82mmShells_F : Box_Syndicate_WpsLaunch_F {
 		author = "[SeL] Belbo";
 		displayName = "82mm Mortar Ammo";
