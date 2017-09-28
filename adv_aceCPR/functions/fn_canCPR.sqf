@@ -12,7 +12,8 @@ private _quotient = missionNamespace getVariable ["adv_aceCPR_quotient",1];
 if (_quotient < 1) then {_quotient = 1};
 
 //return:
-if ( alive _target && (_inRevState && (_startTime+(_maxTime/_quotient)) > CBA_missionTime) ) exitWith {
+//if ( alive _target && (_inRevState && (_startTime+(_maxTime/_quotient)) > CBA_missionTime) ) exitWith {
+if ( alive _target && _inRevState ) exitWith {
 	true;
 };
 
