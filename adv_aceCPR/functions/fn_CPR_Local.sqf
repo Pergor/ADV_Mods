@@ -9,7 +9,8 @@ private _inCardiac = _target getVariable ["ace_medical_inCardiacArrest",false];
 private _inRevive = _target getVariable ["ace_medical_inReviveState",false];
 private _reviveEnabled = missionNamespace getVariable ["ace_medical_enableRevive",0];
 
-//execute custom CPR local to the unit:
+/*
+//exit if cpr no longer possible:
 if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 	//diagnostics:
 	[_caller,"custom CPR on target not possible"] call adv_aceCPR_fnc_diag;
@@ -18,6 +19,7 @@ if !( [_target] call adv_aceCPR_fnc_canCPR ) exitWith {
 	[_target, "activity", localize "STR_ADV_ACECPR_CPR_FATAL", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 	[_target, "activity_view", localize "STR_ADV_ACECPR_CPR_FATAL", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 };
+*/
 
 //add time if in revive:
 if ( _inRevive ) then {
