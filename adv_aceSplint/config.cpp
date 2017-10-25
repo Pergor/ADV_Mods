@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.0";
-		versionStr = "1.0";
+		version = "1.0.1";
+		versionStr = "1.0.1";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -40,7 +40,7 @@ class CfgFunctions {
 
 class cfgWeapons {
 	class ACE_ItemCore;
-	class InventoryItem_Base_F;
+	class CBA_MiscItem_ItemInfo;
 	
     class adv_aceSplint_splint: ACE_ItemCore {
         scope = 2;
@@ -48,7 +48,7 @@ class cfgWeapons {
         descriptionShort = "$STR_ADV_ACESPLINT_DESCRIPTION";
         descriptionUse = "$STR_ADV_ACESPLINT_DESCRIPTION";
         picture = "\adv_aceSplint\ui\splint.paa";
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 3;
         };
 	};
