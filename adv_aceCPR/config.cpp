@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.7";
-		versionStr = "1.4.7";
+		version = "1.4.8";
+		versionStr = "1.4.8";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -46,7 +46,7 @@ class CfgFunctions {
 
 class cfgWeapons {
 	class ACE_ItemCore;
-	class InventoryItem_Base_F;
+	class CBA_MiscItem_ItemInfo;
 	
     class adv_aceCPR_AED: ACE_ItemCore {
         scope = 2;
@@ -55,7 +55,7 @@ class cfgWeapons {
 		model = "\A3\Structures_F_EPA\Items\Medical\Defibrillator_F.p3d";
         descriptionShort = "Use to resuscitate player";
         descriptionUse = "Use to resuscitate player";
-        class ItemInfo: InventoryItem_Base_F {
+        class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
 	};
