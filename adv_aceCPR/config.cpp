@@ -8,12 +8,12 @@
         weapons[] = {
 			"adv_aceCPR_AED"
 		};
-        requiredVersion = 1.72;
+        requiredVersion = 1.80;
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.8";
-		versionStr = "1.4.8";
+		version = "1.4.9";
+		versionStr = "1.4.9";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -114,8 +114,8 @@ class ACE_Medical_Actions {
 		class CPR: fieldDressing {
 			callbackSuccess = "adv_aceCPR_fnc_CPR_action";
 			animationCaller = "AinvPknlMstpSnonWnonDr_medic0";
-			animationPatientUnconsciousExcludeOn[] = {""};
 			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
+			animationPatientUnconsciousExcludeOn[] = {"ainjppnemstpsnonwrfldnon"};
 		};
 		class Defibrillator: CPR {
             displayName = "Automated External Defibrillator";
@@ -125,8 +125,6 @@ class ACE_Medical_Actions {
 			requiredMedic = 1;
 			callbackSuccess = "adv_aceCPR_fnc_AED_action";
 			callbackProgress = "adv_aceCPR_fnc_AED_sound";
-			animationPatientUnconsciousExcludeOn[] = {""};			
-			animationPatientUnconscious = "AinjPpneMstpSnonWrflDnon_rolltoback";
 			animationCaller = "AinvPknlMstpSnonWnonDnon_medic3";
 		};
 	};
