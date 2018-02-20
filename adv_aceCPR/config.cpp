@@ -12,8 +12,8 @@
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.4.9";
-		versionStr = "1.4.9";
+		version = "1.4.10";
+		versionStr = "1.4.10";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -53,8 +53,8 @@ class cfgWeapons {
         displayName = "Automated External Defibrillator";
         picture = "\adv_aceCPR\ui\defib.paa";
 		model = "\A3\Structures_F_EPA\Items\Medical\Defibrillator_F.p3d";
-        descriptionShort = "Use to resuscitate player";
-        descriptionUse = "Use to resuscitate player";
+        descriptionShort = "$STR_ADV_ACECPR_AED_DESCRIPTION";
+        descriptionUse = "$STR_ADV_ACECPR_AED_DESCRIPTION";
         class ItemInfo: CBA_MiscItem_ItemInfo {
             mass = 30;
         };
@@ -83,7 +83,7 @@ class cfgVehicles {
 			class ACE_Torso {
 				class CPR;
 				class adv_aceCPR_AED: CPR {
-					displayName = "Use Defibrillator";
+					displayName = "$STR_ADV_ACECPR_AED_ACTION";
 					condition = "[_player, _target, 'body', 'Defibrillator'] call ace_medical_fnc_canTreatCached";
 					statement = "[_player, _target, 'body', 'Defibrillator'] call ace_medical_fnc_treatment";
 					exceptions[] = {""};
@@ -95,7 +95,7 @@ class cfgVehicles {
 					class ACE_Torso {
 						class CPR;
 						class adv_aceCPR_AED: CPR {
-							displayName = "Use Defibrillator";
+							displayName = "$STR_ADV_ACECPR_AED_ACTION";
 							condition = "[_player, _target, 'body', 'Defibrillator'] call ace_medical_fnc_canTreatCached";
 							statement = "[_player, _target, 'body', 'Defibrillator'] call ace_medical_fnc_treatment";
 							exceptions[] = {"isNotInside"};
@@ -119,7 +119,7 @@ class ACE_Medical_Actions {
 		};
 		class Defibrillator: CPR {
             displayName = "Automated External Defibrillator";
-			displayNameProgress = "Using the defibrillator...";
+			displayNameProgress = "$STR_ADV_ACECPR_AED_PROGRESS";
 			items[] = {"adv_aceCPR_AED"};
 			treatmentTime = 8;
 			requiredMedic = 1;

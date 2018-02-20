@@ -8,12 +8,12 @@
         weapons[] = {
 			"adv_aceSplint_splint"
 		};
-        requiredVersion = 1.68;
+        requiredVersion = 1.80;
         requiredAddons[] = {
 			"ace_medical"
 		};
-		version = "1.0.1";
-		versionStr = "1.0.1";
+		version = "1.0.2";
+		versionStr = "1.0.2";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };

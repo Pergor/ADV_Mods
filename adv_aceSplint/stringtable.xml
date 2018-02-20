@@ -4,36 +4,43 @@
         <Key ID="STR_ADV_ACESPLINT_DISPLAYNAME">
 			<Original>SAM splint</Original>
             <English>SAM splint</English>
+			<French>Attelle</French>
             <German>Alu-Polsterschiene</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_DESCRIPTION">
 			<Original>Use to splint damaged limb</Original>
             <English>Use to splint damaged limb</English>
+			<French>Utiliser pour immobiliser un membre fracturé</French>
             <German>Zum Schienen verletzter Gliedmaßen</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_APPLIED">
 			<Original>%1 applied splint to %3</Original>
 			<English>%1 applied splint to %3</English>
+			<French>%1 pose une attelle à %3</French>
 			<German>%1 hat %3 geschient</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_ACTION">
 			<Original>Apply SAM splint</Original>
             <English>Apply SAM splint</English>
+			<French>Poser une attelle</French>
             <German>Alu-Polsterschiene</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_PROGRESS">
 			<Original>Applying splint...</Original>
             <English>Applying splint...</English>
+			<French>Pose de l'attelle...</French>
             <German>Gliedmaß wird geschient...</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_ARM">
 			<Original>arm</Original>
             <English>arm</English>
+			<French>bras</French>
             <German>Arm</German>
         </Key>
         <Key ID="STR_ADV_ACESPLINT_LEG">
 			<Original>leg</Original>
             <English>leg</English>
+			<French>jambe</French>
             <German>Bein</German>
         </Key>
 		</Package>
