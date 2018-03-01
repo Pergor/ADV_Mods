@@ -4,7 +4,7 @@
     {
         units[] = {};
         weapons[] = {};
-        requiredVersion = 1.82;
+        requiredVersion = 1.80;
         requiredAddons[] = {"ace_goggles","bwa3_comp_ace","adv_aceGogglesNoTint"};
 		version = "1.0";
 		versionStr = "1.0";
