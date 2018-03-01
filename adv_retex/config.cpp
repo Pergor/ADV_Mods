@@ -39,7 +39,9 @@ class CfgPatches
 			"adv_retex_b_kuma_f",
 			"adv_retex_b_mora_f",
 			"adv_retex_b_marid_f",
+			"adv_retex_b_marid_nt_f",
 			"adv_retex_b_gorgon_f",
+			"adv_retex_b_gorgon_nt_f",
 			"adv_retex_b_strider_f",
 			"adv_retex_b_strider_hmg_f",
 			"adv_retex_b_strider_gmg_f",
@@ -72,8 +74,8 @@ class CfgPatches
 			"A3_Characters_F_Civil",
 			"A3_Weapons_F_Uniforms"
 		};
-		version = "1.16";
-		versionStr = "1.16";
+		version = "1.2";
+		versionStr = "1.2";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -88,6 +90,7 @@ class cfgFunctions {
 			class setTextureNATOStrider {};
 			class setTextureBLACKPawnee {};
 			class setTextureMarid {};
+			class setTextureMaridSan {};
 			class setTextureMora {};
 			class setTextureRHSHunter {};
 			class setTextureWDL {};
@@ -109,7 +112,10 @@ class cfgFunctions {
 
 class CfgVehicles {
 	//vehicle inheritances
-	class I_APC_Wheeled_03_cannon_F;
+	class I_APC_Wheeled_03_base_F;
+	class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
+		class Eventhandlers;
+	};
 	class I_APC_tracked_03_cannon_F;
 	class I_MBT_03_cannon_F;
 	class O_APC_Wheeled_02_base_F;
@@ -129,10 +135,14 @@ class CfgVehicles {
 	class B_MRAP_01_hmg_F;
 	class B_MRAP_01_gmg_F;
 	
+	class B_MBT_01_TUSK_F;
+	class B_MBT_01_cannon_F;
+	
 	//blufor vehicles
 	//hunter
 	class adv_retex_b_mrap_f: B_MRAP_01_F {
 		displayName = "Hunter (Desert)";
+		forceInGarage = 1;
 		hiddenSelectionsTextures[] = {
 			"adv_retex\textures\hunter\rhs_body.paa"
 			,"adv_retex\textures\hunter\rhs_back.paa"
@@ -140,6 +150,7 @@ class CfgVehicles {
 	};
 	class adv_retex_b_mrap_hmg_f: B_MRAP_01_hmg_F {
 		displayName = "Hunter HMG (Desert)";
+		forceInGarage = 1;
 		hiddenSelectionsTextures[] = {
 			"adv_retex\textures\hunter\rhs_body.paa"
 			,"adv_retex\textures\hunter\rhs_back.paa"
@@ -148,10 +159,32 @@ class CfgVehicles {
 	};
 	class adv_retex_b_mrap_gmg_f: B_MRAP_01_gmg_F {
 		displayName = "Hunter GMG (Desert)";
+		forceInGarage = 1;
 		hiddenSelectionsTextures[] = {
 			"adv_retex\textures\hunter\rhs_body.paa"
 			,"adv_retex\textures\hunter\rhs_back.paa"
 			,"adv_retex\textures\hunter\rhs_turret.paa"
+		};
+	};
+	//slammer
+	//class adv_retex_b_slammer_f: B_T_MBT_01_cannon_F {
+	class B_T_MBT_01_cannon_F: B_MBT_01_cannon_F {
+		displayName = "M2A1 Slammer (Olive)";
+		forceInGarage = 1;
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\slammer\mbt_01_body_co_wd.paa"
+			,"adv_retex\textures\slammer\mbt_01_tow_co_wd.paa"
+			,"adv_retex\textures\slammer\mbt_addons_co_wd.paa"
+		};
+	};
+	//class adv_retex_b_slammer_up_f: B_T_MBT_01_TUSK_F {
+	class B_T_MBT_01_TUSK_F: B_MBT_01_TUSK_F {
+		displayName = "M2A4 Slammer UP (Olive)";
+		forceInGarage = 1;
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\slammer\mbt_01_body_co_wd.paa"
+			,"adv_retex\textures\slammer\mbt_01_tow_co_wd.paa"
+			,"adv_retex\textures\slammer\mbt_addons_co_wd.paa"
 		};
 	};
 	//kuma
@@ -165,6 +198,7 @@ class CfgVehicles {
 			natoweapons
 		};
 		displayName = "MBT-52 Kuma";
+		forceInGarage = 1;
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
@@ -188,6 +222,7 @@ class CfgVehicles {
 			natoweapons
 		};
 		displayName = "FV-720 Mora";
+		forceInGarage = 1;
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
@@ -206,6 +241,7 @@ class CfgVehicles {
 			natoweapons
 		};
 		displayName = "MSE-3 Marid";
+		forceInGarage = 1;
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
@@ -218,7 +254,27 @@ class CfgVehicles {
 			,"adv_retex\textures\marid\MaridRcwcsTexture.paa"
 			*/
 		};
-		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0)] call adv_retex_fnc_setTextureMarid;};"; };
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];if (local _target) then {[_target] call adv_retex_fnc_setTextureMarid;};";
+		};
+	};
+	class adv_retex_b_marid_nt_f: adv_retex_b_marid_f {
+		displayName = "MSE-3 Marid (SAN)";
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\marid\apc_wheeled_02_ext_01_blufor_co_san.paa"
+			,"adv_retex\textures\marid\apc_wheeled_02_ext_02_blufor_co.paa"
+			,"a3\data_f\vehicles\turret_co.paa"
+			/*
+			"adv_retex\textures\marid\MaridBodyTexture1.paa"
+			,"adv_retex\textures\marid\MaridBodyTexture2.paa"
+			,"adv_retex\textures\marid\MaridRcwcsTexture.paa"
+			*/
+		};
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];if (local _target) then {[_target] call adv_retex_fnc_setTextureMaridSan;};_target lockturret [[0],true];_target animate ['HideTurret',1];";
+		};
+		threat[] = {0,0,0};
+		attendant = 1;
 	};
 	//gorgon
 	class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
@@ -231,6 +287,7 @@ class CfgVehicles {
 			natoweapons
 		};
 		displayName = "AFV-4 Gorgon";
+		forceInGarage = 1;
 		crew = "B_crew_F";
 		typicalCargo[] = {"B_soldier_F"};
 		hiddenSelectionsTextures[] = {
@@ -239,6 +296,20 @@ class CfgVehicles {
 			,"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa"
 			,"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
 		};
+	};
+	class adv_retex_b_gorgon_nt_f: adv_retex_b_gorgon_f {
+		displayName = "AFV-4 Gorgon (SAN)";
+		hiddenSelectionsTextures[] = {
+			"adv_retex\textures\gorgon\apc_wheeled_03_ext_co_san.paa"
+			,"adv_retex\textures\gorgon\apc_wheeled_03_ext2_co_san.paa"
+			,"a3\armor_f_gamma\APC_Wheeled_03\data\rcws30_co.paa"
+			,"a3\armor_f_gamma\APC_Wheeled_03\data\apc_wheeled_03_ext_alpha_co.paa"
+		};
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
+		};
+		threat[] = {0,0,0};
+		attendant = 1;
 	};
 	//strider
 	class adv_retex_b_strider_f: I_MRAP_03_F {
