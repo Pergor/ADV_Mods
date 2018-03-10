@@ -12,6 +12,9 @@ class CfgPatches
 			,"adv_Box_IND_MMG_F"
 			,"adv_Box_IND_AT_F"
 			,"adv_Box_IND_AA_F"
+			,"I_APC_Wheeled_03_cannon_nt_F"
+			,"O_APC_Wheeled_02_rcws_nt_F"
+			,"O_T_APC_Wheeled_02_rcws_ghex_nt_F"
 		};
         weapons[] = {};
         requiredVersion = 1.60;
@@ -20,10 +23,12 @@ class CfgPatches
 			,"A3_Weapons_F_Machineguns_M200"
 			,"A3_Weapons_F_Mark_Machineguns_M200"
 			,"A3_Weapons_F_Exp_Machineguns_LMG_03"
+			,"A3_Static_F_Mortar_01"
+			,"A3_Static_F_Beta_Mortar_01"
 			,"A3_Characters_F"
 		};
-		version = "1.06";
-		versionStr = "1.06";
+		version = "1.07";
+		versionStr = "1.07";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -48,6 +53,17 @@ class CfgPatches
     backpack = #BACKPACK; \
     count = COUNT; \
 }
+
+class cfgFunctions {
+	class adv_configsVanilla {
+		tag = "adv_configsVanilla";
+		class init
+		{
+			file = "adv_configsVanilla\functions";
+			class mortarFlare {};
+		};
+	};
+};
 
 class cfgMagazines {
 	class 200Rnd_65x39_cased_Box_Tracer;
@@ -77,8 +93,8 @@ class CfgCloudlets
 		interval = 0.04;
 		lifeTime = 40;
 		moveVelocity[] = {0,0.1,0};
-		weight = 6.4;
-		volume = 5;
+		weight = 6.3;
+		volume = 6;
 	};
 };
 
@@ -89,9 +105,9 @@ class ragc_mortar_effect_smoke
 		type = "ragc_mortar_smoke";
 		simulation = "particles";
 		position[] = {0,0,0};
-		intensity = 20;
+		intensity = 25;
 		//interval = 0.08;
-		interval = 0.04;
+		interval = 0.03;
 	};
 };
 
@@ -109,14 +125,14 @@ class CfgAmmo {
 	class SmokeShellArty: SmokeShell
 	{
 		effectsSmoke = "ragc_mortar_effect_smoke";
-		timeToLive = 150;
+		timeToLive = 200;
 	};
 	class ShotDeployBase;
 	class Smoke_82mm_AMOS_White: ShotDeployBase
 	{
 		submunitionAmmo = "SmokeShellArty";
 		effectsSmoke = "ragc_mortar_effect_smoke";
-		timeToLive = 150;
+		timeToLive = 200;
 	};
 
 	/*
@@ -216,4 +232,44 @@ class CfgWeapons
 
 class CfgVehicles {
 	#include "boxes.hpp"
+	class I_APC_Wheeled_03_base_F;
+	class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
+		class Eventhandlers;
+	};
+	class O_APC_Wheeled_02_base_F;
+	class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
+		class Eventhandlers;
+	};
+	class O_T_APC_Wheeled_02_rcws_ghex_F: O_APC_Wheeled_02_base_F {
+		class Eventhandlers;
+	};
+	
+	class I_APC_Wheeled_03_cannon_nt_F: I_APC_Wheeled_03_cannon_F {
+		displayName = "AFV-4 Gorgon (No Turret)";
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
+		};
+	};
+	class O_APC_Wheeled_02_rcws_nt_F: O_APC_Wheeled_02_rcws_F {
+		displayName = "MSE-3 Marid (No Turret)";
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
+		};
+	};
+	class O_T_APC_Wheeled_02_rcws_ghex_nt_F: O_T_APC_Wheeled_02_rcws_ghex_F{
+		displayName = "MSE-3 Marid (No Turret)";
+		class EventHandlers: EventHandlers {
+			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
+		};
+	};
+	
+	class StaticWeapon;
+	class StaticMortar: StaticWeapon{
+		class Eventhandlers;
+	};
+	class Mortar_01_base_F: StaticMortar {
+		class EventHandlers: EventHandlers {
+			init = "params ['_target']; [_target] call adv_configsVanilla_fnc_mortarFlare;";
+		};		
+	};
 };
