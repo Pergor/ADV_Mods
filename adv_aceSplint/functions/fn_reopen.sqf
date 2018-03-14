@@ -4,8 +4,7 @@ ADV-aceSplint - by Belbo
 
 private _handle = _this spawn {
 
-
-	params ["_target","_oldBps","_oldGetHitPoint","_hitPointArray"];
+	params ["_target","_oldBps","_oldGetHitPoint","_hitPointArray","_selectionNumber"];
 
 	_hitPointArray params ["_hitpoint","_bodyPart","_selection","_str"];
 	_oldBps params ["_hitHeadOld","_hitBodyOld","_hitLeftArmOld","_hitRightArmOld","_hitLeftLegOld","_hitRightLegOld"];
@@ -22,19 +21,23 @@ private _handle = _this spawn {
 		
 		private _bps = _target getVariable ["ace_medical_bodypartstatus",[0,0,0,0,0,0]];
 		_bps params ["_hitHead","_hitBody","_hitLeftArm","_hitRightArm","_hitLeftLeg","_hitRightLeg"];
+		private _splints = _target getVariable ["adv_aceSplint_splints",[0,0,0,0,0,0]];
 		
-		if (_hitPoint isEqualTo "hithands") then {
+		if ( _selectionNumber in [2,3] ) then {
 			_target setHitPointDamage ["HitHands", 1];
 			_bps set [2,_hitLeftArm+_hitLeftArmOld];
 			_bps set [3,_hitRightArm+_hitRightArmOld];
-			
 		};
 		
-		if (_hitPoint isEqualTo "hitlegs") then {
+		if ( _selectionNumber in [4,5] ) then {
 			_target setHitPointDamage ["HitLegs", 1];
 			_bps set [4,_hitLeftLeg+_hitLeftLegOld];
 			_bps set [5,_hitRightLeg+_hitRightLegOld];
 		};
+		
+		_splints set [_selectionNumber,0];
+		
+		_target setVariable ["adv_aceSplint_splints",_splints,true];
 		
 		_target setVariable ["ace_medical_bodypartstatus",_bps,true];
 		
