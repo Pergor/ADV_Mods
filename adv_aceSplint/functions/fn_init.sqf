@@ -10,3 +10,8 @@ ADV-aceSplint - by Belbo
 ["adv_aceSplint_evh_log", { diag_Log (format ["%1",_this]) }] call CBA_fnc_addEventHandler;
 
 missionNamespace setVariable ["adv_aceSplint_diag",false];
+
+//set the chance for the splint to 'fall off':
+missionNamespace setVariable ["adv_aceSplint_reopenChance",30];
+//set the time for the splint to 'fall off':
+missionNamespace setVariable ["adv_aceSplint_reopenTime",600];

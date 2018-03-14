@@ -43,5 +43,11 @@
 			<French>jambe</French>
             <German>Bein</German>
         </Key>
+        <Key ID="STR_ADV_ACESPLINT_REOPEN">
+			<Original>Splint has come undone</Original>
+            <English>Splint has come undone</English>
+			<French>Une attelle se délier</French>
+            <German>Polsterschiene hat sich gelöst</German>
+        </Key>
 		</Package>
 </Project>
