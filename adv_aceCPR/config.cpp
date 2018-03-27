@@ -34,12 +34,12 @@ class CfgFunctions {
 			class AED_action {};
 			class AED_sound {};
 			class AED_local {};
-			class canCPR {};
 			class CPR_action {};
 			class CPR_local {};
 			class diag {};
 			class getBloodLoss {};
 			class init { postInit = 1; };
+			class isResurrectable {};
 			class probability {};
 			class registerSettings {};
 		};
