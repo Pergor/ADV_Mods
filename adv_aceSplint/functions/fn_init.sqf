@@ -12,6 +12,8 @@ ADV-aceSplint - by Belbo
 missionNamespace setVariable ["adv_aceSplint_diag",false];
 
 //set the chance for the splint to 'fall off':
-missionNamespace setVariable ["adv_aceSplint_reopenChance",30];
+//missionNamespace setVariable ["adv_aceSplint_reopenChance",0];
 //set the time for the splint to 'fall off':
-missionNamespace setVariable ["adv_aceSplint_reopenTime",600];
+//missionNamespace setVariable ["adv_aceSplint_reopenTime",600];
+
+nil
