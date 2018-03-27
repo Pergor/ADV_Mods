@@ -18,4 +18,4 @@ if ((_target getHitPointDamage _hitPoint) < 0.5) exitWith { false };
 
 //if !([_target] call ace_medical_fnc_isInStableCondition) exitWith { false };
 
-true;
+true
