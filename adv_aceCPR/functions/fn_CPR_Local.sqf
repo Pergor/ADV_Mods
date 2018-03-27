@@ -62,7 +62,7 @@ if ( _probability >= _diceRoll ) exitWith {
 	[_target, "activity_view", localize "STR_ADV_ACECPR_CPR_COMPLETED", [[_caller, false, true] call ace_common_fnc_getName]] call ace_medical_fnc_addToLog;
 
 	//diagnostics:
-	[_caller,"patient has been succesfully stabilized"] call adv_aceCPR_fnc_diag;
+	[_caller,"patient has been successfully stabilized"] call adv_aceCPR_fnc_diag;
 
 	//return:
 	true;
