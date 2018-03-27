@@ -2,7 +2,6 @@
 ADV-aceSplint - by Belbo
 */
 
-//Pretty name shown inside of Addon Options
 #define CBA_SETTINGS_CAT "ADV - ACE Splint"
 
 //Reopen Chance
@@ -34,3 +33,5 @@ ADV-aceSplint - by Belbo
 	,[0,100,90,0]
 	,true
 ] call CBA_Settings_fnc_init;
+
+nil
