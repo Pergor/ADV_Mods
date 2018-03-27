@@ -9,8 +9,8 @@ private _reviveStartTime = _target getVariable ["ace_medical_reviveStartTime",ni
 private _addTimeSetting = missionNamespace getVariable ["adv_aceCPR_addTime",15];
 private _timeAdded = 0;
 
-if (_addTimeSetting > 20) then {_addTimeSetting = 20};
-if (_addTimeSetting < 8) then {_addTimeSetting = 8};
+if (_addTimeSetting > 40) then {_addTimeSetting = 40};
+if (_addTimeSetting < 15) then {_addTimeSetting = 15};
 
 //if target is in reviveState it will gain _addTimeSetting additional seconds of revive time:
 if (!isNil "_reviveStartTime") then {
