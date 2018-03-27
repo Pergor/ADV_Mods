@@ -6,12 +6,15 @@ params ["_caller", "_target"];
 
 private _inState = _target getVariable ["ace_medical_inReviveState",false];
 private _reviveStartTime = _target getVariable ["ace_medical_reviveStartTime",nil];
-private _addTimeSetting = missionNamespace getVariable ["adv_aceCPR_timeAdd",15];
+private _addTimeSetting = missionNamespace getVariable ["adv_aceCPR_addTime",15];
 private _timeAdded = 0;
 
-//if target is in reviveState it will gain 15 additional seconds of revive time:
+if (_addTimeSetting > 20) then {_addTimeSetting = 20};
+if (_addTimeSetting < 8) then {_addTimeSetting = 8};
+
+//if target is in reviveState it will gain _addTimeSetting additional seconds of revive time:
 if (!isNil "_reviveStartTime") then {
-	_timeAdded = _reviveStartTime + _addTimeSetting;
+	_timeAdded = _reviveStartTime + _addTimeSetting + (round random 6) - 3;
 	_target setVariable ["ace_medical_reviveStartTime", _timeAdded min CBA_missionTime];
 };
 

@@ -64,9 +64,9 @@ missionNamespace setVariable ["adv_aceCPR_probabilities",[40,15,5,85]];
 
 //Added time with CPR
 [
-	"adv_aceCPR_timeAdd"
+	"adv_aceCPR_addTime"
 	,"SLIDER"
-	,localize "STR_ADV_ACECPR_SETTING_TIMEADD"
+	,localize "STR_ADV_ACECPR_SETTING_ADDTIME"
 	,CBA_SETTINGS_CAT
 	,[8,20,15,0]
 	,true

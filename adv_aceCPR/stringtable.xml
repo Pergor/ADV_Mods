@@ -73,10 +73,10 @@
 			<French>Probabilité du succès de l'usage d'une AED</French>
             <German>Erfolgswahrscheinlichkeit für Defibrillatoren</German>
         </Key>
-        <Key ID="STR_ADV_ACECPR_SETTING_TIMEADD">
-			<Original>Seconds added to revive timer</Original>
-            <English>Seconds added to revive timer</English>
-            <German>Hinzugefügte Revive-Zeit</German>
+        <Key ID="STR_ADV_ACECPR_SETTING_ADDTIME">
+			<Original>Seconds added to revive timer (+/-3 seconds)</Original>
+            <English>Seconds added to revive timer (+/-3 seconds)</English>
+            <German>Hinzugefügte Revive-Zeit (+/-3 Sekunden)</German>
         </Key>
 		</Package>
 </Project>
