@@ -17,3 +17,5 @@ call {
 	//splint call:
 	["adv_aceSplint_evh_splint", [_caller, _target, _selection], _target] call CBA_fnc_targetEvent;
 };
+
+nil
