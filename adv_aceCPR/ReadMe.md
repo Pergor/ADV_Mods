@@ -12,7 +12,8 @@ The success rate is lowered if the patient looses blood or has morphine in his b
 The minimum rate is always 2%, unless the player starts with a success probability of 0 (see below).
 
 For mission builders:
-You can set the probabilities for successful resuscitation individually depending on the value for ace_medical_medicClass a player's unit has.
+You can set the probabilities for successful resuscitation individually depending on the value for ace_medical_medicClass a player's unit has,
+or the time to be added to the revive timer or the duration during which CPR can still be applied successfully.
 The easiest way to do this is via CBA Settings ( https://github.com/CBATeam/CBA_A3/wiki/CBA-Settings-System ). Alternatively you can use the following variables in your mission:
 
 adv_aceCPR_probabilities = [40,15,5,85];	//the first entry is for ace_medical_medicClass == 2, the second for == 1, the third for regular units with ace_medical_medicClass == 0 and the fourth one for the defibrillator.
@@ -20,8 +21,13 @@ adv_aceCPR_probabilities = [40,15,5,85];	//the first entry is for ace_medical_me
 So if you want to disable CPR for any player with less than ace_medical_medicClass below 2 just use something like this:
 adv_aceCPR_probabilities = [40,0,0,85];
 
-The time to be added to the revive timer (+/-3 seconds) can additionally be set with this variable (default is 15, maximum is 20, minimum is 8):
-adv_aceCPR_timeAdd = 15;
+The time to be added to the revive timer (+/-3 seconds) can additionally be set with this variable
+(default is 20, maximum is 40, minimum is 15 - if set to anything below 18 there's a chance you spend more time on CPR than you gain):
+adv_aceCPR_timeAdd = 30;
+
+To set the duration during which CPR can still be applied successfully, you can set this variable (eg. if your ace_medical_maxReviveTime is 600 seconds and you want players to only be able to resuscitate patients
+for 300 seconds, set it to 300. If the value is higher than ace_medical_maxReviveTime, it will revert to ace_medical_maxReviveTime). After this time you have to use AED or PAK to resuscitate a player (default is 1200):
+adv_aceCPR_maxTime = 300;
 
 With version 1.4.0 a new item is added to adv_aceCPR: A defibrillator.
 The defibrillator works almost like the CPR action, but you have to have a defibrillator in your inventory and it's much faster and the success rate is way higher.
