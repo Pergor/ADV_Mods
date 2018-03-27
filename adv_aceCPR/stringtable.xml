@@ -61,22 +61,22 @@
             <German>Maximale Zeit für erfolgreiche CPR</German>
         </Key>
         <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_2">
-			<Original>CPR-chance with medicClass == 2</Original>
-            <English>CPR-chance with medicClass == 2</English>
-			<French>CPR-probabilité avec medicClass == 2</French>
-            <German>CPR-Wahrscheinlichkeit mit medicClass == 2</German>
+			<Original>CPR-chance for ACE doctors</Original>
+            <English>CPR-chance for ACE doctors</English>
+			<French>CPR-probabilité pour ACE médecins</French>
+            <German>CPR-Wahrscheinlichkeit für ACE-Doctors</German>
         </Key>
         <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_1">
-			<Original>CPR-chance with medicClass == 1</Original>
-            <English>CPR-chance with medicClass == 1</English>
-			<French>CPR-probabilité avec medicClass == 1</French>
-            <German>CPR-Wahrscheinlichkeit mit medicClass == 1</German>
+			<Original>CPR-chance for ACE medics</Original>
+            <English>CPR-chance for ACE medics</English>
+			<French>CPR-probabilité pour ACE infirmiers</French>
+            <German>CPR-Wahrscheinlichkeit für ACE-Medics</German>
         </Key>
         <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_0">
-			<Original>CPR-chance with medicClass == 0</Original>
-            <English>CPR-chance with medicClass == 0</English>
-			<French>CPR-probabilité avec medicClass == 0</French>
-            <German>CPR-Wahrscheinlichkeit mit medicClass == 0</German>
+			<Original>CPR-chance for non-medics</Original>
+            <English>CPR-chance for non-medics</English>
+			<French>CPR-probabilité pour non formés soldats</French>
+            <German>CPR-Wahrscheinlichkeit für Nicht-Medics</German>
         </Key>
         <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_AED">
 			<Original>Probability of success for AED usage</Original>
