@@ -20,4 +20,4 @@ call {
 	["adv_aceSplint_evh_log", [_str], _target] call CBA_fnc_targetEvent;
 };
 
-true;
+true
