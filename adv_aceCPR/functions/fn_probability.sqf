@@ -8,6 +8,7 @@ params ["_caller", "_target"];
 private _isMedic = _caller getVariable ["ACE_medical_medicClass", 0];
 private _onlyDoctors = missionNamespace getVariable ["adv_aceCPR_onlyDoctors", 0];
 private _probabilities = missionNamespace getVariable ["adv_aceCPR_probabilities", [40,15,5,85]];
+
 if ( _onlyDoctors isEqualType true ) then {
 	_onlyDoctors = if (_onlyDoctors) then {2} else {0};
 };

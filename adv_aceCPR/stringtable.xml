@@ -49,5 +49,34 @@
 			<French>%1 a utilisé le défibrillateur et a stabilisé le patient</French>
             <German>%1 hat den Patienten mit Defibrillator stabilisiert</German>
         </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_2">
+			<Original>CPR-chance with medicClass == 2</Original>
+            <English>CPR-chance with medicClass == 2</English>
+			<French>CPR-probabilité avec medicClass == 2</French>
+            <German>CPR-Wahrscheinlichkeit mit medicClass == 2</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_1">
+			<Original>CPR-chance with medicClass == 1</Original>
+            <English>CPR-chance with medicClass == 1</English>
+			<French>CPR-probabilité avec medicClass == 1</French>
+            <German>CPR-Wahrscheinlichkeit mit medicClass == 1</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_0">
+			<Original>CPR-chance with medicClass == 0</Original>
+            <English>CPR-chance with medicClass == 0</English>
+			<French>CPR-probabilité avec medicClass == 0</French>
+            <German>CPR-Wahrscheinlichkeit mit medicClass == 0</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_AED">
+			<Original>Probability of success for AED usage</Original>
+            <English>Probability of success for AED usage</English>
+			<French>Probabilité du succès de l'usage d'une AED</French>
+            <German>Erfolgswahrscheinlichkeit für Defibrillatoren</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_TIMEADD">
+			<Original>Seconds added to revive timer</Original>
+            <English>Seconds added to revive timer</English>
+            <German>Hinzugefügte Revive-Zeit</German>
+        </Key>
 		</Package>
 </Project>

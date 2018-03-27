@@ -15,11 +15,4 @@ ADV-aceCPR - by Belbo
 //for diagnostic purposes only:
 ["adv_aceCPR_evh_log", { diag_Log (format ["%1",_this]) }] call CBA_fnc_addEventHandler;
 
-//backwards compatibility:
-private _probabilities = missionNamespace getVariable ["adv_aceCPR_probabilities", [40,15,5,85]];
-if (count _probabilities isEqualTo 3) then {
-	_probabilities pushBack 85;
-};
-missionNamespace setVariable ["adv_aceCPR_probabilities", _probabilities];
-
 missionNamespace setVariable ["adv_aceCPR_diag",false];

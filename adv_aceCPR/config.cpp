@@ -11,9 +11,10 @@
         requiredVersion = 1.80;
         requiredAddons[] = {
 			"ace_medical"
+			,"cba_settings"
 		};
-		version = "1.4.10";
-		versionStr = "1.4.10";
+		version = "1.5.0";
+		versionStr = "1.5.0";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -40,7 +41,14 @@ class CfgFunctions {
 			class getBloodLoss {};
 			class init { postInit = 1; };
 			class probability {};
+			class registerSettings {};
 		};
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class adv_aceCPR_Settings {
+		init = "call adv_aceCPR_fnc_registerSettings";
 	};
 };
 
