@@ -7,7 +7,7 @@
     "SLIDER", // setting type
     "Reopen Chance (%)", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     CBA_SETTINGS_CAT, // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,3600,30,1], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,100,30,0], // data for this setting: [min, max, default, number of shown trailing decimals]
     false // "global" flag. Set this to true to always have this setting forced on all clients in multiplayer
 ] call CBA_Settings_fnc_init;
 
@@ -17,7 +17,7 @@
     "SLIDER", // setting type
     "Reopen Time", // Pretty name shown inside the ingame settings menu. Can be stringtable entry.
     CBA_SETTINGS_CAT, // Pretty name of the category where the setting can be found. Can be stringtable entry.
-    [0,100,30,0], // data for this setting: [min, max, default, number of shown trailing decimals]
+    [0,3600,30,1], // data for this setting: [min, max, default, number of shown trailing decimals]
     false // "global" flag. Set this to true to always have this setting forced on all clients in multiplayer
 ] call CBA_Settings_fnc_init;
 
