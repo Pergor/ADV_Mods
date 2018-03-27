@@ -4,9 +4,11 @@
     {
         units[] = {
 			"adv_aceSplint_splintItem"
+			,"adv_aceSplint_splintItem_used"
 		};
         weapons[] = {
 			"adv_aceSplint_splint"
+			,"adv_aceSplint_splint_used"
 		};
         requiredVersion = 1.80;
         requiredAddons[] = {
@@ -33,10 +35,17 @@ class CfgFunctions {
 			class canSplint {};
 			class diag {};
 			class getHitPoint {};
+			class registerSettings {};
 			class reopen {};
 			class splint_local {};
 			class splint {};
 		};
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class adv_aceSplint_Settings {
+		init = "call adv_aceSplint_fnc_registerSettings";
 	};
 };
 
@@ -54,6 +63,10 @@ class cfgWeapons {
             mass = 3;
         };
 	};
+	class adv_aceSplint_splint_used: adv_aceSplint_splint {
+		scope = 0;
+        displayName = "$STR_ADV_ACESPLINT_DISPLAYNAME_USED";
+	};
 };
 
 class cfgVehicles {
@@ -67,6 +80,14 @@ class cfgVehicles {
         vehicleClass = "Items";
         class TransportItems {
             MACRO_ADDITEM(adv_aceSplint_splint,1);
+        };
+	};
+	class adv_aceSplint_splintItem_USED: adv_aceSplint_splintItem {
+        scope = 0;
+        scopeCurator = 0;
+        displayName = "$STR_ADV_ACESPLINT_DISPLAYNAME_USED";
+        class TransportItems {
+            MACRO_ADDITEM(adv_aceSplint_splint_used,1);
         };
 	};
 	
