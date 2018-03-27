@@ -49,6 +49,17 @@
 			<French>%1 a utilisé le défibrillateur et a stabilisé le patient</French>
             <German>%1 hat den Patienten mit Defibrillator stabilisiert</German>
         </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_ADDTIME">
+			<Original>Seconds added to revive timer (+/-3 seconds)</Original>
+            <English>Seconds added to revive timer (+/-3 seconds)</English>
+            <German>Hinzugefügte Revive-Zeit (+/-3 Sekunden)</German>
+        </Key>
+        <Key ID="STR_ADV_ACECPR_SETTING_MAXTIME">
+			<Original>Maximum time for successful CPR</Original>
+            <English>Maximum time for successful CPR</English>
+			<French>CPR-probabilité avec medicClass == 2</French>
+            <German>Maximale Zeit für erfolgreiche CPR</German>
+        </Key>
         <Key ID="STR_ADV_ACECPR_SETTING_CHANCE_2">
 			<Original>CPR-chance with medicClass == 2</Original>
             <English>CPR-chance with medicClass == 2</English>
@@ -72,11 +83,6 @@
             <English>Probability of success for AED usage</English>
 			<French>Probabilité du succès de l'usage d'une AED</French>
             <German>Erfolgswahrscheinlichkeit für Defibrillatoren</German>
-        </Key>
-        <Key ID="STR_ADV_ACECPR_SETTING_ADDTIME">
-			<Original>Seconds added to revive timer (+/-3 seconds)</Original>
-            <English>Seconds added to revive timer (+/-3 seconds)</English>
-            <German>Hinzugefügte Revive-Zeit (+/-3 Sekunden)</German>
         </Key>
 		</Package>
 </Project>

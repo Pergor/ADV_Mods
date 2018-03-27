@@ -6,6 +6,26 @@ ADV-aceCPR - by Belbo
 
 missionNamespace setVariable ["adv_aceCPR_probabilities",[40,15,5,85]];
 
+//Added time with CPR
+[
+	"adv_aceCPR_addTime"
+	,"SLIDER"
+	,localize "STR_ADV_ACECPR_SETTING_ADDTIME"
+	,CBA_SETTINGS_CAT
+	,[15,40,20,0]
+	,true
+] call CBA_Settings_fnc_init;
+
+//CPR possible until
+[
+	"adv_aceCPR_maxTime"
+	,"SLIDER"
+	,localize "STR_ADV_ACECPR_SETTING_MAXTIME"
+	,CBA_SETTINGS_CAT
+	,[0,3600,1200,0]
+	,true
+] call CBA_Settings_fnc_init;
+
 //Chance for medicClass == 2
 [
 	"adv_aceCPR_chance_2"
@@ -60,16 +80,6 @@ missionNamespace setVariable ["adv_aceCPR_probabilities",[40,15,5,85]];
 		params ["_value"];
         adv_aceCPR_probabilities set [3,round _value];
 	}
-] call CBA_Settings_fnc_init;
-
-//Added time with CPR
-[
-	"adv_aceCPR_addTime"
-	,"SLIDER"
-	,localize "STR_ADV_ACECPR_SETTING_ADDTIME"
-	,CBA_SETTINGS_CAT
-	,[8,20,15,0]
-	,true
 ] call CBA_Settings_fnc_init;
 
 /*
