@@ -13,6 +13,7 @@
         requiredVersion = 1.80;
         requiredAddons[] = {
 			"ace_medical"
+			,"cba_settings"
 		};
 		version = "1.1.0";
 		versionStr = "1.1.0";
