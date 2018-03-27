@@ -10,7 +10,8 @@
 		};
         requiredVersion = 1.80;
         requiredAddons[] = {
-			"ace_medical"
+			"ace_medical",
+			"cba_settings"
 		};
 		version = "1.0.3";
 		versionStr = "1.0.3";
@@ -36,7 +37,14 @@ class CfgFunctions {
 			class reopen {};
 			class splint_local {};
 			class splint {};
+			class registerSettings {};
 		};
+	};
+};
+
+class Extended_PreInit_EventHandlers {
+	class adv_aceSplint_Settings {
+		init = "call adv_aceSplint_fnc_registerSettings";
 	};
 };
 
