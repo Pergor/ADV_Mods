@@ -30,7 +30,7 @@ ADV-aceSplint - by Belbo
 	,"SLIDER"
 	,localize "STR_ADV_ACESPLINT_SETTING_REUSE"
 	,CBA_SETTINGS_CAT
-	,[0,100,90,0]
+	,[0,100,80,0]
 	,true
 ] call CBA_Settings_fnc_init;
 
