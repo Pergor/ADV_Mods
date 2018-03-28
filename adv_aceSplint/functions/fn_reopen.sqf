@@ -10,8 +10,8 @@ private _handle = _this spawn {
 
 	[_target,format ["Reopening of Splint is being handled for %1.",_bodyPart]] call adv_aceSplint_fnc_diag;
 
-	private _chance = missionNamespace getVariable ["adv_aceSplint_reopenChance",0];
-	private _reuse = missionNamespace getVariable ["adv_aceSplint_reuseChance",80];
+	private _chance = (missionNamespace getVariable ["adv_aceSplint_reopenChance",0]) min 100;
+	private _reuse = (missionNamespace getVariable ["adv_aceSplint_reuseChance",80]) min 100;
 	private _time = missionNamespace getVariable ["adv_aceSplint_reopenTime",600];
 
 	if (ceil random 100 <= _chance) exitWith {

@@ -25,7 +25,7 @@ if !( [_target] call adv_aceCPR_fnc_isResurrectable ) exitWith {
 };
 
 //what's our probability?
-private _probability = [_caller,_target] call ADV_aceCPR_fnc_probability;
+private _probability = ([_caller,_target] call ADV_aceCPR_fnc_probability) min 100;
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);

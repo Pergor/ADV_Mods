@@ -15,7 +15,7 @@ if (count _probabilities isEqualTo 3) then {
 	_probabilities pushBack 85;
 };
 //what's our probability?
-private _probability = _probabilities select 3;
+private _probability = (_probabilities select 3) min 100;
 
 //let's roll the dice:
 private _diceRoll = 1+floor(random 100);
