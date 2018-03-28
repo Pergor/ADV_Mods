@@ -23,7 +23,7 @@ adv_aceCPR_probabilities = [40,0,0,85];
 
 The time to be added to the revive timer (+/-3 seconds) can additionally be set with this variable
 (default is 20, maximum is 40, minimum is 15 - if set to anything below 18 there's a chance you spend more time on CPR than you gain):
-adv_aceCPR_timeAdd = 30;
+adv_aceCPR_addTime = 30;
 
 To set the duration during which CPR can still be applied successfully, you can set this variable (eg. if your ace_medical_maxReviveTime is 600 seconds and you want players to only be able to resuscitate patients
 for 300 seconds, set it to 300. If the value is higher than ace_medical_maxReviveTime, it will revert to ace_medical_maxReviveTime). After this time you have to use AED or PAK to resuscitate a player (default is 1200):
