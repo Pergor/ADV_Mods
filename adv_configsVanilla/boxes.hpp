@@ -1,4 +1,30 @@
-﻿
+﻿//slingload containers:
+#define CONTAINERSPACE maximumLoad = 8000;\
+	transportMaxWeapons = 25;\
+	transportMaxMagazines = 320;\
+	transportMaxBackpacks = 25;
+
+class Pod_Heli_Transport_04_base_F;
+class Pod_Heli_Transport_04_crewed_base_F;
+class Land_Pod_Heli_Transport_04_box_F : Pod_Heli_Transport_04_base_F {
+	CONTAINERSPACE
+};
+class Land_Pod_Heli_Transport_04_medevac_F : Pod_Heli_Transport_04_crewed_base_F {
+	CONTAINERSPACE
+};
+class Land_Pod_Heli_Transport_04_covered_F : Pod_Heli_Transport_04_crewed_base_F {
+	maximumLoad = 3000;
+};
+
+class Slingload_01_Base_F;
+class B_Slingload_01_Cargo_F : Slingload_01_Base_F {
+	CONTAINERSPACE
+};
+class B_Slingload_01_Medevac_F : Slingload_01_Base_F {
+	CONTAINERSPACE
+};
+
+//new boxes:
 class Box_NATO_WpsSpecial_F;
 class Box_EAST_WpsSpecial_F;
 class Box_IND_WpsSpecial_F;
