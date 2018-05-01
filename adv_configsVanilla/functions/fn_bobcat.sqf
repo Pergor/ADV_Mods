@@ -1,7 +1,7 @@
 ﻿/*
  * Author: Belbo
  *
- * Adds an action to a bobcat that will enable driver to raise and lower the plow, which can act as a blast shield against mines.
+ * Adds an action to a bobcat that will enable driver to raise and lower the plow, which can act as a blast shield against mines or as a crater remover.
  *
  * Arguments:
  * 0 - target vehicle - <OBJECT>
@@ -69,10 +69,10 @@ _target addEventHandler ["EpeContactStart", {
 	params ["_target", "_object", "_selection1", "_selection2", "_force"]; 
 	if (_target animationSourcePhase 'MovePlow' isEqualTo 1) then {
 		private _craterTypes = ["craterlong_small","craterlong","crater","ace_envelope_small","ace_envelope_big","grad_envelope_short","grad_envelope_vehicle"];
-		private _slowCraters = ["craterlong"];
-		private _factor = 25;
+		private _slowCraters = ["craterlong_small"];
+		private _factor = 20;
 		if ( toLower (typeOf _object) in _slowCraters ) then {
-			_factor = 100;
+			_factor = 500;
 		};
 		if ( toLower (typeOf _object) in _craterTypes ) then {
 			_object setPos [getPos _object select 0, getPos _object select 1, (getPos _object select 2) - (1/_factor)];
