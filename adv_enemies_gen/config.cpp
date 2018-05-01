@@ -10,15 +10,24 @@ class CfgPatches
 			,"B_GEN_Offroad_01_armed_F"
 			,"adv_gen_offroad_01_armed_F"
 			,"adv_gen_Offroad_02_gen_F"
+			,"B_Offroad_02_LMG_gen_F"
+			,"adv_gen_Offroad_02_LMG_gen_F"
+			,"B_Offroad_02_AT_gen_F"
+			,"adv_gen_Offroad_02_AT_gen_F"
+			,"adv_gen_van_02_vehicle_f"
+			,"adv_gen_van_02_transport_f"
 		};
         weapons[] = {};
-        requiredVersion = 1.60;
+        requiredVersion = 1.82;
         requiredAddons[] = {
-			"A3_Soft_F_Exp_Offroad_01"
-			,"A3_Characters_F_Exp"
+			"A3_Characters_F_Exp"
+			,"A3_Soft_F_Offroad_01"
+			,"A3_Soft_F_Exp_Offroad_01"
+			,"A3_Soft_F_Exp_Offroad_02"
+			,"a3_Soft_F_Orange_van_02";
 		};
-		version = "1.0.1";
-		versionStr = "1.0.1";
+		version = "1.0.3";
+		versionStr = "1.0.3";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
