@@ -17,7 +17,7 @@ class CfgPatches
 			,"O_T_APC_Wheeled_02_rcws_ghex_nt_F"
 		};
         weapons[] = {};
-        requiredVersion = 1.60;
+        requiredVersion = 1.82;
         requiredAddons[] = {
 			"A3_Weapons_F"
 			,"A3_Weapons_F_Machineguns_M200"
@@ -26,9 +26,14 @@ class CfgPatches
 			,"A3_Static_F_Mortar_01"
 			,"A3_Static_F_Beta_Mortar_01"
 			,"A3_Characters_F"
+			,"A3_Supplies_F_Heli_Slingload"
+			,"A3_Air_F_Heli_Heli_Transport_04"
+			,"A3_Armor_F_Gamma_APC_Wheeled_03"
+			,"A3_Armor_F_Beta_APC_Wheeled_02"
+			,"A3_Armor_F_EPB_APC_Tracked_03"
 		};
-		version = "1.07";
-		versionStr = "1.07";
+		version = "1.09";
+		versionStr = "1.09";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -232,37 +237,8 @@ class CfgWeapons
 
 class CfgVehicles {
 	#include "boxes.hpp"
-	class I_APC_Wheeled_03_base_F;
-	class I_APC_Wheeled_03_cannon_F: I_APC_Wheeled_03_base_F {
-		class Eventhandlers;
-	};
-	class O_APC_Wheeled_02_base_F;
-	class O_APC_Wheeled_02_rcws_F: O_APC_Wheeled_02_base_F {
-		class Eventhandlers;
-	};
-	class O_T_APC_Wheeled_02_rcws_ghex_F: O_APC_Wheeled_02_base_F {
-		class Eventhandlers;
-	};
-	
-	class I_APC_Wheeled_03_cannon_nt_F: I_APC_Wheeled_03_cannon_F {
-		displayName = "AFV-4 Gorgon (No Turret)";
-		class EventHandlers: EventHandlers {
-			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
-		};
-	};
-	class O_APC_Wheeled_02_rcws_nt_F: O_APC_Wheeled_02_rcws_F {
-		displayName = "MSE-3 Marid (No Turret)";
-		class EventHandlers: EventHandlers {
-			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
-		};
-	};
-	class O_T_APC_Wheeled_02_rcws_ghex_nt_F: O_T_APC_Wheeled_02_rcws_ghex_F{
-		displayName = "MSE-3 Marid (No Turret)";
-		class EventHandlers: EventHandlers {
-			init = "params ['_target'];_target lockturret [[0],true];_target animate ['HideTurret',1];";
-		};
-	};
-	
+	#include "vehicles.hpp"
+
 	class StaticWeapon;
 	class StaticMortar: StaticWeapon{
 		class Eventhandlers;
