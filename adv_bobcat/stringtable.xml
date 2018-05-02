@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project name="adv">
+    <Package name="bobcat">
+		
+        <Key ID="STR_ADV_BOBCAT_PLOW_UP">
+			<Original>Raise Plow</Original>
+            <English>Raise Plow</English>
+            <German>Schaufel hochfahren</German>
+        </Key>
+        <Key ID="STR_ADV_BOBCAT_PLOW_DOWN">
+			<Original>Lower Plow</Original>
+            <English>Lower Plow</English>
+            <German>Schaufel herunterfahren</German>
+        </Key>
+	</Package>
+</Project>

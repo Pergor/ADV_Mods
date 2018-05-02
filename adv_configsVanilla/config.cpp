@@ -31,7 +31,6 @@ class CfgPatches
 			,"A3_Armor_F_Gamma_APC_Wheeled_03"
 			,"A3_Armor_F_Beta_APC_Wheeled_02"
 			,"A3_Armor_F_EPB_APC_Tracked_03"
-			,"A3_Armor_F_Beta_APC_Tracked_01"
 		};
 		version = "1.1.1";
 		versionStr = "1.1.1";
@@ -66,8 +65,6 @@ class cfgFunctions {
 		class init
 		{
 			file = "adv_configsVanilla\functions";
-			//class bobcat {preInit = 1;};
-			class bobcat {};
 			class mortarFlare {};
 		};
 	};
