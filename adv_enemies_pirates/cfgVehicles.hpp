@@ -233,6 +233,30 @@ class CfgVehicles {
 		typicalCargo[] = { "adv_pirates_soldier_3_f" };
 		hiddenSelectionsTextures[] = {"\A3\soft_f\Offroad_01\data\Offroad_01_ext_co.paa","\A3\soft_f\Offroad_01\data\Offroad_01_ext_co.paa"};
 	};
+	
+	class Offroad_02_AT_base_F;
+	class I_C_Offroad_02_AT_F: Offroad_02_AT_base_F {
+		class Eventhandlers;
+	};
+	class adv_pirates_mb4wd_at_f: I_C_Offroad_02_AT_F {
+		standard_cfg_vehicle
+		displayname = "MB 4WD (AT)";
+		crew = "adv_pirates_soldier_3_f";
+		typicalCargo[] = { "adv_pirates_soldier_TL_f" };
+		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0),['Olive',1],['hideLeftDoor',1,'hideRightDoor',1,'hideFenders',1,'hideHeadSupportFront',1]] call BIS_fnc_initVehicle;};"; };
+	};
+	
+	class Offroad_02_LMG_base_F;
+	class I_C_Offroad_02_LMG_F: Offroad_02_LMG_base_F {
+		class Eventhandlers;
+	};
+	class adv_pirates_mb4wd_lmg_f: I_C_Offroad_02_LMG_F {
+		standard_cfg_vehicle
+		displayname = "MB 4WD (LMG)";
+		crew = "adv_pirates_soldier_3_f";
+		typicalCargo[] = { "adv_pirates_soldier_TL_f" };
+		class EventHandlers: EventHandlers { init = "if (local (_this select 0)) then {[(_this select 0),['Olive',1],['hideLeftDoor',1,'hideRightDoor',1,'hideFenders',1,'hideHeadSupportFront',1]] call BIS_fnc_initVehicle;};"; };
+	};
 
 	class adv_pirates_offroad_armed_f : O_G_Offroad_01_armed_F {
 		standard_cfg_vehicle

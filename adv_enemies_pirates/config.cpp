@@ -3,27 +3,29 @@ class CfgPatches
     class adv_enemies_pirates
     {
         units[] = {
-			"adv_pirates_soldier_1_f",
-			"adv_pirates_soldier_2_f",
-			"adv_pirates_soldier_3_f",
-			"adv_pirates_soldier_AR_f",
-			"adv_pirates_soldier_AT_f",
-			"adv_pirates_soldier_M_f",
-			"adv_pirates_medic_f",
-			"adv_pirates_soldier_TL_f",
-			"adv_pirates_offroad_f",
-			"adv_pirates_offroad_armed_f",
-			"adv_pirates_mb4wd_f"
+			"adv_pirates_soldier_1_f"
+			,"adv_pirates_soldier_2_f"
+			,"adv_pirates_soldier_3_f"
+			,"adv_pirates_soldier_AR_f"
+			,"adv_pirates_soldier_AT_f"
+			,"adv_pirates_soldier_M_f"
+			,"adv_pirates_medic_f"
+			,"adv_pirates_soldier_TL_f"
+			,"adv_pirates_offroad_f"
+			,"adv_pirates_offroad_armed_f"
+			,"adv_pirates_mb4wd_f"
+			,"adv_pirates_mb4wd_at_f"
+			,"adv_pirates_mb4wd_lmg_f"
 		};
         weapons[] = {};
-        requiredVersion = 1.62;
+        requiredVersion = 1.82;
         requiredAddons[] = {
 			"A3_Characters_F_OPFOR",
 			"A3_Characters_F",
 			"A3_Soft_F_Gamma_Offroad"
 		};
-		version = "1.04";
-		versionStr = "1.04";
+		version = "1.05";
+		versionStr = "1.05";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };

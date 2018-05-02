@@ -192,7 +192,7 @@ class CfgGroups
 					class Unit1
 					{
 						side=0;
-						vehicle="adv_pirates_offroad_armed_f";
+						vehicle="adv_pirates_mb4wd_lmg_f";
 						rank="PRIVATE";
 						position[]={7,-7,0};
 					};
@@ -213,6 +213,26 @@ class CfgGroups
 					{
 						side=0;
 						vehicle="adv_pirates_mb4wd_f";
+						rank="PRIVATE";
+						position[]={7,-7,0};
+					};
+				};
+				class adv_enemies_pirates_cars_3
+				{
+					name="Armed Vehicle Duo (AT)";
+					faction = "adv_faction_enemies_pirates";
+					side = 0;
+					class Unit0
+					{
+						side=0;
+						vehicle="adv_pirates_mb4wd_lmg_f";
+						rank="CORPORAL";
+						position[]={0,0,0};
+					};
+					class Unit1
+					{
+						side=0;
+						vehicle="adv_pirates_mb4wd_at_f";
 						rank="PRIVATE";
 						position[]={7,-7,0};
 					};
