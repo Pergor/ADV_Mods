@@ -44,46 +44,48 @@ class CfgPatches
     count = COUNT; \
 }
 
-#define MACRO_EDITORIAL author = "Spezialeinheit Luchs";
+#define MACRO_LOAD(MLOAD,MWEAP,MMAGS,MBPS)	maximumLoad = MLOAD;\
+	transportMaxWeapons = MWEAP;\
+	transportMaxMagazines = MMAGS;\
+	transportMaxBackpacks = MBPS;
 
 class CfgVehicles {
 	class NATO_Box_Base;
+
 	class adv_trunk_suitcase_f: NATO_Box_Base {
-		MACRO_EDITORIAL
-		displayName = "[ADV] Suitcase";
-		model = "\A3\Structures_F\Items\Luggage\Suitcase_F.p3d";
-		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_Suitcase_F.jpg";
-		hiddenSelections[] = {};
-		hiddenSelectionsTextures[] = {};
-		destrType = "DestructNo";
-		editorCategory = "EdCat_Supplies";
-		vehicleClass = "Ammo";
-		scope = 2;
-		curatorScope = 2;
-		mapSize = 1.81;
-		maximumLoad = 600;
-		transportMaxWeapons = 2;
-		transportMaxMagazines = 12;
-		transportMaxBackpacks = 2;
 		class TransportWeapons {};
 		class TransportMagazines {};
 		class TransportItems {};
 		class TransportBackpacks {};
+		author = "Spezialeinheit Luchs";
+		displayName = "[ADV] Suitcase";
+		model = "\A3\Structures_F\Items\Luggage\Suitcase_F.p3d";
+		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_Suitcase_F.jpg";
+		icon = "iconCrateWpns";
+		hiddenSelections[] = {};
+		hiddenSelectionsTextures[] = {};
+		destrType = "DestructNo";
+		editorCategory = "EdCat_Supplies";
+		editorSubcategory = "EdSubcat_Storage";
+		vehicleClass = "Container";
+		scope = 2;
+		curatorScope = 2;
+		mapSize = 1.81;
+		MACRO_LOAD(300,2,8,1)
+		ace_cargo_size = 1;
 	};
 	
 	class adv_trunk_metalcase_01_f: adv_trunk_suitcase_f {
 		displayName = "[ADV] Metal Case (Small)";
 		model = "\A3\Structures_F_Heli\Items\Luggage\MetalCase_01_small_F.p3d";
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_MetalCase_01_small_F.jpg";
+		MACRO_LOAD(400,2,12,2)
 	};
 	class adv_trunk_metalcase_02_f: adv_trunk_suitcase_f {
 		displayName = "[ADV] Metal Case (Medium)";
 		model = "\A3\Structures_F_Heli\Items\Luggage\MetalCase_01_medium_F.p3d";
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_MetalCase_01_medium_F.jpg";
-		maximumLoad = 1000;
-		transportMaxWeapons = 6;
-		transportMaxMagazines = 32;
-		transportMaxBackpacks = 6;
+		MACRO_LOAD(1000,6,32,6)
 	};
 	
 	class adv_trunk_plasticcase_01_f: adv_trunk_suitcase_f {
@@ -92,10 +94,7 @@ class CfgVehicles {
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_PlasticCase_01_small_F.jpg";
 		hiddenselections[] = {"camo"};
 		hiddenselectionsTextures[] = {"a3\structures_f_heli\items\luggage\data\plasticcase_01_co.paa"};
-		maximumLoad = 300;
-		transportMaxWeapons = 1;
-		transportMaxMagazines = 6;
-		transportMaxBackpacks = 1;
+		MACRO_LOAD(300,1,8,1)
 	};
 	class adv_trunk_plasticcase_01_grey_f: adv_trunk_plasticcase_01_f {
 		displayName = "[ADV] Plastic Case (Small, Grey)";
@@ -108,10 +107,7 @@ class CfgVehicles {
 		model = "\A3\Structures_F_Heli\Items\Luggage\PlasticCase_01_medium_F.p3d";
 		hiddenselectionsTextures[] = {"a3\structures_f_heli\items\luggage\data\plasticcase_01_co.paa"};
 		editorPreview = "\A3\EditorPreviews_F\Data\CfgVehicles\Land_PlasticCase_01_medium_F.jpg";
-		maximumLoad = 600;
-		transportMaxWeapons = 2;
-		transportMaxMagazines = 12;
-		transportMaxBackpacks = 2;
+		MACRO_LOAD(600,2,12,2)
 	};
 	class adv_trunk_plasticcase_02_grey_f: adv_trunk_plasticcase_02_f {
 		displayName = "[ADV] Plastic Case (Medium, Grey)";
