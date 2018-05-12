@@ -14,8 +14,8 @@ class CfgPatches
 			,"ace_grenades"
 			,"ace_realisticweights"
 		};
-		version = "1.02";
-		versionStr = "1.02";
+		version = "1.0.3";
+		versionStr = "1.0.3";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -44,6 +44,25 @@ class CfgPatches
 #define standard_flare intensity = 50000;\
 	flareSize = 18;\
 	timeToLive = 60;
+	
+class cfgFunctions {
+	//a little trick for the stupid ace-itemCheck:
+	class ace_medical
+	{
+		tag = "ace_medical";
+		class ace_medical
+		{
+			class itemCheck
+			{
+				file = "adv_configsAce\functions\fn_itemCheck.sqf";
+			};
+			class useItem
+			{
+				file = "adv_configsAce\functions\fn_useItem.sqf";
+			};
+		};
+	};	
+};
 
 class CfgAmmo {
 	class FlareCore;
@@ -61,7 +80,6 @@ class CfgAmmo {
 		aimAboveDefault = 4;
 	};
 };
-
 
 class CfgWeapons
 {
