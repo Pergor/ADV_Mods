@@ -1,17 +1,4 @@
-﻿#define macro_6 ace_cargo_space = 6;\
-		ace_cargo_hasCargo = 1;
-#define macro_8 ace_cargo_space = 8;\
-		ace_cargo_hasCargo = 1;
-#define macro_10 ace_cargo_space = 10;\
-		ace_cargo_hasCargo = 1;
-#define macro_20 ace_cargo_space = 20;\
-		ace_cargo_hasCargo = 1;
-#define macro_30 ace_cargo_space = 30;\
-		ace_cargo_hasCargo = 1;
-#define macro_40 ace_cargo_space = 40;\
-		ace_cargo_hasCargo = 1;
-		
-class CfgPatches
+﻿class CfgPatches
 {
     class adv_aceCargo
     {
@@ -38,6 +25,9 @@ class CfgPatches
     };
 };
 
+#define MACRO_SPACE(SPACE)	ace_cargo_space = SPACE;\
+	ace_cargo_hasCargo = 1;
+
 class CfgVehicles {
 
     class ThingX;
@@ -63,36 +53,36 @@ class CfgVehicles {
 	class Quadbike_01_base_F;
 	
 	class B_Quadbike_01_F: Quadbike_01_base_F {
-		macro_20
+		MACRO_SPACE(20)
 	};
 	*/
 	
 	class Car: LandVehicle {
-		macro_6
+		MACRO_SPACE(6)
 	};
 	
 	class B_APC_Tracked_01_base_F: APC_Tracked_01_base_F {
-		macro_10
+		MACRO_SPACE(10)
 	};
 	
 	class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
-		macro_20
+		MACRO_SPACE(20)
 	};	
 	class B_Heli_Transport_03_unarmed_F: Heli_Transport_03_unarmed_base_F {
-		macro_20
+		MACRO_SPACE(20)
 	};	
 
 	class B_Truck_01_ammo_F: B_Truck_01_mover_F {
-		macro_20
+		MACRO_SPACE(20)
 	};
     class B_Truck_01_medical_F: B_Truck_01_transport_F {
-		macro_20
+		MACRO_SPACE(20)
     };
 
 	class O_Truck_03_ammo_F: Truck_03_base_F {
-		macro_20
+		MACRO_SPACE(20)
 	};
     class O_Truck_03_medical_F: Truck_03_base_F {
-		macro_20
+		MACRO_SPACE(20)
     };
 };
