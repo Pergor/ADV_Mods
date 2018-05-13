@@ -79,8 +79,8 @@ class CfgPatches
 			,"A3_Armor_F_EPB_MBT_03"
 			,"A3_Armor_F_EPB_APC_Tracked_03"
 		};
-		version = "1.4";
-		versionStr = "1.4";
+		version = "1.4.1";
+		versionStr = "1.4.1";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
