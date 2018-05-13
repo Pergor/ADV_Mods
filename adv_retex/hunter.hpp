@@ -30,6 +30,7 @@ class B_MRAP_01_F: MRAP_01_base_F {
 
 class MRAP_01_hmg_base_F: MRAP_01_base_F {};
 class B_MRAP_01_hmg_F: MRAP_01_hmg_base_F {
+	hiddenSelections[] = {"Camo1","Camo2","camo3"};
 	class TextureSources: TextureSources {
 		class sand {
 			author = "Bohemia Interactive";
@@ -56,6 +57,7 @@ class B_MRAP_01_hmg_F: MRAP_01_hmg_base_F {
 
 class MRAP_01_gmg_base_F: MRAP_01_base_F {};
 class B_MRAP_01_gmg_F: MRAP_01_gmg_base_F {
+	hiddenSelections[] = {"Camo1","Camo2","camo3"};
 	class TextureSources: TextureSources {
 		class sand {
 			author = "Bohemia Interactive";
