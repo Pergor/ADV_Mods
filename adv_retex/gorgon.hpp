@@ -62,7 +62,7 @@ class adv_retex_b_gorgon_f: I_APC_Wheeled_03_cannon_F {
 	class TransportWeapons {
 		natoweapons
 	};
-	displayName = "AFV-4 Gorgon";
+	displayName = "AFV-4 Gorgon (NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
 	typicalCargo[] = {"B_soldier_F"};

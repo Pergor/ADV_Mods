@@ -7,7 +7,7 @@ class I_MRAP_03_gmg_F;
 class adv_retex_b_strider_f: I_MRAP_03_F {
 	standard_macro
 	nato_macro
-	displayName = "Strider";
+	displayName = "Strider (NATO)";
 	crew = "B_soldier_F";
 	typicalCargo[] = {"B_soldier_F"};
 	forceInGarage = 1;
@@ -25,7 +25,7 @@ class adv_retex_b_strider_f: I_MRAP_03_F {
 class adv_retex_b_strider_hmg_f: I_MRAP_03_hmg_F {
 	standard_macro
 	nato_macro
-	displayName = "Strider HMG";
+	displayName = "Strider HMG (NATO)";
 	crew = "B_soldier_F";
 	typicalCargo[] = {"B_soldier_F"};
 	forceInGarage = 1;
@@ -43,7 +43,7 @@ class adv_retex_b_strider_hmg_f: I_MRAP_03_hmg_F {
 class adv_retex_b_strider_gmg_f: I_MRAP_03_gmg_F {
 	standard_macro
 	nato_macro
-	displayName = "Strider GMG";
+	displayName = "Strider GMG (NATO)";
 	crew = "B_soldier_F";
 	typicalCargo[] = {"B_soldier_F"};
 	forceInGarage = 1;

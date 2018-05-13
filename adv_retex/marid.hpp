@@ -63,7 +63,7 @@ class adv_retex_b_marid_f: O_APC_Wheeled_02_rcws_v2_F {
 	class TransportWeapons {
 		natoweapons
 	};
-	displayName = "MSE-3 Marid";
+	displayName = "MSE-3 Marid (NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
 	typicalCargo[] = {"B_soldier_F"};

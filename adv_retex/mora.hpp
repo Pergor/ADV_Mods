@@ -51,7 +51,7 @@ class adv_retex_b_mora_f: I_APC_tracked_03_cannon_F {
 	class TransportWeapons {
 		natoweapons
 	};
-	displayName = "FV-720 Mora";
+	displayName = "FV-720 Mora (NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
 	typicalCargo[] = {"B_soldier_F"};

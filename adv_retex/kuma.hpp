@@ -46,7 +46,7 @@ class adv_retex_b_kuma_f: I_MBT_03_cannon_F {
 	class TransportWeapons {
 		natoweapons
 	};
-	displayName = "MBT-52 Kuma";
+	displayName = "MBT-52 Kuma (NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
 	typicalCargo[] = {"B_soldier_F"};
