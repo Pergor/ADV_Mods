@@ -16,10 +16,11 @@
 			"A3_Armor_F_Marid",
 			"A3_Armor_F_APC_Wheeled_03",
 			"A3_Air_F_Heli_Heli_Transport_03",
-			"A3_Armor_F_Panther"
+			"A3_Armor_F_Panther",
+			"A3_Supplies_F_Heli_CargoNets"
 		};
-		version = "1.05";
-		versionStr = "1.05";
+		version = "1.0.6";
+		versionStr = "1.0.6";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -34,7 +35,31 @@ class CfgVehicles {
     class Items_base_F;
     class ReammoBox_F: ThingX {
         ace_cargo_size = 1;
-    };	
+    };
+	
+	class CargoNet_01_base_F;
+	class CargoNet_01_ammo_base_F: CargoNet_01_base_F {
+		MACRO_SPACE(12)
+	};
+	class CargoNet_01_box_F: CargoNet_01_base_F {
+		MACRO_SPACE(12)
+	};
+	class Land_CargoBox_V1_F: ThingX {
+		MACRO_SPACE(12)
+	};
+	
+	class NATO_Box_Base;
+	class Box_NATO_AmmoVeh_F: NATO_Box_Base {
+		MACRO_SPACE(12)
+	};
+	class EAST_Box_Base;
+	class Box_East_AmmoVeh_F: EAST_Box_Base {
+		MACRO_SPACE(12)
+	};
+	class IND_Box_Base;
+	class Box_IND_AmmoVeh_F: IND_Box_Base {
+		MACRO_SPACE(12)
+	};
 
     class StaticMortar;
     class Mortar_01_base_F: StaticMortar {
