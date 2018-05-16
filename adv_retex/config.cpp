@@ -33,32 +33,36 @@ class CfgPatches
     class adv_retex
     {
         units[] = {
-			"adv_retex_b_mrap_f",
-			"adv_retex_b_mrap_hmg_f",
-			"adv_retex_b_mrap_gmg_f",
-			"adv_retex_b_kuma_f",
-			"adv_retex_b_mora_f",
-			"adv_retex_b_marid_f",
-			"adv_retex_b_marid_san_f",
-			"adv_retex_b_gorgon_f",
-			"adv_retex_b_gorgon_san_f",
-			"adv_retex_b_strider_f",
-			"adv_retex_b_strider_hmg_f",
-			"adv_retex_b_strider_gmg_f",
-			"adv_retex_b_mohawk_01_f",
-			"adv_retex_b_mohawk_02_f",			
-			"adv_retex_b_mh9_black_f",
-			"adv_retex_b_ah9_black_f",
-			"adv_retex_i_mh9_f",
-			"adv_retex_i_mh9_black_f",
-			"adv_retex_i_ah9_f",
-			"adv_retex_i_ah9_black_f",
-			"adv_retex_i_orca_f",
-			"adv_retex_i_mohawk_01_f",
-			"adv_retex_i_mohawk_02_f",
-			"adv_retex_c_orca_f",
-			"adv_retex_c_mohawk_01_f",
-			"adv_retex_c_mohawk_02_f"
+			"adv_retex_b_mrap_f"
+			,"adv_retex_b_mrap_hmg_f"
+			,"adv_retex_b_mrap_gmg_f"
+			,"adv_retex_b_kuma_f"
+			,"adv_retex_b_mora_f"
+			,"adv_retex_b_marid_f"
+			,"adv_retex_b_marid_san_f"
+			,"adv_retex_b_gorgon_f"
+			,"adv_retex_b_gorgon_san_f"
+			,"adv_retex_b_strider_f"
+			,"adv_retex_b_strider_hmg_f"
+			,"adv_retex_b_strider_gmg_f"
+			,"adv_retex_b_mohawk_01_f"
+			,"adv_retex_b_mohawk_02_f"			
+			,"adv_retex_b_mh9_black_f"
+			,"adv_retex_b_ah9_black_f"
+			,"adv_retex_i_mh9_f"
+			,"adv_retex_i_mh9_black_f"
+			,"adv_retex_i_ah9_f"
+			,"adv_retex_i_ah9_black_f"
+			,"adv_retex_i_orca_f"
+			,"adv_retex_i_mohawk_01_f"
+			,"adv_retex_i_mohawk_02_f"
+			,"adv_retex_c_orca_f"
+			,"adv_retex_c_mohawk_01_f"
+			,"adv_retex_c_mohawk_02_f"
+			,"adv_retex_b_lt_aa_f"
+			,"adv_retex_b_lt_at_f"
+			,"adv_retex_b_lt_cannon_f"
+			,"adv_retex_b_lt_scout_f"
 		};
         weapons[] = {};
         requiredVersion = 1.82;
@@ -78,9 +82,10 @@ class CfgPatches
 			,"A3_Armor_F_Beta_APC_Wheeled_02"
 			,"A3_Armor_F_EPB_MBT_03"
 			,"A3_Armor_F_EPB_APC_Tracked_03"
+			,"A3_Armor_F_Tank_LT_01"
 		};
-		version = "1.4.1";
-		versionStr = "1.4.1";
+		version = "1.4.2";
+		versionStr = "1.4.2";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -125,13 +130,15 @@ class CfgVehicles {
 	class O_Heli_Light_02_unarmed_F;
 	
 	class Car_F;
+	class Tank;
 	
 	#include "hunter.hpp"
 	#include "kuma.hpp"
 	#include "mora.hpp"
 	#include "marid.hpp"
 	#include "gorgon.hpp"
-	#include "strider.hpp"
+	#include "strider.hpp"	
+	#include "nyx.hpp"	
 
 	//mohawk (dahoman)
 	class adv_retex_b_mohawk_01_f: I_Heli_Transport_02_F {
