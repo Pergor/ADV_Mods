@@ -11,6 +11,9 @@
 #define civ_macro side=3;\
 			faction="CIV_F";
 			
+#define nato_t_macro side=1;\
+			faction="BLU_T_F";
+			
 #define natoweapons class xx_arifle_MX_F { weapon = "arifle_MX_F"; count = 2; };
 
 #define natomags class _xx_30Rnd_65x39_caseless_mag { magazine = "30Rnd_65x39_caseless_mag"; count = 16; };\
@@ -63,6 +66,10 @@ class CfgPatches
 			,"adv_retex_b_lt_at_f"
 			,"adv_retex_b_lt_cannon_f"
 			,"adv_retex_b_lt_scout_f"
+			,"adv_retex_b_t_lt_aa_f"
+			,"adv_retex_b_t_lt_at_f"
+			,"adv_retex_b_t_lt_cannon_f"
+			,"adv_retex_b_t_lt_scout_f"
 		};
         weapons[] = {};
         requiredVersion = 1.82;
@@ -84,8 +91,8 @@ class CfgPatches
 			,"A3_Armor_F_EPB_APC_Tracked_03"
 			,"A3_Armor_F_Tank_LT_01"
 		};
-		version = "1.4.2";
-		versionStr = "1.4.2";
+		version = "1.4.3";
+		versionStr = "1.4.3";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };

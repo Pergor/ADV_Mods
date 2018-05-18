@@ -44,17 +44,12 @@ class I_LT_01_scout_F: LT_01_scout_base_F {
 	};
 };
 
+
 //Nyx AA
 class adv_retex_b_lt_aa_f: I_LT_01_AA_F {
 	standard_macro
 	nato_macro
 	animationList[] = {"showBags",1,"showTools",1,"showCamonetHull",0,"showSLATHull",0};
-	class TransportMagazines {
-		natomags
-	};
-	class TransportWeapons {
-		natoweapons
-	};
 	displayName = "AWC 301 Nyx (AA - NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
@@ -67,17 +62,17 @@ class adv_retex_b_lt_aa_f: I_LT_01_AA_F {
 		,"A3\armor_f\data\cage_olive_co.paa"
 	};
 };
+class adv_retex_b_t_lt_aa_f: adv_retex_b_lt_aa_f {
+	nato_t_macro
+	crew = "B_T_Crew_F";
+	typicalCargo[] = {"B_T_soldier_F"};
+	forceInGarage = 0;
+};
 //Nyx AT
 class adv_retex_b_lt_at_f: I_LT_01_AT_F {
 	standard_macro
 	nato_macro
 	animationList[] = {"showBags",1,"showTools",1,"showCamonetHull",0,"showSLATHull",0};
-	class TransportMagazines {
-		natomags
-	};
-	class TransportWeapons {
-		natoweapons
-	};
 	displayName = "AWC 301 Nyx (AT - NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
@@ -90,17 +85,17 @@ class adv_retex_b_lt_at_f: I_LT_01_AT_F {
 		,"A3\armor_f\data\cage_olive_co.paa"
 	};
 };
+class adv_retex_b_t_lt_at_f: adv_retex_b_lt_at_f {
+	nato_t_macro
+	crew = "B_T_Crew_F";
+	typicalCargo[] = {"B_T_soldier_F"};
+	forceInGarage = 0;
+};
 //Nyx cannon
 class adv_retex_b_lt_cannon_f: I_LT_01_cannon_F {
 	standard_macro
 	nato_macro
 	animationList[] = {"showBags",1,"showTools",1,"showCamonetHull",0,"showSLATHull",0};
-	class TransportMagazines {
-		natomags
-	};
-	class TransportWeapons {
-		natoweapons
-	};
 	displayName = "AWC 301 Nyx (Autocannon - NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
@@ -113,17 +108,17 @@ class adv_retex_b_lt_cannon_f: I_LT_01_cannon_F {
 		,"A3\armor_f\data\cage_olive_co.paa"
 	};
 };
+class adv_retex_b_t_lt_cannon_f: adv_retex_b_lt_cannon_f {
+	nato_t_macro
+	crew = "B_T_Crew_F";
+	typicalCargo[] = {"B_T_soldier_F"};
+	forceInGarage = 0;
+};
 //Nyx scout
 class adv_retex_b_lt_scout_f: I_LT_01_scout_F {
 	standard_macro
 	nato_macro
 	animationList[] = {"showBags",1,"showTools",1,"showCamonetHull",0,"showSLATHull",0};
-	class TransportMagazines {
-		natomags
-	};
-	class TransportWeapons {
-		natoweapons
-	};
 	displayName = "AWC 301 Nyx (Recon - NATO)";
 	forceInGarage = 1;
 	crew = "B_crew_F";
@@ -135,4 +130,10 @@ class adv_retex_b_lt_scout_f: I_LT_01_scout_F {
 		,"A3\Armor_F\Data\camonet_AAF_Digi_Green_CO.paa"
 		,"A3\armor_f\data\cage_olive_co.paa"
 	};
+};
+class adv_retex_b_t_lt_scout_f: adv_retex_b_lt_scout_f {
+	nato_t_macro
+	crew = "B_T_Crew_F";
+	typicalCargo[] = {"B_T_soldier_F"};
+	forceInGarage = 0;
 };
