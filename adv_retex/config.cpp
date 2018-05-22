@@ -31,6 +31,11 @@
 	class _xx_SmokeShellBlue { magazine = "SmokeShellBlue"; count = 4; };\
 	class _xx_NLAW_F { magazine = "NLAW_F"; count = 2; };
 	
+#define MACRO_ADDITEM(ITEM,COUNT) class _xx_##ITEM { \
+    name = #ITEM; \
+    count = COUNT; \
+};
+	
 class CfgPatches
 {
     class adv_retex
@@ -90,6 +95,9 @@ class CfgPatches
 			,"A3_Armor_F_EPB_MBT_03"
 			,"A3_Armor_F_EPB_APC_Tracked_03"
 			,"A3_Armor_F_Tank_LT_01"
+			,"A3_Characters_F"
+			,"A3_Weapons_F_Ammoboxes"
+			,"A3_Supplies_F_Exp"
 		};
 		version = "1.4.3";
 		versionStr = "1.4.3";
@@ -146,6 +154,8 @@ class CfgVehicles {
 	#include "gorgon.hpp"
 	#include "strider.hpp"	
 	#include "nyx.hpp"	
+	#include "backpacks.hpp"
+	#include "soldiers.hpp"
 
 	//mohawk (dahoman)
 	class adv_retex_b_mohawk_01_f: I_Heli_Transport_02_F {
