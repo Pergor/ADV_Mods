@@ -88,6 +88,8 @@ class CfgPatches
 			,"adv_retex_u_CombatUniform_sgg"
 			,"adv_retex_u_CombatUniform_sgg_vest"
 			,"adv_retex_u_CombatUniform_sgg_tshirt"
+			,"adv_retex_u_CombatUniform_i_wdl"
+			,"adv_retex_u_CombatUniform_i_wdl_shortsleeve"
 		};
         requiredVersion = 1.82;
         requiredAddons[] = {
@@ -112,8 +114,8 @@ class CfgPatches
 			,"A3_Supplies_F_Exp"
 			,"A3_Air_F_EPB_Heli_Light_03"
 		};
-		version = "1.4.3";
-		versionStr = "1.4.3";
+		version = "1.4.4";
+		versionStr = "1.4.4";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
