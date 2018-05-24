@@ -75,8 +75,20 @@ class CfgPatches
 			,"adv_retex_b_t_lt_at_f"
 			,"adv_retex_b_t_lt_cannon_f"
 			,"adv_retex_b_t_lt_scout_f"
+			,"adv_retex_hellcat_dynamicLoadout_f"
+			,"adv_retex_hellcat_unarmed_f"
 		};
-        weapons[] = {};
+        weapons[] = {
+			"H_PASGT_neckprot_black_F"
+			,"H_PASGT_neckprot_olive_F"
+			,"H_PASGT_neckprot_blue_F"
+			,"adv_retex_u_CombatUniform_wdl"
+			,"adv_retex_u_CombatUniform_wdl_vest"
+			,"adv_retex_u_CombatUniform_wdl_tshirt"
+			,"adv_retex_u_CombatUniform_sgg"
+			,"adv_retex_u_CombatUniform_sgg_vest"
+			,"adv_retex_u_CombatUniform_sgg_tshirt"
+		};
         requiredVersion = 1.82;
         requiredAddons[] = {
 			"A3_Armor_F_APC_Wheeled_03"
@@ -98,6 +110,7 @@ class CfgPatches
 			,"A3_Characters_F"
 			,"A3_Weapons_F_Ammoboxes"
 			,"A3_Supplies_F_Exp"
+			,"A3_Air_F_EPB_Heli_Light_03"
 		};
 		version = "1.4.3";
 		versionStr = "1.4.3";
@@ -135,6 +148,11 @@ class cfgFunctions {
 	};
 };
 
+class cfgWeapons {
+	#include "headgear.hpp"
+	#include "uniforms.hpp"
+};
+
 class CfgVehicles {
 	//vehicle inheritances
 
@@ -152,8 +170,9 @@ class CfgVehicles {
 	#include "mora.hpp"
 	#include "marid.hpp"
 	#include "gorgon.hpp"
-	#include "strider.hpp"	
-	#include "nyx.hpp"	
+	#include "strider.hpp"
+	#include "nyx.hpp"
+	#include "hellcat.hpp"
 	#include "backpacks.hpp"
 	#include "soldiers.hpp"
 
@@ -210,7 +229,7 @@ class CfgVehicles {
 	class adv_retex_i_mh9_black_f: B_Heli_Light_01_F {
 		standard_macro
 		aaf_macro
-		scopeArsenal = 0;
+		forceInGarage = 0;
 		displayName = "MH-9 Hummingbird (Black)";
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
@@ -227,7 +246,7 @@ class CfgVehicles {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee (Black)";
-		scopeArsenal = 0;
+		forceInGarage = 0;
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
 	};
