@@ -103,13 +103,13 @@ class CfgPatches
 			,"A3_Characters_F_BLUFOR"
 			,"A3_Characters_F_INDEP"
 			,"A3_Characters_F_Civil"
+			,"A3_Characters_F"
 			,"A3_Weapons_F_Uniforms"
 			,"A3_Armor_F_Gamma_APC_Wheeled_03"
 			,"A3_Armor_F_Beta_APC_Wheeled_02"
 			,"A3_Armor_F_EPB_MBT_03"
 			,"A3_Armor_F_EPB_APC_Tracked_03"
 			,"A3_Armor_F_Tank_LT_01"
-			,"A3_Characters_F"
 			,"A3_Weapons_F_Ammoboxes"
 			,"A3_Supplies_F_Exp"
 			,"A3_Air_F_EPB_Heli_Light_03"
@@ -151,8 +151,8 @@ class cfgFunctions {
 };
 
 class cfgWeapons {
-	#include "headgear.hpp"
-	#include "uniforms.hpp"
+	#include "equipment\headgear.hpp"
+	#include "equipment\uniforms.hpp"
 };
 
 class CfgVehicles {
@@ -167,16 +167,17 @@ class CfgVehicles {
 	class Car_F;
 	class Tank;
 	
-	#include "hunter.hpp"
-	#include "kuma.hpp"
-	#include "mora.hpp"
-	#include "marid.hpp"
-	#include "gorgon.hpp"
-	#include "strider.hpp"
-	#include "nyx.hpp"
-	#include "hellcat.hpp"
-	#include "backpacks.hpp"
-	#include "soldiers.hpp"
+	#include "equipment\backpacks.hpp"
+	#include "equipment\soldiers.hpp"
+	
+	#include "vehicles\gorgon.hpp"
+	#include "vehicles\hellcat.hpp"
+	#include "vehicles\hunter.hpp"
+	#include "vehicles\kuma.hpp"
+	#include "vehicles\marid.hpp"
+	#include "vehicles\mora.hpp"
+	#include "vehicles\nyx.hpp"
+	#include "vehicles\strider.hpp"
 
 	//mohawk (dahoman)
 	class adv_retex_b_mohawk_01_f: I_Heli_Transport_02_F {
