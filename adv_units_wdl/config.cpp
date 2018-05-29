@@ -99,7 +99,7 @@ class cfgFactionClasses {
 #include "macros.hpp"
 
 class cfgWeapons {
-	#include "cfgWeapons.hpp"
+	#include "weapons.hpp"
 };
 
 class cfgVehicles {
