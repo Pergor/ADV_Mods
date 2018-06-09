@@ -24,16 +24,15 @@ adv_configsVanilla_scriptfnc_setMortarFlare = {
 		
 		private _activationTime = 10;
 		sleep _activationTime;
-		if !(local _unit) exitWith {
-			_light setLightUseFlare true;
-			_light setLightFlareSize _flareSize;
-			_light setLightFlareMaxDistance 12000;
-			_light setLightBrightness _flareBrightness;
-			_light setLightIntensity _flareIntensity;
-			_light setLightColor _flareColor;
-			_light setLightAmbient _flareColor;
-			_light setLightDayLight true;
-		};
+		_light setLightUseFlare true;
+		_light setLightFlareSize _flareSize;
+		_light setLightFlareMaxDistance 12000;
+		_light setLightBrightness _flareBrightness;
+		_light setLightIntensity _flareIntensity;
+		_light setLightColor _flareColor;
+		_light setLightAmbient _flareColor;
+		_light setLightDayLight true;
+		if !(local _unit) exitWith {};
 		private _timeToLive = getNumber (configFile >> "CfgAmmo" >> _ammo >> "timeToLive");
 		sleep _timeToLive-_activationTime;
 		deleteVehicle _light;
@@ -42,7 +41,7 @@ adv_configsVanilla_scriptfnc_setMortarFlare = {
 
 private _index = _unit addEventHandler ["Fired",{
 	params ["_unit","_weapon","_muzzle","_mode","_ammo","_magazine","_projectile","_gunner"];
-	if !(_ammo == "Flare_82mm_AMOS_White") exitWith {};
+	if !(_ammo == "FlareCore") exitWith {};
 	private _light = createVehicle ["#lightpoint", getPos _projectile, [], 0, "NONE"];
 	_light attachTo [_projectile];
 	

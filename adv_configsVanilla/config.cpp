@@ -240,7 +240,7 @@ class CfgVehicles {
 	#include "vehicles.hpp"
 
 	class StaticWeapon;
-	class StaticMortar: StaticWeapon{
+	class StaticMortar: StaticWeapon {
 		class Eventhandlers;
 	};
 	class Mortar_01_base_F: StaticMortar {
