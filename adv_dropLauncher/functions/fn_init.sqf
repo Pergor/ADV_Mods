@@ -20,9 +20,17 @@ ADV_array_dropLaunch = [];
 if (isClass(configFile >> "CfgPatches" >> "ace_disposable")) then {
 	ADV_array_dropLaunch pushBack "LAUNCH_NLAW_F";
 };
+if (isClass(configFile >> "CfgPatches" >> "adv_disposableRPG")) then {
+	ADV_array_dropLaunch append [
+		"ADV_LAUNCH_RPG32_F"
+		,"ADV_LAUNCH_RPG32_HE_F"
+		,"ADV_LAUNCH_RPG32_GHEX_F"
+		,"ADV_LAUNCH_RPG32_GHEX_HE_F"
+	];
+};
 ADV_array_dropLaunch append [
 	"BWA3_PZF3","BWA3_RGW90"
-	,"BWA3_PZF3_LOADED","BWA3_RGW90_LOADED"
+	,"BWA3_PZF3_TANDEM_LOADED","BWA3_RGW90_LOADED"
 	,"STI_M136"
 	,"UK3CB_BAF_AT4_AP_LAUNCHER","UK3CB_BAF_AT4_CS_AP_LAUNCHER","UK3CB_BAF_NLAW_LAUNCHER"
 	,"CUP_LAUNCH_NLAW","CUP_LAUNCH_RPG18","CUP_LAUNCH_M136","CUP_LAUNCH_M72A6_SPECIAL","CUP_LAUNCH_M72A6"
