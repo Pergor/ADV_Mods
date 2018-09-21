@@ -24,6 +24,4 @@ class CfgPatches
     };
 };
 
-class CfgVehicles {
-	#include "vehicles.hpp"
-};
+#include "vehicles.hpp"
