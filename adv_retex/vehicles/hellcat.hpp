@@ -10,6 +10,7 @@ class adv_retex_hellcat_dynamicLoadout_f: I_Heli_light_03_dynamicLoadout_F {
 	hiddenSelectionsTextures[] = {"A3\Air_F_EPB\Heli_Light_03\data\Heli_Light_03_base_CO.paa"};
 	textureList[] = {"Green",1};
 	typicalCargo[] = {"B_Soldier_F"};
+	magazines[] = {"5000Rnd_762x51_Belt","168Rnd_CMFlare_Chaff_Magazine"};
 };
 class adv_retex_hellcat_unarmed_f: I_Heli_light_03_unarmed_F {
 	standard_macro

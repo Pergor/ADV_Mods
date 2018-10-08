@@ -189,6 +189,7 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
 	//mohawk (ion)
@@ -201,8 +202,10 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
+
 	//mh9
 	class adv_retex_b_mh9_black_f: B_Heli_Light_01_F {
 		standard_macro
@@ -242,6 +245,7 @@ class CfgVehicles {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee";
+		magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
 	};
@@ -249,6 +253,7 @@ class CfgVehicles {
 		standard_macro
 		aaf_macro
 		displayName = "AH-9 Pawnee (Black)";
+		magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
 		forceInGarage = 0;
 		crew = "I_helipilot_F";
 		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
@@ -263,6 +268,7 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
 	//mohawk (ion)
@@ -275,6 +281,7 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
 	//orca
@@ -297,6 +304,7 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_dahoman_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_dahoman_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
 	//mohawk (ion)
@@ -309,6 +317,7 @@ class CfgVehicles {
 			"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_1_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_2_ion_co.paa"
 			,"a3\air_f_beta\Heli_Transport_02\Data\Skins\heli_transport_02_3_ion_co.paa"
+			,"A3\Air_F_Beta\Heli_Transport_02\Data\Heli_Transport_02_int_02_CO.paa"
 		};
 	};
 	//orca
