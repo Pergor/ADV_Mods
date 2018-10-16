@@ -24,7 +24,7 @@ class CfgPatches
 			,"A3_Soft_F_Offroad_01"
 			,"A3_Soft_F_Exp_Offroad_01"
 			,"A3_Soft_F_Exp_Offroad_02"
-			,"a3_Soft_F_Orange_van_02";
+			,"a3_Soft_F_Orange_van_02"
 		};
 		version = "1.0.3";
 		versionStr = "1.0.3";
