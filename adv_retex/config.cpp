@@ -114,8 +114,8 @@ class CfgPatches
 			,"A3_Supplies_F_Exp"
 			,"A3_Air_F_EPB_Heli_Light_03"
 		};
-		version = "1.4.4";
-		versionStr = "1.4.4";
+		version = "1.4.5";
+		versionStr = "1.4.5";
 		author = "[SeL] Belbo // Adrian";
 		authorUrl = "http://spezialeinheit-luchs.de/";
     };
@@ -220,7 +220,7 @@ class CfgVehicles {
 		nato_macro
 		displayName = "AH-9 Pawnee (Black)";
 		crew = "B_helipilot_F";
-		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa","a3\air_f\heli_light_01\data\heli_light_01_dot_ca.paa"};
 	};
 	
 	//indfor vehicles
@@ -247,7 +247,7 @@ class CfgVehicles {
 		displayName = "AH-9 Pawnee";
 		magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
 		crew = "I_helipilot_F";
-		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa"};
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_indp_co.paa","a3\air_f\heli_light_01\data\heli_light_01_dot_ca.paa"};
 	};
 	class adv_retex_i_ah9_black_f: B_Heli_Light_01_dynamicLoadout_F {
 		standard_macro
@@ -256,7 +256,7 @@ class CfgVehicles {
 		magazines[] = {"5000Rnd_762x51_Yellow_Belt"};
 		forceInGarage = 0;
 		crew = "I_helipilot_F";
-		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa"};
+		hiddenSelectionsTextures[] = {"a3\air_f\Heli_Light_01\Data\heli_light_01_ext_ion_co.paa","a3\air_f\heli_light_01\data\heli_light_01_dot_ca.paa"};
 	};
 	//mohawk (dahoman)
 	class adv_retex_i_mohawk_01_f: I_Heli_Transport_02_F {
