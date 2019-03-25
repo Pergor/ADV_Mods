@@ -229,21 +229,27 @@ class adv_wdl_gmg_01_high_F: B_GMG_01_high_F {
 };
 
 //vanilla helis:
-class Helicopter_Base_H;
+class Helicopter_Base_F;
+
+class Helicopter_Base_H: Helicopter_Base_F {
+	class Turrets;
+}; 
+	
 class Heli_Transport_01_base_F: Helicopter_Base_H {
-	class Turrets;	
-};
-class B_Heli_Transport_01_F: Heli_Transport_01_base_F {
-		class Turrets: Turrets {
+	class Turrets: Turrets {
+		class CopilotTurret;
 		class MainTurret;
 		class RightDoorGun;
 	};
 };
 
+class B_Heli_Transport_01_F: Heli_Transport_01_base_F {};
+
 class adv_wdl_heli_transport_01_F: B_Heli_Transport_01_F {
 	macro_standard
 	macro_veh_crew(adv_wdl_helipilot_f,adv_wdl_helipilot_f)
 	class Turrets: Turrets {
+		class CopilotTurret: CopilotTurret {};
 		class MainTurret: MainTurret {
 			gunnerType = "adv_wdl_helicrew_F";
 		};
@@ -254,18 +260,23 @@ class adv_wdl_heli_transport_01_F: B_Heli_Transport_01_F {
 };
 
 class Heli_Transport_03_base_F: Helicopter_Base_H {
-	class Turrets;	
-};
-class B_Heli_Transport_03_F: Heli_Transport_03_base_F {
-		class Turrets: Turrets {
+	class Turrets: Turrets {
+		class CargoTurret_01;
+		class CargoTurret_02;
+		class CopilotTurret;
 		class MainTurret;
 		class RightDoorGun;
 	};
 };
+class B_Heli_Transport_03_F: Heli_Transport_03_base_F {};
+
 class adv_wdl_heli_transport_03_F: B_Heli_Transport_03_F {
 	macro_standard
 	macro_veh_crew(adv_wdl_helipilot_f,adv_wdl_soldier_lite_f)
 	class Turrets: Turrets {
+		class CargoTurret_01: CargoTurret_01 {};
+		class CargoTurret_02: CargoTurret_02 {};
+		class CopilotTurret: CopilotTurret {};
 		class MainTurret: MainTurret {
 			gunnerType = "adv_wdl_helicrew_F";
 		};
@@ -291,6 +302,3 @@ class adv_wdl_heli_light_01_F: B_Heli_Light_01_F {
 	macro_standard
 	crew = "adv_wdl_helipilot_f";
 };
-
-
-
